@@ -125,6 +125,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   background-color: black;
+  background: url(../img/home-background-bad.png) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
