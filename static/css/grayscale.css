@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  * THIS IS THE FULL WHATEVER
  */
+ 
 body {
   width: 100%;
   height: 100%;
@@ -229,7 +230,7 @@ a:focus {
   padding: 50px 0;
   color: black;
   background-image: url(../img/gplaypattern.png);
-  background-color: #217D9F;
+  background-color: #3C839F;
   background-blend-mode: multiply;
   /*-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -338,6 +339,10 @@ body {
        -o-transform: rotate(-5deg);
       -ms-transform: rotate(-5deg);
           transform: rotate(-5deg);
+}
+
+.about-margins{
+	margin-bottom: 5px;
 }
 
 /*
