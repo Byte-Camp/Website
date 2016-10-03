@@ -5,11 +5,19 @@
  * THIS IS THE FULL WHATEVER
  */
  
+ /* Colours we want to keep
+  * Nice blue: #217D9F
+  * Background orange-yellow: #FFD83A
+  * Byte Camp dark peach: #FFD791
+  * Byte Camp light peach: #FFEDCD
+  */
+ 
 body {
   width: 100%;
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
+  background-color: #FFD791;
 }
 html {
   width: 100%;
@@ -40,7 +48,7 @@ p {
   }
 }
 a {
-  color: #257EA1;
+  color: black;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -49,8 +57,22 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: black;
+  color: red;
 }
+
+/* ACCENT AND MAIN SECTIONS */
+.accent-section{
+	position:relative;
+	background-color: #FFEDCD;
+	width:100%;
+}
+.accent-section a:hover{
+	color: #FFD83A;
+}
+
+
+
+
 .light {
   font-weight: 400;
 }
@@ -126,7 +148,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   background-color: black;
-  background: url(../img/home-background-bad.png) no-repeat bottom center scroll;
+  background: url(../img/website-banner.png) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -229,8 +251,7 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: black;
-  background-image: url(../img/gplaypattern.png);
-  background-color: #3C839F;
+  /*background-image: url(../img/gplaypattern.png);*/
   background-blend-mode: multiply;
   /*-webkit-background-size: cover;
   -moz-background-size: cover;
@@ -344,6 +365,8 @@ body {
 .about-margins{
 	margin-bottom: 5px;
 }
+
+
 
 /*
 ==============================================
