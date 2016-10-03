@@ -17,7 +17,7 @@ body {
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
-  background-color: #FFD791;
+  background-color: #FFD83A;
 }
 html {
   width: 100%;
@@ -60,10 +60,14 @@ a:focus {
   color: red;
 }
 
+hr{
+	border: 1px solid black;
+}
+
 /* ACCENT AND MAIN SECTIONS */
 .accent-section{
 	position:relative;
-	background-color: #FFEDCD;
+	background-color: #EDC04D;
 	width:100%;
 }
 .accent-section a:hover{
