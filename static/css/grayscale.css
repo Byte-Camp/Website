@@ -74,7 +74,10 @@ hr{
 	color: #FFD83A;
 }
 
-
+.col-centered {
+  float:none;
+  margin:0 auto;
+}
 
 
 .light {
