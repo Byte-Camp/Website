@@ -17,7 +17,7 @@ body {
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
-  background-color: #FFD83A;
+  background-color: #FFDF70;
 }
 html {
   width: 100%;
@@ -67,7 +67,7 @@ hr{
 /* ACCENT AND MAIN SECTIONS */
 .accent-section{
 	position:relative;
-	background-color: #EDC04D;
+	background-color: #FFEBA4;
 	width:100%;
 }
 .accent-section a:hover{
@@ -152,7 +152,7 @@ hr{
   padding: 100px 0;
   text-align: center;
   background-color: black;
-  background: url(../img/website-banner.png) no-repeat bottom center scroll;
+  background: url(../img/website-banner-yellow.png) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -320,7 +320,7 @@ ul.banner-social-buttons {
   }
 }
 footer {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 footer p {
   margin: 0;
