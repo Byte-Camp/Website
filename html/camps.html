@@ -66,19 +66,28 @@
                     <li>
                         <a class="page-scroll" href="#register">Register Now</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="../index.html#calendar">Calendar</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="#bestofs">Best-Ofs</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#">About Us</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="../index.html#contact">Contact</a>
-                    </li>
+                    <li class="dropdown">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs<span class="caret"></span></a>
+			            <ul class="dropdown-menu">
+			                <li><a href="../index.html#calendar">Calendar</a></li>
+			                <li role="separator" class="divider"></li>
+			                <li><a href="camps.html#programs">Camp Descriptions</a></li>
+			                <li role="separator" class="divider"></li>
+			                <li><a href="#">Best Of's</a></li>
+			                <li role="separator" class="divider"></li>
+			                <li><a href="#">Resources</a></li>
+			            </ul>
+		            </li>
+                    <li class="dropdown">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
+			            <ul class="dropdown-menu">
+			                <li><a href="../index.html#calendar">Who are We?</a></li>
+			                <li role="separator" class="divider"></li>
+			                <li><a href="camps.html#programs">Contact Us</a></li>
+			                <li role="separator" class="divider"></li>
+			                <li><a href="#">FAQs</a></li>
+			            </ul>
+		            </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -89,7 +98,7 @@
     <!-- Intro Header -->
     <img src="../static/img/programsBar.png" style="width:100%;"/>
 
-    <!-- WHAT is Byte Camp? -->
+    <!-- A Day in the life of a Byte Camper -->
     <div class="accent-section">
         <div class="container text-center">
 			<div>
@@ -101,8 +110,8 @@
     </div>
 
     <!-- Body Menu Section -->
-    <div class="container content-section">
-    	<h1 class="text-center">Programs</h1>
+    <div id="programs" class="container content-section">
+    	<h1  class="text-center">Programs</h1>
     	<hr>
         <div class="container col-lg-9 col-md-9 col-sm-10 col-centered">
             <div class="panel-group" id="accordion">
