@@ -45,7 +45,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="display:hidden">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -79,11 +79,11 @@
 			            </ul>
 		            </li>
                     <li class="dropdown">
-			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
 			            <ul class="dropdown-menu navbar-custom">
-			                <li><a href="../index.html#calendar">Who are We?</a></li>
+			                <li><a href="about_us.html#what">Who are We?</a></li>
 			                <li role="separator" class="divider"></li>
-			                <li><a href="camps.html#programs">Contact Us</a></li>
+			                <li><a href="about_us.html#who">Contact Us</a></li>
 			                <li role="separator" class="divider"></li>
 			                <li><a href="#">FAQs</a></li>
 			            </ul>
@@ -95,23 +95,36 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <img src="../static/img/programsBar.png" style="width:100%;"/>
-
-		
     <!-- What is Byte Camp? -->
-    <div class="accent-section">
-        <div class="container" style="padding-top:50px;">
+    <section id="what" style="background:url(../static/img/banner-yellow-trans.png) no-repeat bottom right scroll;">
+        <div class="container text-center" style="padding-top:275px;">
+            <h1>What is Byte Camp?</h1>
+            <p>Byte Camp Education Society is a non-profit organization that has been 
+            providing <strong>engaging, affordable creative technology programs for kids </strong>since 
+            2003. We have active partnerships with <strong>over 100 schools and community centres</strong> 
+            in Metro Vancouver, Victoria, Nanaimo, Calgary, and the Okanagan. Over 20,000 kids have come 
+            through our programs learning animation, web design, programming, video editing, 3D modelling 
+            and more!</p>
+        </div>
+    </section>
+    
+    <!--div id="what" class="accent-section">
+        <div class="container text-center" style="padding-top:50px;">
 			<div>
 				<h1 class="text-center">What is Byte Camp?</h1>
-                <p class="text-center">Byte Camp Education Society is a non-profit organization that has been providing <strong>engaging, affordable creative technology programs for kids </strong>since 2003. We have active partnerships with <strong>over 100 schools and community centres</strong> in Metro Vancouver, Victoria, Nanaimo, Calgary, and the Okanagan. Over 20,000 kids have come through our programs learning animation, web design, programming, video editing, 3D modelling and more!</p>
+                <p class="text-center">Byte Camp Education Society is a non-profit organization that has been 
+                providing <strong>engaging, affordable creative technology programs for kids </strong>since 
+                2003. We have active partnerships with <strong>over 100 schools and community centres</strong> 
+                n Metro Vancouver, Victoria, Nanaimo, Calgary, and the Okanagan. Over 20,000 kids have come 
+                through our programs learning animation, web design, programming, video editing, 3D modelling 
+                and more!</p>
             </div>
         </div>
         <br><br><br>
-    </div>
+    </div-->
 	
 	<!-- Who is Byte Camp? -->
-        <div class="container-fluid content-section">
+        <div id="who" class="container-fluid content-section accent-section">
 			<h1 class="text-center">Who is Byte Camp?</h1>
 			<hr>
 		<!-- ROW 1 -->
@@ -228,19 +241,13 @@
 
 
     <!-- Footer -->
-    <div class="accent-section">
-        <br><br><br>
-        <footer>
-            <div class="container" style="width:30%;">
-                <img src="../static/img/website-logo.png" style="width:100%;height:auto;"/>
-            </div>
-            <!-- Footer -->
-        
-            <div class="container text-center">
-                <p>Copyright &copy; Byte Camp 2016</p>
-            </div>
-        </footer>
-    </div>
+	<footer>
+		<br><br><br>
+		<div class="container text-center">
+			<img src="../static/img/website-logo.png" style="width:30%"/>
+			<p>Copyright &copy; Byte Camp 2016</p>
+		</div>
+	</footer>
 </body>
 
 </html>

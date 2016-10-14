@@ -108,6 +108,7 @@ hr{
   color: white;
 }
 .navbar-custom .nav li a {
+  color:white;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
