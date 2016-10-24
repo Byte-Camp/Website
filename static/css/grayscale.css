@@ -38,13 +38,13 @@ h6 {
 }
 p {
   margin: 0 0 25px;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
   p {
     margin: 0 0 35px;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1.6;
   }
 }
@@ -72,7 +72,7 @@ hr{
 	width:100%;
 }
 .accent-section a:hover{
-	color: #FFD83A;
+	/*color: #FFD83A;*/
 }
 
 .col-centered {
@@ -171,7 +171,7 @@ hr{
   font-size: 40px;
 }
 .intro .intro-body .intro-text {
-  font-size: 18px;
+  font-size: 26px;
 }
 
 @media (min-width: 768px) {
@@ -183,7 +183,7 @@ hr{
     font-size: 100px;
   }
   .intro .intro-body .intro-text {
-    font-size: 26px;
+    font-size: 40px;
   }
 }
 .btn-circle {
@@ -350,20 +350,30 @@ body {
 }
 
 .index-btn-text{
-	width:100%;
 	position: absolute;
-	top: 45px;
+	top: 0px;
 	left: 0px;
-	margin: auto;
-	
-	font-size: 70px;
+	width: 100%;
+	padding-top: 20%;
+	height: 70px; 
+	text-align: center;
+	font-size: 40px;
 	font-weight: normal;
+	/* adjust top up half the height of a single line */
+    margin-top: -0.5em;
 }
 
 .index-btn-img{
+	position: relative;
+	display:block;
 	width: 100%;
 	margin-bottom: 10px;
-	
+}
+
+@media (min-width: 767px) {
+	.index-btn-text{
+		font-size: 55px;
+	}
 }
 
 .img-button-left, .img-button-right{
