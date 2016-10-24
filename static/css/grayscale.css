@@ -384,19 +384,13 @@ body {
 
 /*
 ==============================================
-hatch
+LOGO ANIMATION
 ==============================================
 */
-
-
-
-
-
-
 .hatch{
 	animation-name: hatch;
 	-webkit-animation-name: hatch;	
-
+	
 	animation-duration: 2s;	
 	-webkit-animation-duration: 2s;
 
@@ -407,27 +401,27 @@ hatch
 	-ms-transform-origin: 50% 100%;
 	-webkit-transform-origin: 50% 100%;
 
-	visibility: visible !important;		
+	visibility: visible !important;
 }
 
 @keyframes hatch {
 	0% {
-		transform: rotate(0deg) scaleY(0.6);
+		transform: rotate(0deg) scaleY(0.2);
 	}
 	20% {
 		transform: rotate(-2deg) scaleY(1.5);
 	}
 	35% {
-		transform: rotate(2deg) scaleY(1);
+		transform: rotate(2deg) scaleY(0.8);
 	}
 	50% {
-		transform: rotate(-2deg);
+		transform: rotate(-2deg) scaleY(1.1);
 	}	
 	65% {
-		transform: rotate(1deg);
+		transform: rotate(1deg) scaleY(0.95);
 	}	
 	80% {
-		transform: rotate(-1deg);
+		transform: rotate(-1deg) scaleY(1);
 	}		
 	100% {
 		transform: rotate(0deg);
