@@ -371,11 +371,12 @@ ul.banner-social-buttons {
 
 .btn-register{
 	border-radius: 15px;
-	color: black;
+	color: white;
 	width: 300px;
 	margin-top: 20px;
 	font-size: 30px;
-	border: 2px outset black;
+	border: 2px outset darkorange;
+	font-weight: bold;
 	/*font-family: 'Caveat Brush', cursive;*/
 }
 .btn-register:hover{
