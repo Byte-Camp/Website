@@ -115,7 +115,46 @@ img::-moz-selection {
 	/*color: #FFD83A;*/
 }
 
+/* FAQs stuff */
+.faq-info {
+	border-radius:25px 0px 0px 5px;
+}
+.faq-title {
+	font-family:helvetica;
+	border-radius:5px 25px 0px;
+	border:none;
+	background-color:white;
+}
 
+.faq-icon{
+	font-size:25px;
+	color:#000000;
+	position:absolute;
+	transform:translateY(-50%);
+	right:5px;
+	z-index:99;
+}
+
+.faq-dropdown {
+	color:white;
+	border-radius:5px 25px 0px;
+	min-height:50px;
+	font-size: 15px;
+	padding:5px;
+	text-align: center;
+}
+@media (min-width: 992px) {
+	.faq-row {
+		width:80%;
+	}
+}
+@media (max-width: 768px) {
+	.faq-col {
+		width:90%;
+		float:none;
+		margin:0 auto;
+	}
+}
 
 /* MIGHT NOT NEED THIS - NOT USED */
 .col-centered {

@@ -76,7 +76,7 @@
 			                <li role="separator" class="divider"></li>
 			                <li><a href="#">Best Of's</a></li>
 			                <li role="separator" class="divider"></li>
-			                <li><a href="#">Resources</a></li>
+			                <li><a href="http://bytecamp.wixsite.com/bytecampresources">Resources</a></li>
 			            </ul>
 		            </li>
                     <li class="dropdown">
@@ -421,77 +421,6 @@
 				</div>
 			</div>
 		</div>
-	<SCRIPT>
-		$(function() {
-			// OPACITY OF BUTTON SET TO 0%
-			$(".faq-icon").css("opacity","0");
-			
-			// ON MOUSE OVER
-			$(".panel-title").hover(function() {		 
-				// SET OPACITY TO 70%
-				$(jQuery(this).children("div")).stop().animate({
-					opacity: .3
-				}, "slow");
-				$(jQuery(this).children("i")).stop().animate({
-					opacity: 1
-				}, "slow");
-			},
-						  
-			 
-			// ON MOUSE OUT
-			function () {		 
-				// SET OPACITY BACK
-				$(jQuery(this).children("div")).stop().animate({
-					opacity: 1
-				}, "slow");
-				$(jQuery(this).children("i")).stop().animate({
-					opacity: 0
-				}, "slow");
-			});
-		});
-	</SCRIPT>
-	<style>
-
-		.faq-info {
-			border-radius:25px 0px 0px 5px;
-		}
-		.faq-title {
-			font-family:helvetica;
-			border-radius:5px 25px 0px;
-			border:none;
-			background-color:white;
-		}
-		
-		.faq-icon{
-			font-size:25px;
-			color:#000000;
-			position:absolute;
-			transform:translateY(-50%);
-			right:5px;
-			z-index:99;
-		}
-
-		.faq-dropdown {
-			color:white;
-			border-radius:5px 25px 0px;
-			min-height:50px;
-			font-size: 15px;
-			padding:5px;
-			text-align: center;
-		}
-		@media (min-width: 992px) {
-			.faq-row {
-				width:80%;
-			}
-		}
-		@media (max-width: 768px) {
-			.faq-col {
-				width:90%;
-				float:none;
-				margin:0 auto;
-			}
-		}
-	</style>
 	
     <!-- Footer -->
 	<footer>
