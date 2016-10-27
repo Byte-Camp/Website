@@ -432,7 +432,7 @@ ul.banner-social-buttons {
 	padding-top: 20%;
 	height: 70px; 
 	text-align: center;
-	font-size: 40px;
+	font-size: 7vw;
 	font-weight: normal;
 	/* adjust top up half the height of a single line */
     margin-top: -0.5em;
@@ -447,9 +447,11 @@ ul.banner-social-buttons {
 
 @media (min-width: 767px) {
 	.index-btn-text{
-		font-size: 55px;
+		font-size: 56px;
 	}
 }
+
+
 
 .img-button-left, .img-button-right{
 	-webkit-transition: all 0.5s ease;
