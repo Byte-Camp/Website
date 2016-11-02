@@ -534,10 +534,12 @@ ul.banner-social-buttons {
 .banner{
   display: table;
   width: 100%;
-  padding-top: 15%;
+    margin-top: 40px;
+  padding-top: 150px;
+    padding-bottom: 150px;
   text-align: center;
   background-color: black;
-  background: url(../img/banners/staff-hill-600.png) no-repeat top center scroll;
+  background: url(../img/banners/staff-hill-600-fade.png) no-repeat top center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
