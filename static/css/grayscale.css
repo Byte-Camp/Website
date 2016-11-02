@@ -546,6 +546,18 @@ ul.banner-social-buttons {
   -o-background-size: cover;
 }
 
+.banner-text{
+    color: white;
+    text-shadow: 0px 5px black;
+    font-size: 14vw;
+}
+
+@media (min-width: 767px) {
+	.banner-text{
+		font-size: 100px;
+	}
+}
+
 .animate-in{
 	animation-fill-mode: forwards;
 	opacity: 0;
