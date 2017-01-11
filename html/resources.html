@@ -23,11 +23,11 @@
     <link rel="stylesheet" href="../static/css/aos.css" />
     <script src="../static/js/aos.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
 
     <!-- Theme JavaScript -->
-    <script src="../static/js/grayscale.min.js"></script>
+    <script src="../static/js/grayscale.js"></script>
 
 
 
@@ -44,7 +44,7 @@
 
     <!-- Theme CSS -->
     <link href="../static/css/grayscale.css" rel="stylesheet">
-    
+    <link href="../static/css/side-nav.css" rel="stylesheet">
 
 </head>
 
@@ -105,21 +105,7 @@
         <!-- /.container -->
     </nav>
 
-    <!-- What is Byte Camp? -->
-    <!--<section id="what" style="background:url(../static/img/banner-yellow-trans.png) no-repeat bottom right scroll; padding-top:20%;">
-        <div class="container text-center">
-            <h1>What is Byte Camp?</h1>
-            <p>Byte Camp Education Society is a non-profit organization that has been 
-            providing <strong>engaging, affordable creative technology programs for kids </strong>since 
-            2003. We have active partnerships with <strong>over 100 schools and community centres</strong> 
-            in Metro Vancouver, Victoria, Nanaimo, Calgary, and the Okanagan. Over 20,000 kids have come 
-            through our programs learning animation, web design, programming, video editing, 3D modelling 
-            and more!</p>
-        </div>
-    </section>
-	-->
-	
-    <div id="header">
+     <div id="header">
 		
         <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
 			<div class="col-lg-12">
@@ -134,17 +120,17 @@
         <div class="container" style="padding-top:70px; background-color: white;" data-aos="fade-up" data-aos-duration="750" data-aos-once="true">
 			
             <!-- Claymation -->
-            <div class=" col-lg-offset-2 col-lg-8" id="claymation">
-				<h1 class="text-center">Claymation</h1>
+            <div class=" col-lg-offset-2 col-lg-8" id="claymation" style="text-align:center;">
+				<h2 class="text-center">Claymation</h2>
                 <hr>
-                <h2 class="text-center" style="margin: 25px;">Software</h2>
-                <p class="text-center" style="margin: 0px;">Download your free version of AnimatorDV+ here:</p>
+                <h3 class="text-center" style="margin: 25px;">Software</h3>
+                <p class="text-center" style="margin: 0px; font-size: 24px;">Download your free version of AnimatorDV here:</p>
                 <a class="text-center" href="http://animatordv.com/download_free.php">
                     <img src="../static/img/animatorDV.jpg" style="display: block; margin: auto;">
                     <p>ANIMATOR DV</p>
                 </a>
-                <br>
-                <h2 class="text-center" style="margin: 25px;">Documents</h2>
+                
+                <h3 class="text-center" style="margin: 25px;">Documents</h3>
                 <a href="../static/docs/Storyboards.pdf">
                     <div class="doc-container">
                         <img src="../static/img/PDF-icon.ico" class="dl-icon">
@@ -172,18 +158,7 @@
                 </a>
                 <br>
                 <h2 class="text-center" style="margin: 25px;">Documents</h2>
-                <a href="../static/docs/Storyboards.pdf">
-                    <div class="doc-container">
-                        <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                        <p class="text-center">Storyboards</p>
-                    </div>
-                </a>
-                <a href="../static/docs/Scripts.pdf"> 
-                    <div class="doc-container">
-                        <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                        <p class="text-center">Scripts</p>
-                    </div>
-                </a>
+                <p>There are no documents available yet! Please request any documents you would like here.</p>
                 
             </div>
             
@@ -191,23 +166,12 @@
     </div>
     
     <!-- HERE IS THE SWEET SIDEBAR YO -->
-     <nav class="navbar navbar-inverse sidebar class-picker" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!--<div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand  toggle-btn" style="font-size: 30px;">Choose a Camp<span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-chevron-right"></span></a>
-            </div>-->
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav" style="font-size: 30px;">
-                    <li><a href="#" class="sidebar-text" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
+     <!-- Sidebar -->
+    <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li><a href="#" value="claymation" class="sidebar-text" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" value="musicvideo" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
                     <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
                     <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
                     <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
@@ -216,12 +180,23 @@
                 </ul>
             </div>
         </div>
-    </nav>
-
+    <!-- /#sidebar-wrapper
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                    <ul class="nav navbar-nav" style="font-size: 30px;">
+                    <li><a href="#" class="sidebar-text" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
+                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
+                </ul>
+            </div> -->
+    
 
 
     <!-- Footer -->
-	<footer id="chka-chka-slim-shady" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+	<footer data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
 		
 		<div class="container text-center">
 			<img src="../static/img/website-logo.png" style="width:30%"/>
