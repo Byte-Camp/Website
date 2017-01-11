@@ -29,7 +29,8 @@
     <!-- Theme JavaScript -->
     <script src="../static/js/grayscale.js"></script>
 
-
+    <!-- Page JavaScript -->
+    <script src="../static/js/resources.js"></script>
 
     <title>Resources - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
 
@@ -48,7 +49,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="switchCamp('default')">
     
     <script>AOS.init();</script>
 
@@ -105,8 +106,7 @@
         <!-- /.container -->
     </nav>
 
-     <div id="header">
-		
+    <div id="header">
         <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
 			<div class="col-lg-12">
 				<h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Resources</h1>
@@ -118,10 +118,22 @@
     <div id="resources">
 		
         <div class="container" style="padding-top:70px; background-color: white;" data-aos="fade-up" data-aos-duration="750" data-aos-once="true">
+            
+            <!-- Default -->
+            <div class="col-lg-offset-2 col-lg-8 resource-info" id="default">
+                <h1 class="text-center">Resources</h1>
+                <hr>
+                <p class="text-center">Please choose your camp on the left!</p>
+            </div>
+            
 			
             <!-- Claymation -->
-            <div class=" col-lg-offset-2 col-lg-8" id="claymation" style="text-align:center;">
-				<h2 class="text-center">Claymation</h2>
+            <div class="col-lg-offset-2 col-lg-8 resource-info" id="claymation">
+                <div class="text-center">
+                    <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
+                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Claymation</h1>
+                    <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
+                </div>
                 <hr>
                 <h3 class="text-center" style="margin: 25px;">Software</h3>
                 <p class="text-center" style="margin: 0px; font-size: 24px;">Download your free version of AnimatorDV here:</p>
@@ -129,26 +141,31 @@
                     <img src="../static/img/animatorDV.jpg" style="display: block; margin: auto;">
                     <p>ANIMATOR DV</p>
                 </a>
-                
-                <h3 class="text-center" style="margin: 25px;">Documents</h3>
-                <a href="../static/docs/Storyboards.pdf">
-                    <div class="doc-container">
-                        <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                        <p class="text-center">Storyboards</p>
-                    </div>
-                </a>
-                <a href="../static/docs/Scripts.pdf"> 
-                    <div class="doc-container">
-                        <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                        <p class="text-center">Scripts</p>
-                    </div>
-                </a>
-                
+                <br>
+                <h2 class="text-center" style="margin: 25px;">Documents</h2>
+                <div class="text-center">
+                    <a href="../static/docs/Storyboards.pdf">
+                        <div class="doc-container">
+                            <img src="../static/img/PDF-icon.ico" class="dl-icon">
+                            <p class="text-center">Storyboards</p>
+                        </div>
+                    </a>
+                    <a href="../static/docs/Scripts.pdf"> 
+                        <div class="doc-container">
+                            <img src="../static/img/PDF-icon.ico" class="dl-icon">
+                            <p class="text-center">Scripts</p>
+                        </div>
+                    </a>
+                </div>
             </div>
             
             <!-- Music Video -->
-            <div class=" col-lg-offset-2 col-lg-8" id="musicvideo">
-				<h1 class="text-center">Music Video</h1>
+            <div class="col-lg-offset-2 col-lg-8 resource-info" id="musicvideo">
+				<div class="text-center">
+                    <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
+                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Music Video</h1>
+                    <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
+                </div>
                 <hr>
                 <h2 class="text-center" style="margin: 25px;">Software</h2>
                 <p class="text-center" style="margin: 0px;">Download the free LMMS software here:</p>
@@ -159,7 +176,6 @@
                 <br>
                 <h2 class="text-center" style="margin: 25px;">Documents</h2>
                 <p>There are no documents available yet! Please request any documents you would like here.</p>
-                
             </div>
             
         </div>
@@ -182,14 +198,14 @@
         </div>
     <!-- /#sidebar-wrapper
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                    <ul class="nav navbar-nav" style="font-size: 30px;">
-                    <li><a href="#" class="sidebar-text" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
+                <ul class="nav navbar-nav" style="font-size: 30px;">
+                    <li class="sidebar-item"><a onclick="switchCamp('claymation')" style="line-height: 50px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
+                    <li class="sidebar-item"><a onclick="switchCamp('musicvideo')" style="line-height: 50px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
+                    <li class="sidebar-item"><a onclick="switchCamp('2dgames')" style="line-height: 50px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
+                    <li class="sidebar-item"><a onclick="switchCamp('3danimation')" style="line-height: 50px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
+                    <li class="sidebar-item"><a onclick="switchCamp('3dgames')" style="line-height: 50px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
+                    <li class="sidebar-item"><a onclick="switchCamp('baa')" style="line-height: 50px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
+                    <li class="sidebar-item"><a onclick="switchCamp('2danimation')" style="line-height: 50px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
                 </ul>
             </div> -->
     

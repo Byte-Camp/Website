@@ -854,7 +854,7 @@ stretchRight
     pointer-events: none;
 }
 
-.sidebar-text{
+.sidebar-item{
     line-height: 50px;
     padding-top:10px;
     padding-bottom: 10px;
