@@ -491,6 +491,10 @@ ul.banner-social-buttons {
 	}
 }
 
+/* FAQ PANEL */
+.panel-title{
+	cursor: pointer;
+}
 
 
 .img-button-left, .img-button-right{
