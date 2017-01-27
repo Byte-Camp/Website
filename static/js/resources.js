@@ -1,17 +1,4 @@
-// jQuery to move the side menu on scroll (with the nav bar)
-function moveSidebar() {
-    if ($(".navbar").offset().top > 50) {
-        $(".class-picker").addClass("sidebar-up");
-    } else {
-        $(".class-picker").removeClass("sidebar-up");
-    }
-}
-
-$(window).scroll(moveSidebar);
-$(document).ready(moveSidebar);
-
-
-function switchCamp(camp){
+$(function switchCamp(camp){
     console.log(camp);
     $(".resource-info").each(function(i){
         console.log($(this).attr('id'));
@@ -21,4 +8,4 @@ function switchCamp(camp){
             $(this).slideUp(1000);
         }
     });
-}
+});
