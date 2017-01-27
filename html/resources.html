@@ -11,23 +11,23 @@
 
 
     <!-- jQuery -->
-    <script src="../static/jquery/jquery.js"></script>
+    <script src="../static/js/vendor/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
     <!-- AOS Animation CSS and JavaScript -->
     <link rel="stylesheet" href="../static/css/aos.css" />
-    <script src="../static/js/aos.js"></script>
+    <script src="../static/js/vendor/aos.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
 
     <!-- Theme JavaScript -->
-    <script src="../static/js/grayscale.js"></script>
+    <script src="../static/js/main.js"></script>
 
     <!-- Page JavaScript -->
     <script src="../static/js/resources.js"></script>
@@ -35,17 +35,17 @@
     <title>Resources - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet"> 
 
     <!-- Theme CSS -->
-    <link href="../static/css/grayscale.css" rel="stylesheet">
-    <link href="../static/css/side-nav.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
+    <!--<link href="../static/css/side-nav.css" rel="stylesheet">-->
 
 </head>
 
@@ -115,12 +115,25 @@
     </div>
 	
     <!-- HERE IS ALL THE RESOURCE INFO -->
-    <div id="resources">
-		
-        <div class="container" style="padding-top:70px; background-color: white;" data-aos="fade-up" data-aos-duration="750" data-aos-once="true">
-            
+    <a id="resources" class="anchor"></a>
+    <div id="resources-section" class="container content-section accent-section" style="padding:0px; padding-top:50px;">
+    	<h1  class="text-center">Pick Your Camp!</h1>
+    	<div class="camp-selection-container" style="text-align:center;">
+            <img src="../static/img/icons/2dtab.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/clay.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/coding.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/mv.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
+            <div class="clearfix hidden-lg"></div>
+            <img src="../static/img/icons/3d.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/3dgame.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/baa.png" style="display: inline-block; height:75px; margin: 10px;">
+            <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
+        </div>
+        
+        <div class="camps-content container col-lg-8 col-sm-8 col-centered" style="background-color:white; margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
             <!-- Default -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info" id="default">
+            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="default">
                 <h1 class="text-center">Resources</h1>
                 <hr>
                 <p class="text-center">Please choose your camp on the left!</p>
@@ -128,7 +141,7 @@
             
 			
             <!-- Claymation -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info" id="claymation">
+            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-clay">
                 <div class="text-center">
                     <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
                     <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Claymation</h1>
@@ -160,7 +173,7 @@
             </div>
             
             <!-- Music Video -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info" id="musicvideo">
+            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-mv">
 				<div class="text-center">
                     <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
                     <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Music Video</h1>
@@ -182,7 +195,7 @@
     </div>
     
     <!-- HERE IS THE SWEET SIDEBAR YO -->
-     <!-- Sidebar -->
+     <!-- Sidebar
     <div id="wrapper">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
@@ -195,7 +208,7 @@
                     <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     <!-- /#sidebar-wrapper
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
                 <ul class="nav navbar-nav" style="font-size: 30px;">
