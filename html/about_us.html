@@ -23,11 +23,8 @@
     <link rel="stylesheet" href="../static/css/aos.css" />
     <script src="../static/js/aos.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
     <!-- Theme JavaScript -->
-    <script src="../static/js/grayscale.min.js"></script>
+    <script src="../static/js/grayscale.js"></script>
 
 
 
@@ -53,10 +50,10 @@
     <script>AOS.init();</script>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src="../static/img/btn_home_invert.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
+                <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
                 <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
                     <span class="light">Byte Camp</span>
                 </a>
@@ -128,10 +125,10 @@
         </div>
     </div>
 	
-    
-    <div id="what" class='accent-section'>
+    <a id="what" class="anchor"></a>
+    <div id="what-section" class='accent-section'>
 		
-        <div class="container-fluid text-center" style="padding-top:70px;" data-aos="fade-up" data-aos-duration="750" data-aos-once="true" data-aos-delay="500" data-aos-anchor:"#header">
+        <div class="container-fluid text-center" style="padding-top:30px;" data-aos="fade-up" data-aos-duration="750" data-aos-once="true" data-aos-delay="500" data-aos-anchor:"#header">
 			<div class=" col-lg-offset-2 col-lg-8">
 				<h1 class="text-center">What is Byte Camp?</h1>
                 <p class="text-center">Byte Camp Education Society is a non-profit organization that has been 
@@ -145,7 +142,10 @@
     </div>
 	
 	<!-- Who is Byte Camp? -->
-        <div id="who" class="container-fluid content-section" style="background:url(../static/img/controller-tile.png) top left fixed; padding-top: 70px;" >
+        <a id="who" class="anchor"></a>
+        <div id="who-section" class="container-fluid content-section" style="background:url(../static/img/controller-tile.png) top left fixed; padding-top: 70px;" >
+        <div class=" col-lg-offset-2 col-lg-8 col-sm-12 col-centered" style="background-color:white; margin-bottom: 150px; padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 			     <h1 class="text-center">Who is Byte Camp?</h1>
                 <hr>
@@ -258,6 +258,7 @@
             </div>
 			
 			<hr data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
+            </div>
         </div>
         <br><br><br>
     </div>
