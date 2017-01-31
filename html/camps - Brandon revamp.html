@@ -28,10 +28,8 @@
     <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet"> 
     
     <!-- Theme CSS -->
     <link href="../static/css/main.css" rel="stylesheet">
@@ -41,7 +39,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px darkkhaki;">
         <div class="container-fluid">
             <div class="navbar-header">
                 <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
@@ -107,7 +105,33 @@
     <div id="programs-section" class="container content-section accent-section" style="padding:0px; padding-top:50px;">
     	<h1  class="text-center">Camp Descriptions</h1>
     	<div class="camp-selection-container" style="text-align:center;">
-            <img src="../static/img/icons/2dtab.png" style="display: inline-block; height:75px; margin: 10px;">
+            <div style="display: inline-block; padding:0; margin:7px;">
+                <img src="../static/img/icons/2dtab.png" style="height:75px;">
+                <p style="padding:0; margin:0;">2D Animation</p>
+            </div>
+            <div style="display: inline-block; padding:0; margin:10px;">
+                <img src="../static/img/icons/clay.png" style="height:75px;">
+                <p style="padding:0; margin:0;">Claymation</p>
+            </div>
+            <div style="display: inline-block; padding:0; margin:10px;">
+                <img src="../static/img/icons/coding.png" style="height:75px;">
+                <p style="padding:0; margin:0;">Intro to Coding</p>
+            </div>
+            <div style="display: inline-block; padding:0; margin:10px;">
+                <img src="../static/img/icons/mv.png" style="height:75px;">
+                <p style="padding:0; margin:0;">Music Video</p>
+            </div>
+            <div style="display: inline-block; padding:0; margin:10px;">
+                <img src="../static/img/icons/2d.png" style="height:75px;">
+                <p style="padding:0; margin:0;">2D Games</p>
+            </div>
+            <div style="display: inline-block; padding:0; margin:10px;">
+                <img src="../static/img/icons/3d.png" style="height:75px;">
+                <p style="padding:0; margin:0;">3D Animation</p>
+            </div>
+            
+            
+            <!--
             <img src="../static/img/icons/clay.png" style="display: inline-block; height:75px; margin: 10px;">
             <img src="../static/img/icons/coding.png" style="display: inline-block; height:75px; margin: 10px;">
             <img src="../static/img/icons/mv.png" style="display: inline-block; height:75px; margin: 10px;">
@@ -117,9 +141,10 @@
             <img src="../static/img/icons/3dgame.png" style="display: inline-block; height:75px; margin: 10px;">
             <img src="../static/img/icons/baa.png" style="display: inline-block; height:75px; margin: 10px;">
             <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
+-->
         </div>
         
-        <div class="camps-content container col-lg-8 col-sm-8 col-centered" style="background-color:white; margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+        <div class="camps-content container col-lg-8 col-sm-8 col-centered boxokay" style="background-color: white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
             <!-- Claymation -->
             <div class="camp-info" id="camp-info-clay">
                 <div id="clay-header">
@@ -136,6 +161,10 @@
                     script, shoot their movie scene, and then learn to edit and add sounds and special effects 
                     to complete the whole project. Don't worry parents, there will be plenty of time devoted to 
                     outdoor games and activities!</p>
+                    <div class="text-center" style="margin-top: -30px;">
+                        <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray;">Check the Calendar!</a>
+                        <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray;">Register!</a>
+                    </div>
                 </div>
 
                 <hr class="hidden-lg hidden-md hidden-sm col-xs-11 col-centered">
@@ -159,6 +188,7 @@
                         </div>								
                     </div>
                 </div>
+            
             </div>
                         
             <!-- Build An App -->
@@ -170,6 +200,10 @@
                     script, shoot their movie scene, and then learn to edit and add sounds and special effects 
                     to complete the whole project. Don't worry parents, there will be plenty of time devoted to 
                     outdoor games and activities!</p>
+                    <div class="text-center" style="margin-top: -30px;">
+                        <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray;">Check the Calendar!</a>
+                        <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray;">Register!</a>
+                    </div>
                 </div>
 
                 <hr class="hidden-lg hidden-md hidden-sm col-xs-11 col-centered">
@@ -197,7 +231,14 @@
                         
             <!-- 2D Tablet -->
             <div class="camp-info" id="camp-info-2dtab">
-                <h1 class="text-center">2D Tablet Animation</h1>
+                <div id="2dtab-header">
+                    <div class="text-center">
+                        <img src="../static/img/icons/2dtab.png" style="display:inline; width: 50px;">
+                        <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">2D Tablet Animation</h1>
+                        <img src="../static/img/icons/2dtab.png" style="display:inline; width: 50px;">
+                        <hr>
+                    </div>
+                </div>
                 <div class="col-lg-7 col-md-7 col-sm-6">
                     <p>Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
                     work with a partner to build their own clay characters, sets and props, develop their own 
@@ -233,15 +274,12 @@
                     </div>
                 </div>
             </div>
-                        
-                        
-                        
         </div>
         
         <!-- A Day in the life of a Byte Camper -->
         <a id="dayinthelife" class="anchor"></a>
         <div class="container-fluid" style="background:url(../static/img/controller-tile.png) top left fixed;background-color:#FFDF70;">
-            <div class="col-lg-8 col-sm-8 col-centered" style="background-color:white; margin-bottom: 50px; margin-top: 50px;padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+            <div class="col-lg-8 col-sm-8 col-centered" style="background-color:white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-bottom: 50px; margin-top: 50px;padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
                 <div class="text-center">
                     <h1>A Day in the Life of a Byte Camper</h1>
                     <p>Make your own clay characters come to life, just like Shaun the Sheep! Participants will 

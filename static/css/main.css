@@ -883,3 +883,6 @@ a.anchor {
 .camp-selection-container img:hover{
     height: 100px !important;
 }
+.boxokay{
+    border-bottom-right-radius: 60px 5px;
+}
