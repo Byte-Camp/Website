@@ -30,24 +30,21 @@ $(document).ready(function() {
             event.preventDefault();
         });
     });
-    
+
     $('.camp-info').hide();
     $('#camp-info-2dtab').show();
-    
+
     $('.camp-selection-container img').click(function(e) {
         var src = $(e.target).attr('src');
         var camp = src.substring(src.lastIndexOf('/') + 1, src.length - 4);
         $('.camp-info').hide();
         $('#camp-info-' + camp).show();
-    });
-    
-    $('.camp-selection-container img').click(function(e) {
         $('.camp-selection-container img').css('height', '75px');
         $(e.target).css('height', '100px');
     });
-    
+
     $('#btn-group-age').click(function(e){
-        
+
         if(e.target.id === "9yrbutton"){
             $('.camp-selection-container div').each(function(index){
                 if(camps9yr.indexOf($(this).attr('id')) > -1){
@@ -67,14 +64,14 @@ $(document).ready(function() {
         } else if(e.target.id === 'allyrbutton'){
             $('.camp-selection-container div').show('500');
         }
-        
+
     });
 
     /* Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
         $(this).closest('.collapse').collapse('toggle');
     });*/
-    
+
     //makeHeader('clay-header', {'icon':'clay','camp name':'Claymation'});
 });
 
@@ -86,7 +83,7 @@ function makeHeader(targetId, replacements){
                 "</div><hr>";
     temp = btemplater(temp, replacements);
     document.getElementById(targetId).innerHTML = temp;
-    
+
 }
 
 
@@ -100,5 +97,5 @@ function btemplater(temp, replacements){
             temp = temp.replace('{{' + word.toUpperCase() + '}}', replacements[word]);
         }
     }
-    return temp;  
+    return temp;
 }
