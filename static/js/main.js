@@ -31,8 +31,9 @@ $(document).ready(function() {
         });
     });
 
+
     $('.camp-info').hide();
-    $('#camp-info-2dtab').show();
+    $('#camp-info-clay').show();
 
     $('.camp-selection-container img').click(function(e) {
         var src = $(e.target).attr('src');
