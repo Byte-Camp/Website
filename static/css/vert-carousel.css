@@ -92,17 +92,41 @@
 .carousel-control{
     z-index: 50;
 }
-
+/*
 .carousel-indicators li, .carousel-indicators .active {
-    background-color: black;
+    position: relative;
+    background-color: green;
+    border-radius: 0px;
+    width: 12.5%;
+    height: 50px;
+    display: inline-block;
+    margin: 0 !important;
+}
+*/
+.carousel-indicators li, .carousel-indicators .active{
+    position: relative;
+    display: inline-block;
+    text-indent:0;
+    width: 12.5%;
+    height: 50px;
+    border:none;
+    background-color: orangered;
+}
+.carousel-indicators .active{
+    background-color: orangered;
+}
 
+.carousel-indicators li:hover{
+    box-shadow: 0px 0px 5px red;
 }
 
 .carousel-indicators{
     right:0;
+    display: block;
+    position: relative;
     padding-left: 0px;
-    left:50%;
-    width:50%;
+    left:0;
+    width:100%;
     margin-left:0px;
 }
 
@@ -126,3 +150,16 @@
 .item p{
     text-align: left;
 }
+
+#carousel-custom .carousel-indicators li {
+            background-color: transparent;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            display: inline-block;
+            height: auto;
+            margin: 0 !important;
+            width: auto;
+        }
+        #carousel-custom .carousel-indicators li img {
+            display: block;
+        }
