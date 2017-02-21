@@ -53,7 +53,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse" data-hover='dropdown' data-animations='fadeIn'>
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
@@ -121,22 +121,32 @@
                 <img src="../static/img/icons/clay.png" style="height:75px;">
                 <p style="padding:0; margin:0;">Claymation</p>
             </div>
-            <div style="display: inline-block; padding:0; margin:10px;" id="intro">
-                <img src="../static/img/icons/coding.png" style="height:75px;">
-                <p style="padding:0; margin:0;">Intro to Coding</p>
-            </div>
             <div style="display: inline-block; padding:0; margin:10px;" id="mv">
                 <img src="../static/img/icons/mv.png" style="height:75px;">
                 <p style="padding:0; margin:0;">Music Video</p>
             </div>
+            <div style="display: inline-block; padding:0; margin:10px;" id="intro">
+                <img src="../static/img/icons/coding.png" style="height:75px;">
+                <p style="padding:0; margin:0;">Intro to Coding</p>
+            </div>
+            <div style="display: inline-block; padding:0; margin:10px;" id="cyoa">
+                <img src="../static/img/icons/cyoa.png" style="height:75px;">
+                <p style="padding:0; margin:0;">Code Your Own Adventure</p>
+            </div>
+ 
             <div style="display: inline-block; padding:0; margin:10px;" id="2d">
                 <img src="../static/img/icons/2d.png" style="height:75px;">
                 <p style="padding:0; margin:0;">2D Games</p>
             </div>
-            <div style="display: inline-block; padding:0; margin:10px;" id="3d">
-                <img src="../static/img/icons/3d.png" style="height:75px;">
-                <p style="padding:0; margin:0;">3D Animation</p>
+            <div style="display: inline-block; padding:0; margin:10px;" id="baa">
+                <img src="../static/img/icons/baa.png" style="height:75px;">
+                <p style="padding:0; margin:0;">Build-An-App</p>
             </div>
+            <div style="display: inline-block; padding:0; margin:10px;" id="3dgames">
+                <img src="../static/img/icons/3dgames.png" style="height:75px;">
+                <p style="padding:0; margin:0;">3D Games</p>
+            </div>
+            
             
             
             <!--
@@ -163,7 +173,7 @@
                         <hr>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-7 col-md-12 col-sm-12">
                     <p>Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
                     work with a partner to build their own clay characters, sets and props, develop their own 
                     script, shoot their movie scene, and then learn to edit and add sounds and special effects 
@@ -174,12 +184,12 @@
                         <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray;">Register!</a>
                     </div>
                 </div>
+                <div class="clearfix hidden-lg"></div>
+                <!--<hr class="hidden-lg col-md-11 col-sm-11 col-xs-11 col-centered">-->
 
-                <hr class="hidden-lg hidden-md hidden-sm col-xs-11 col-centered">
-
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="hidden-lg hidden-md hidden-sm col-xs-12"><BR></div>
-                    <video class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 col-centered" controls>
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="hidden-lg col-md-12 col-sm-12 col-xs-12"><BR></div>
+                    <video class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered" poster="../static/img/icons/clay.png" controls>
                         <source src="../static/img/lost_zebra.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>	
@@ -247,7 +257,7 @@
                         <hr>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-7 col-sm-6">
+                <div class="col-lg-7 col-md-12 col-sm-12">
                     <p>Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
                     work with a partner to build their own clay characters, sets and props, develop their own 
                     script, shoot their movie scene, and then learn to edit and add sounds and special effects 
@@ -259,12 +269,12 @@
                     </div>
                     
                 </div>
-
+                <div class="clearfix hidden-lg"></div>
                 <hr class="hidden-lg hidden-md hidden-sm col-xs-11 col-centered">
 
-                <div class="col-lg-5 col-md-5 col-sm-6">
+                <div class="col-lg-5 col-md-12 col-sm-12">
                     <div class="hidden-lg hidden-md hidden-sm col-xs-12"><BR></div>
-                    <video class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 col-centered" poster="../static/img/icons/clay.png" controls>
+                    <video class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 col-centered" controls>
                         <source src="../static/img/lost_zebra.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>	
@@ -309,6 +319,8 @@
 			<p>Copyright &copy; Byte Camp 2016</p>
 		</div>
 	</footer>
+    <!-- Bootstrap Dropdown Hover JS -->
+    <script src="../static/js/vendor/bootstrap-dropdownhover.min.js"></script>
 </body>
 
 </html>
