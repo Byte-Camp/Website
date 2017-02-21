@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  * THIS IS THE FULL WHATEVER
  */
- 
+
  /* Colours we want to keep
   * Nice blue: #217D9F
   * Background orange-yellow: #FFD83A
@@ -17,6 +17,7 @@
 UNIVERSAL STYLING
 ==============================================
 */
+@import "vert-carousel.css";
 
 body {
   width: 100%;
@@ -51,7 +52,7 @@ p {
 @media (min-width: 768px) {
   p {
     margin: 0 0 35px;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.6;
   }
 }
@@ -60,7 +61,7 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  
+
 }
 a:hover,
 a:focus {
@@ -332,7 +333,7 @@ INDEX STYLING
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  
+
 }
 .btn-circle:hover,
 .btn-circle:focus {
@@ -470,7 +471,7 @@ ul.banner-social-buttons {
 	left: 0px;
 	width: 100%;
 	padding-top: 20%;
-	height: 70px; 
+	height: 70px;
 	text-align: center;
 	font-size: 7vw;
 	font-weight: normal;
@@ -504,7 +505,7 @@ ul.banner-social-buttons {
 	-ms-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
- 
+
 .img-button-left:hover {
   -webkit-transform: rotate(-5deg);
      -moz-transform: rotate(-5deg);
@@ -603,12 +604,12 @@ LOGO ANIMATION
 */
 .hatch{
 	animation-name: hatch;
-	-webkit-animation-name: hatch;	
-	
-	animation-duration: 2s;	
+	-webkit-animation-name: hatch;
+
+	animation-duration: 2s;
 	-webkit-animation-duration: 2s;
 
-	animation-timing-function: ease-in-out;	
+	animation-timing-function: ease-in-out;
 	-webkit-animation-timing-function: ease-in-out;
 
 	transform-origin: 50% 100%;
@@ -630,18 +631,18 @@ LOGO ANIMATION
 	}
 	50% {
 		transform: rotate(-2deg) scaleY(1.1);
-	}	
+	}
 	65% {
 		transform: rotate(1deg) scaleY(0.95);
 		opacity: 1;
-	}	
+	}
 	80% {
 		transform: rotate(-1deg) scaleY(1);
-	}		
+	}
 	100% {
 		transform: rotate(0deg);
 		opacity: 1;
-	}									
+	}
 }
 
 @-webkit-keyframes hatch {
@@ -656,18 +657,18 @@ LOGO ANIMATION
 	}
 	50% {
 		-webkit-transform: rotate(-2deg) scaleY(1.1);
-	}	
+	}
 	65% {
 		-webkit-transform: rotate(1deg) scaleY(0.95);
 		opacity: 1;
-	}	
+	}
 	80% {
 		-webkit-transform: rotate(-1deg) scaleY(1);
-	}		
+	}
 	100% {
 		-webkit-transform: rotate(0deg);
 		opacity: 1;
-	}		
+	}
 }
 
 /*
@@ -678,17 +679,17 @@ PULL DOWN ANIMATION
 
 .pullDown{
 	animation-name: pullDown;
-	-webkit-animation-name: pullDown;	
+	-webkit-animation-name: pullDown;
 
-	animation-duration: 1.1s;	
+	animation-duration: 1.1s;
 	-webkit-animation-duration: 1.1s;
 
-	animation-timing-function: ease-out;	
-	-webkit-animation-timing-function: ease-out;	
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
 
 	transform-origin: 50% 0%;
 	-ms-transform-origin: 50% 0%;
-	-webkit-transform-origin: 50% 0%;	
+	-webkit-transform-origin: 50% 0%;
 }
 
 @keyframes pullDown {
@@ -707,14 +708,14 @@ PULL DOWN ANIMATION
 	}
 	100% {
 		transform: scaleY(0.98);
-	}				
+	}
 	80% {
 		transform: scaleY(1.01);
 	}
 	100% {
 		transform: scaleY(1);
 		opacity: 1;
-	}							
+	}
 }
 
 @-webkit-keyframes pullDown {
@@ -733,14 +734,14 @@ PULL DOWN ANIMATION
 	}
 	100% {
 		-webkit-transform: scaleY(0.98);
-	}				
+	}
 	80% {
 		-webkit-transform: scaleY(1.01);
 	}
 	100% {
 		-webkit-transform: scaleY(1);
 		opacity: 1;
-	}		
+	}
 }
 
 /*
@@ -751,17 +752,17 @@ stretchRight
 
 .stretchRight{
 	animation-name: stretchRight;
-	-webkit-animation-name: stretchRight;	
+	-webkit-animation-name: stretchRight;
 
-	animation-duration: 1.5s;	
+	animation-duration: 1.5s;
 	-webkit-animation-duration: 1.5s;
 
-	animation-timing-function: ease-out;	
-	-webkit-animation-timing-function: ease-out;	
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
 
 	transform-origin: 0% 0%;
 	-ms-transform-origin: 0% 0%;
-	-webkit-transform-origin: 0% 0%; 		
+	-webkit-transform-origin: 0% 0%;
 }
 
 @keyframes stretchRight {
@@ -780,14 +781,14 @@ stretchRight
 	}
 	100% {
 		transform: scaleX(0.98);
-	}				
+	}
 	80% {
 		transform: scaleX(1.01);
 	}
 	100% {
 		transform: scaleX(1);
 		opacity: 1;
-	}							
+	}
 }
 
 @-webkit-keyframes stretchRight {
@@ -806,14 +807,14 @@ stretchRight
 	}
 	100% {
 		-webkit-transform: scaleX(0.98);
-	}				
+	}
 	80% {
 		-webkit-transform: scaleX(1.01);
 	}
 	100% {
 		-webkit-transform: scaleX(1);
 		opacity: 1;
-	}		
+	}
 }
 
 .camp-toggle{
@@ -874,6 +875,10 @@ a.anchor {
 .camp-selection-container img{
     transition: 0.5s;
     cursor: pointer;
+}
+
+.camp-selection-container p{
+  cursor: pointer;
 }
 
 .camp-info{
