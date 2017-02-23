@@ -110,14 +110,17 @@
     width: 12.5%;
     height: 50px;
     border:none;
-    background-color: orangered;
+    background-color: #337AB7;
+    color: white;
+    transition: 0.25s;
 }
 .carousel-indicators .active{
-    background-color: orangered;
+    background-color: #337AB7;
+    box-shadow: 0px 3px 4px gray;
 }
 
 .carousel-indicators li:hover{
-    box-shadow: 0px 0px 5px red;
+    box-shadow: 0px 3px 4px gray;
 }
 
 .carousel-indicators{
