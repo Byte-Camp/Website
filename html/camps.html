@@ -21,6 +21,9 @@
     <!-- Theme CSS -->
     <link href="../static/css/main.css" rel="stylesheet">
     <link href="../static/css/vendor/animate.css" rel="stylesheet">
+    <link href="../static/css/vendor/aos.css" rel="stylesheet">
+    <script src="../static/js/vendor/aos.js"></script>
+
 
     <style>
       .lilclayguy{
@@ -36,9 +39,10 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <script>AOS.init();</script>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px darkkhaki;">
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px darkkhaki;" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
                 <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
@@ -92,9 +96,9 @@
     <!-- Intro Header -->
     <div id="header">
 
-        <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" style="background: url(../static/img/banners/overshoulder-music-fade.png) no-repeat top center scroll;">
+        <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" style="background: url(../static/img/banners/overshoulder-music-fade-blue.png) no-repeat top center scroll;">
 			<div class="col-lg-12">
-				<h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">CAMPS</h1>
+				<h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="250">CAMPS</h1>
             </div>
         </div>
     </div>
@@ -102,22 +106,23 @@
     <!-- A Day in the life of a Byte Camper -->
     <a id="dayinthelife" class="anchor"></a>
     <div class="container-fluid" style="background:url(../static/img/controller-tile.png) top left fixed;background-color:#FFDF70;">
-        <div class="col-lg-10 col-sm-10 col-centered" style="background-color:white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-bottom: 50px; margin-top: 50px;padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="col-lg-10 col-sm-10 col-centered" style="background-color:white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-bottom: 50px; margin-top: 50px;padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);" data-aos="fade-up" data-aos-duration="750" data-aos-once="true" data-aos-delay="500" data-aos-anchor:"#header">
             <div class="text-center">
                 <h1>A Day in the Life of a Byte Camper</h1>
-
+                <!-- Indicators -->
+                  <ol class="carousel-indicators" >
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="0" class="active"><p>9:00 am</p></li>
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="1"><p>10:00 am</p></li>
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="2"><p>11:00 am</p></li>
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="3"><p>12:00 pm</p></li>
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="4"><p>1:00 pm</p></li>
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="5"><p>2:00 pm</p></li>
+                    <li data-target="#day-in-the-life-carousel" data-slide-to="6"><p>3:00 pm</p></li>
+                  </ol>
                 <div> <!-- wrap @img width -->
                   <div id="day-in-the-life-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
 
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators" >
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="1"></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="2"></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="3"></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="4"></li>
-                      </ol>
-
+                      
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner vertical" role="listbox">
                           <div class="item active">
@@ -176,7 +181,7 @@
                         </div>
                     </div>
 
-                    <!-- Controls -->
+                    <!-- Controls
                     <a class="left carousel-control" href="#day-in-the-life-carousel" role="button" data-slide="prev">
                       <span class="fa fa-chevron-left" aria-hidden="true"></span>
                       <span class="sr-only">Previous</span>
@@ -185,7 +190,7 @@
                       <span class="fa fa-chevron-right" aria-hidden="true"></span>
                       <span class="sr-only">Next</span>
                     </a>
-
+                    -->
                   </div>
                 </div>
 
@@ -244,37 +249,19 @@
 -->
         </div>
 
-        <div class="camps-content container col-lg-10 col-sm-10 col-centered boxokay" style="background-color: white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <div class="camps-content container col-lg-8 col-sm-10 col-centered boxokay" style="background-color: white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
             <!-- Claymation -->
-            <div class="camp-info" id="camp-info-clay">
+            <div class="camp-info row" id="camp-info-clay">
                 <div id="clay-header">
                     <div class="text-center">
                         <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
                         <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 50px;">Claymation</h1>
                         <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
-                        <!--<hr>-->
+                        <hr>
                     </div>
                 </div>
-                <div class='row'>
-                  <hr style="margin-bottom:0px;">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <p style="margin:5px; padding: 5px;">
-                          <strong>Ages:</strong> 9 - 12 yrs old<br>
-                          <strong>Length:</strong> 4/5 Days<br>
-                          <strong>Cost:</strong> $200.00 - $275.00
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <p style="margin:5px; padding: 5px;">
-                          <strong>Recommended Prereq:</strong> N/A<br>
-                          <strong>Software:</strong> Animator DV Simple, Sony Vegas<br>
-                        </p>
-                    </div>
-                    <div class="clearfix" style=""></div>
-                  <hr style="margin-top:0px;">
-                </div>
-                <div class='row'>
-                  <div class="col-lg-6 col-md-6 col-sm-6">
+                
+                  <div class="col-lg-7 col-md-6 col-sm-6">
                       <p>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
                       work with a partner to build their own clay characters, sets and props, develop their own
                       script, shoot their movie scene, and then learn to edit and add sounds and special effects
@@ -284,15 +271,34 @@
 
                   <hr class="hidden-lg hidden-md hidden-sm col-xs-11 col-centered">
 
-                  <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="col-lg-5 col-md-6 col-sm-6">
                       <div class="hidden-lg hidden-md hidden-sm col-xs-12"><BR></div>
                       <video class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 col-centered" poster="../static/img/clay-poster.png" controls>
                           <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
                           Your browser does not support the video tag.
                       </video>
-
                   </div>
                 </div>
+                
+                <div class='row'>
+                  <hr style="margin-bottom:0px;">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <p style="margin:5px; padding: 5px; font-family: 'Montserrat'; font-size: 18px;">
+                          <strong>Ages:</strong> 9 - 12 yrs old<br>
+                          <strong>Length:</strong> 4/5 Days<br>
+                          <strong>Cost:</strong> $200.00 - $275.00
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <p style="margin:5px; padding: 5px; font-family: 'Montserrat'; font-size: 18px;">
+                          <strong>Recommended Prereq:</strong> N/A<br>
+                          <strong>Software:</strong> Animator DV Simple, Sony Vegas<br>
+                        </p>
+                    </div>
+                    <div class="clearfix" style=""></div>
+                  <hr style="margin-top:0px;">
+                </div>
+                <div class='row'>
                 <div class='row'>
                   <div class="text-center">
                       <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray; display:inline-block;"><i class="fa fa-calendar" aria-hidden="true"></i> Check the Calendar!</a>
@@ -405,6 +411,7 @@
     <script src="../static/js/vendor/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../static/js/vendor/bootstrap.min.js"></script>
+    
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!-- Theme JavaScript -->
