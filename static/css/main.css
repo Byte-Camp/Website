@@ -477,6 +477,7 @@ ul.banner-social-buttons {
 	font-weight: normal;
 	/* adjust top up half the height of a single line */
     margin-top: -0.5em;
+    transition: all 0.2s ease-in-out;
 }
 
 .index-btn-img{

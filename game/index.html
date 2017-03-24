@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Dragger</title>
+	
+	<link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="icon" href="assets/launcher.png" type="image/png" />
+	<link rel="manifest" href="manifest.json" />
+	<style>
+	
+	.banner-img{
+                width: 50%;
+                max-width: 700px;
+                padding-top: 3%;
+                display: block;
+                margin: auto;
+                animation-name: logo-in;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+                animation-delay: 1s;
+                opacity: 0;
+            }
+
+            .fadeOut{
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            @keyframes logo-in {
+                100%{
+                    opacity: 1;
+                }
+            }
+			
+			</style>
+	<script type="text/javascript" src="js/lib/phaser.min.js"></script>
+	<script type="text/javascript" src="js/lib/mt.helper.js"></script>
+	<script type="text/javascript" src="js/lib/mt.data.js"></script>
+	<script>
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	<script type="text/javascript" src="js/state/boot.js"></script>
+	<script type="text/javascript" src="js/state/load.js"></script>
+	<script type="text/javascript" src="js/state/menu.js"></script>
+	<script type="text/javascript" src="js/state/play.js"></script>
+	<script type="text/javascript" src="js/state/demo.js"></script>
+	
+</head>
+<body>
+	<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align:center;">
+		<img src="assets/website-logo.png" alt="Byte Camp Logo" class='banner-img' style='z-index: 100;'>
+	</div>
+</body>
+</html>
