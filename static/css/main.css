@@ -279,7 +279,9 @@ img::-moz-selection {
 INDEX STYLING
 ==============================================
 */
-
+body{
+    overflow-x: hidden;
+}
 /* Main page Header */
 .intro{
   display: table;
@@ -287,12 +289,12 @@ INDEX STYLING
   height: auto;
   padding: 100px 0;
   text-align: center;
-  background-color: black;
+  /*background-color: black;
   background: url(../img/website-banner-comp.png) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover;*/
 }
 
 .intro .intro-body{

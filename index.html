@@ -119,6 +119,29 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
+                    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+                        <source src="web video 2.mp4" type="video/mp4">
+                    </video>
+                    <div id="videocover" style='z-index: -99; background-color: #FFEBA4; opacity: 0.4;'>
+                    </div>
+                    <style media="screen">
+                        video#bgvid, #videocover{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            min-width: 100%;
+                            min-height: 100%;
+                            width: auto;
+                            height: auto;
+                            z-index: -100;
+                            -ms-transform: translateX(-50%) translateY(-50%);
+                            -moz-transform: translateX(-50%) translateY(-50%);
+                            -webkit-transform: translateX(-50%) translateY(-50%);
+                            transform: translateX(-50%) translateY(-50%);
+                            background: url(polina.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    </style>
                     <div class="col-md-8 col-md-offset-2">
                         <img src="static/img/website-logo.png" class="animate-in hatch delay05" style="width:80%"/>
                         <div class="intro-text animate-in hatch delay1">
