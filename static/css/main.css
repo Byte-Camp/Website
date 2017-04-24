@@ -905,11 +905,13 @@ a.anchor {
 
 .camps-content:hover{
     transform:scale(1.05) rotate(2deg);
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .camp-text{
     display:inline-block;
-    transition: 0.1s;
+    transition: 1s;
 }
 
 .camp-text:hover{
