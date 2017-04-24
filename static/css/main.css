@@ -892,6 +892,29 @@ a.anchor {
     height: 100px !important;
 }
 
-.boxokay{
-    border-bottom-right-radius: 60px 5px;
+.camps-content{
+    background-color: white;
+    background-image: url('../img/textures/wrinkledlight.png');
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.camps-content:hover{
+    transform:scale(1.05) rotate(2deg);
+}
+
+.camp-text{
+    display:inline-block;
+    transition: 0.1s;
+}
+
+.camp-text:hover{
+    cursor: default;
+    transform:scale(1.1);
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+    color:red;
 }

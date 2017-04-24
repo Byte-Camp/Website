@@ -31,7 +31,7 @@ $(document).ready(function() {
         });
     });
 
-
+/*
     $('.camp-info').hide();
     $('#camp-info-clay').show();
 
@@ -67,6 +67,7 @@ $(document).ready(function() {
         }
 
     });
+    */
 
     /* Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a').click(function() {
