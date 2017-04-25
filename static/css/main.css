@@ -901,6 +901,7 @@ a.anchor {
     margin-bottom: 10px;
     padding: 30px;
     transition: 0.3s;
+    cursor: default;
 }
 
 .camps-content:hover{
@@ -909,14 +910,7 @@ a.anchor {
     z-index: 1000;
 }
 
-.camp-text{
-    display:inline-block;
-    transition: 1s;
-}
-
-.camp-text:hover{
-    cursor: default;
-    transform:scale(1.1);
-    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-    color:red;
+.modal-content{
+    background-image: url('../img/textures/wrinkledlight.png');
+    border-radius:0px;
 }

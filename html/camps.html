@@ -120,7 +120,7 @@
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Learn stop motion animation and movie editing!</p>
-                            <a class="btn btn-primary btn-lg" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
                     </div>
@@ -171,9 +171,9 @@
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
                             <img src="../static/img/icons/coding.png" style="display:inline; width: 75px;">
-                            <h1 class="text-center camp-text" style="line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 25px; margin-bottom:0;">Introduction to Coding</h1>
+                            <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 25px; margin-bottom:0;">Introduction to Coding</h1>
                             <hr style='margin:5px'>
-                            <h4 style='margin-bottom: 0px'><span class='camp-text'>9-12 yrs,</span> <span class='camp-text'>$200-$280,</span> <span class='camp-text'>4-5 full days</span></h4>
+                            <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Learn real coding skills by making games in Scratch!</p>
                             <a class="btn btn-primary btn-lg" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
@@ -185,6 +185,60 @@
             </div>  <!-- End Row -->
 
         </div>  <!-- End container -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="text-center">
+                    <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 50px;">Claymation</h1>
+                    <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                    <p style='margin:0'>9-12 yrs, $200-$280, 4-5 full days</p>
+                </div>
+              </div>
+              <div class="modal-body">
+                  <!--<div class="row">
+                      <div class="col-xs-12" style='margin-bottom:20px;'>
+                          <p style='font-size: 20px'>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
+                          work with a partner to build their own clay characters, sets and props, develop their own
+                          script, shoot their movie scene, and then learn to edit and add sounds and special effects
+                          to complete the whole project. Don't worry parents, there will be plenty of time devoted to
+                          outdoor games and activities!</p>
+                          <a class="btn btn-primary btn-lg" style="display:block; margin: auto; width: 300px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                      </div>
+                      <video class="col-xs-12" poster="../static/img/clay-poster.png" controls>
+                          <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video>
+
+                  </div>-->
+
+                  <div class="row">
+                      <video class="col-xs-12 col-md-6" poster="../static/img/clay-poster.png" controls>
+                          <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video>
+                      <div class="col-xs-12 col-md-6">
+                          <p style='font-size: 20px;'>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
+                          work with a partner to build their own clay characters, sets and props, develop their own
+                          script, shoot their movie scene, and then learn to edit and add sounds and special effects
+                          to complete the whole project. Don't worry parents, there will be plenty of time devoted to
+                          outdoor games and activities!</p>
+                          <a class="btn btn-primary btn-lg" style="display:block; margin: auto; width: 200px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                      </div>
+
+                 </div>
+              </div>
+              <!--<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
+            </div>
+          </div>
+        </div>
 
         </div>
 
