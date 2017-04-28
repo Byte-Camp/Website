@@ -41,33 +41,50 @@
     <link href="../static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet"> 
 
     <!-- Theme CSS -->
     <link href="../static/css/main.css" rel="stylesheet">
     <!--<link href="../static/css/side-nav.css" rel="stylesheet">-->
+    
+    <style>
+        #res-nav {
+            background: #BA86CE; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(left, #FFDF70 , #bf80ff); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #FFDF70, #bf80ff); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #FFDF70, #bf80ff); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #FFDF70 , #bf80ff); /* Standard syntax */
+        }
+
+        #res-foot {
+            background: #FFDF70; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#f2e6ff , #FFDF70); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#f2e6ff, #FFDF70); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#f2e6ff, #FFDF70); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#f2e6ff , #FFDF70); /* Standard syntax */
+        }
+    </style>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="switchCamp('default')">
     
     <script>AOS.init();</script>
-
+    
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+    <nav id="res-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px darkkhaki;" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src="../static/img/btn_home_invert.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
+                <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
                 <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
                     <span class="light">Byte Camp</span>
                 </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                
             </div>
 
-             <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
@@ -92,7 +109,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu navbar-custom">
-                            <li><a href="about_us.html#what">What is Byte Camp?</a></li>
+                            <li><a href="about_us.html#what">Who are We?</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="about_us.html#who">Contact Us</a></li>
                             <li role="separator" class="divider"></li>
@@ -108,30 +125,33 @@
 
     <div id="header">
         <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
-            <div class="col-lg-12">
-                <h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Resources</h1>
+			<div class="col-lg-12">
+				<h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Resources</h1>
             </div>
         </div>
     </div>
-    
+	
     <!-- HERE IS ALL THE RESOURCE INFO -->
     <a id="resources" class="anchor"></a>
-    <div id="resources-section" class="container content-section accent-section" style="padding:0px; padding-top:50px;">
-        <h1  class="text-center">Pick Your Camp!</h1>
-        <div class="camp-selection-container" style="text-align:center;">
-            <img src="../static/img/icons/2dtab.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/clay.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/coding.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/mv.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
+    <div id="resources-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; background-color:#f2e6ff;">
+    	<h1  class="text-center">Pick Your Camp!</h1>
+    	<div class="camp-selection-container col-lg-2 col-md-3" style="text-align:center;">
+
+            <img src="../static/img/icons/2dtab.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;" title='2D Animation'>2D Animation</p>
+            <img src="../static/img/icons/clay.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">Claymation</p>
+            <img src="../static/img/icons/coding.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">Intro to Code</p>
+            <img src="../static/img/icons/mv.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">Music Video</p>
+            <img src="../static/img/icons/2d.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">2D Games</p>
             <div class="clearfix hidden-lg"></div>
-            <img src="../static/img/icons/3d.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/3dgame.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/baa.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
+            
+            <img src="../static/img/icons/3d.png" style="height:40px; margin: 10px;" title="3D Animation">
+            <img src="../static/img/icons/3dgames.png" style="height:40px; margin: 10px;" title="3D Game Design"> <p style="padding:0; margin:0;">Blender</p>
+            
+            <img src="../static/img/icons/cyoa.png" style="height:40px; margin: 10px;" title="Code Your Own Adventure">
+            <img src="../static/img/icons/baa.png" style="height:40px; margin: 10px;" title="Build An App"> <p style="padding:0; margin:0;">HTML/JS/CSS</p>
         </div>
         
-        <div class="camps-content container col-lg-8 col-sm-8 col-centered" style="background-color:white; margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+        <div class="camps-content container col-lg-8 col-sm-8 col-md-offset-2" style="background-color:white; margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
             <!-- Default -->
             <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="default">
                 <h1 class="text-center">Resources</h1>
@@ -139,7 +159,7 @@
                 <p class="text-center">Please choose your camp on the left!</p>
             </div>
             
-            
+			
             <!-- Claymation -->
             <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-clay">
                 <div class="text-center">
@@ -174,7 +194,7 @@
             
             <!-- Music Video -->
             <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-mv">
-                <div class="text-center">
+				<div class="text-center">
                     <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
                     <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Music Video</h1>
                     <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
@@ -194,39 +214,9 @@
         </div>
     </div>
     
-    <!-- HERE IS THE SWEET SIDEBAR YO -->
-     <!-- Sidebar
-    <div id="wrapper">
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li><a href="#" value="claymation" class="sidebar-text" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" value="musicvideo" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
-                </ul>
-            </div>
-        </div> -->
-    <!-- /#sidebar-wrapper
-            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav" style="font-size: 30px;">
-                    <li class="sidebar-item"><a onclick="switchCamp('claymation')" style="line-height: 50px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('musicvideo')" style="line-height: 50px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('2dgames')" style="line-height: 50px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('3danimation')" style="line-height: 50px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('3dgames')" style="line-height: 50px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('baa')" style="line-height: 50px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('2danimation')" style="line-height: 50px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
-                </ul>
-            </div> -->
-    
-
-
     <!-- Footer -->
-    <footer data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-        
+    <footer id="res-foot">
+        <br><br><br>
         <div class="container text-center">
             <img src="../static/img/website-logo.png" style="width:30%"/>
             <p>Copyright &copy; Byte Camp 2016</p>
