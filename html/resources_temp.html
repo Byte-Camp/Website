@@ -35,7 +35,7 @@
     <title>Resources - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="glyph_requirement/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -62,6 +62,22 @@
             background: -o-linear-gradient(#f2e6ff, #FFDF70); /* For Opera 11.1 to 12.0 */
             background: -moz-linear-gradient(#f2e6ff, #FFDF70); /* For Firefox 3.6 to 15 */
             background: linear-gradient(#f2e6ff , #FFDF70); /* Standard syntax */
+        }
+
+        .well {
+            padding:5px;
+        }
+        .list-res {
+            margin:0px;
+        }
+        .list-res a, li {
+            text-align:left;
+        }
+        .list-res a:hover {
+            background-color:#e6e6e6;
+        }
+        .link {
+            color: #0060B6;
         }
     </style>
 
@@ -130,90 +146,135 @@
             </div>
         </div>
     </div>
-	
-    <!-- HERE IS ALL THE RESOURCE INFO -->
-    <a id="resources" class="anchor"></a>
-    <div id="resources-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; background-color:#f2e6ff;">
-    	<h1  class="text-center">Pick Your Camp!</h1>
-    	<div class="camp-selection-container col-lg-2 col-md-3" style="text-align:center;">
 
-            <img src="../static/img/icons/2dtab.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;" title='2D Animation'>2D Animation</p>
-            <img src="../static/img/icons/clay.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">Claymation</p>
-            <img src="../static/img/icons/coding.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">Intro to Code</p>
-            <img src="../static/img/icons/mv.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">Music Video</p>
-            <img src="../static/img/icons/2d.png" style="height:75px; margin: 10px;"> <p style="padding:0; margin:0;">2D Games</p>
-            <div class="clearfix hidden-lg"></div>
-            
-            <img src="../static/img/icons/3d.png" style="height:40px; margin: 10px;" title="3D Animation">
-            <img src="../static/img/icons/3dgames.png" style="height:40px; margin: 10px;" title="3D Game Design"> <p style="padding:0; margin:0;">Blender</p>
-            
-            <img src="../static/img/icons/cyoa.png" style="height:40px; margin: 10px;" title="Code Your Own Adventure">
-            <img src="../static/img/icons/baa.png" style="height:40px; margin: 10px;" title="Build An App"> <p style="padding:0; margin:0;">HTML/JS/CSS</p>
-        </div>
-        
-        <div class="camps-content container col-lg-8 col-sm-8 col-md-offset-2" style="background-color:white; margin-top: 30px; margin-bottom: 150px; padding: 30px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
-            <!-- Default -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="default">
-                <h1 class="text-center">Resources</h1>
-                <hr>
-                <p class="text-center">Please choose your camp on the left!</p>
-            </div>
-            
-			
-            <!-- Claymation -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-clay">
-                <div class="text-center">
-                    <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
-                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Claymation</h1>
-                    <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
-                </div>
-                <hr>
-                <h3 class="text-center" style="margin: 25px;">Software</h3>
-                <p class="text-center" style="margin: 0px; font-size: 24px;">Download your free version of AnimatorDV here:</p>
-                <a class="text-center" href="http://animatordv.com/download_free.php">
-                    <img src="../static/img/animatorDV.jpg" style="display: block; margin: auto;">
-                    <p>ANIMATOR DV</p>
-                </a>
-                <br>
-                <h2 class="text-center" style="margin: 25px;">Documents</h2>
-                <div class="text-center">
-                    <a href="../static/docs/Storyboards.pdf">
-                        <div class="doc-container">
-                            <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                            <p class="text-center">Storyboards</p>
-                        </div>
-                    </a>
-                    <a href="../static/docs/Scripts.pdf"> 
-                        <div class="doc-container">
-                            <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                            <p class="text-center">Scripts</p>
-                        </div>
-                    </a>
+    <div id="resources-section" class="container text-center accent-section" style="background-color:#f2e6ff;"> 
+        <div class="row col-sm-10 col-centered accent-section" style="text-align:center; background:url(../static/img/controller-tile.png) top left fixed;">
+            <h1  class="text-center" style="padding:50px;">Camp Resources</h1>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" >
+                <div style="background-color:white; margin: 5px; padding: 10px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+                    <img src="../static/img/banners/webdev.png" style="width:100%"/>
+                    
+                    <h4 style="text-align:left; margin:10px;"><img class="glyphicon" src="../static/img/htmljscss-logo.png" style="height:50px;"></span><span class="link"> HTML/JS/CSS </span></h4>
+                    <hr style="border:2px solid #f2f2f2; margin-top:0px">
+                    
+                    <div style="text-align:left; font-size:20px">Filter By Camp:</div>
+
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group checked-list-box list-res">
+                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> Cody Your Own Adventure </li>
+                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Build An App </li>
+                        </ul>
+                    </div>
+
+
+                    <div style="text-align:left; font-size:20px">Resources:</div>
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group list-res">
+                             <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-download-alt"></span> <span class="link"> Download Software </span> <span class="badge" style="font-family:courier;">1</span>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-education"></span> <span class="link"> Learning Resources </span> <span class="badge" style="font-family:courier;">4</span>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-file"></span> <span class="link"> Beginner's Guide </span> <span class="badge" style="font-family:courier;">1</span>
+                            </a>
+                           <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-film"></span> <span class="link"> Videos Tutorials </span> <span class="badge" style="font-family:courier;">8</span>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Music Video -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-mv">
-				<div class="text-center">
-                    <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
-                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Music Video</h1>
-                    <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" >
+                <div style="background-color:white; margin: 5px; padding: 10px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+                    <img src="../static/img/banners/blender.png" style="width:100%"/>
+                    
+                    <h4 style="text-align:left; margin:10px;"><img class="glyphicon" src="../static/img/blender-logo.png" style="height:50px;"></span><span class="link"> Blender </span></h4>
+                    <hr style="border:2px solid #f2f2f2; margin-top:0px">
+                    
+                    <div style="text-align:left; font-size:20px">Filter By Camp:</div>
+
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group checked-list-box list-res">
+                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> 3D Animation </li>
+                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> 3D Game Design </li>
+                        </ul>
+                    </div>
+
+
+                    <div style="text-align:left; font-size:20px">Resources:</div>
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group list-res">
+                             <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-download-alt"></span> <span class="link"> Download Software </span> <span class="badge" style="font-family:courier;">1</span>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-education"></span> <span class="link"> Learning Resources </span> <span class="badge" style="font-family:courier;">4</span>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-file"></span> <span class="link"> Beginner's Guide </span> <span class="badge" style="font-family:courier;">1</span>
+                            </a>
+                           <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-film"></span> <span class="link"> Videos Tutorials </span> <span class="badge" style="font-family:courier;">8</span>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
-                <hr>
-                <h2 class="text-center" style="margin: 25px;">Software</h2>
-                <p class="text-center" style="margin: 0px;">Download the free LMMS software here:</p>
-                <a class="text-center" href="https://lmms.io/download/">
-                    <img src="../static/img/lmms.png" height="100px" style="display: block; margin: auto;">
-                    <p>LMMS</p>
-                </a>
-                <br>
-                <h2 class="text-center" style="margin: 25px;">Documents</h2>
-                <p>There are no documents available yet! Please request any documents you would like here.</p>
             </div>
-            
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" >
+                <div style="background-color:white; margin: 5px; padding: 10px; border-radius: 15px; box-shadow: 0px 5px 10px black;">
+                    <img src="../static/img/banners/tab.png" style="width:100%"/>
+                    
+                    <h4 style="text-align:left; margin:10px;"><img class="glyphicon" src="../static/img/flipaclip-logo.png" style="height:50px;"></span><span class="link"> Flip-A-Clip </span></h4>
+                    <hr style="border:2px solid #f2f2f2; margin-top:0px">
+                    
+                    <div style="text-align:left; font-size:20px">Filter By Camp:</div>
+
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group checked-list-box list-res">
+                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> 2D Tablet Animation </li>
+                        </ul>
+                    </div>
+
+
+                    <div style="text-align:left; font-size:20px">Resources:</div>
+                    <div class="well" style="max-height: 300px;overflow: auto;">
+                        <ul class="list-group list-res">
+                             <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-download-alt"></span> <span class="link"> Download Software </span> <span class="badge" style="font-family:courier;">1</span>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-education"></span> <span class="link"> Learning Resources </span> <span class="badge" style="font-family:courier;">4</span>
+                            </a>
+                            <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-file"></span> <span class="link"> Beginner's Guide </span> <span class="badge" style="font-family:courier;">1</span>
+                            </a>
+                           <a href="#" class="list-group-item">
+                                <span class="glyphicon glyphicon-film"></span> <span class="link"> Videos Tutorials </span> <span class="badge" style="font-family:courier;">8</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+    <script>
+        $( ".glyphicon-check" ).click(function() {
+            if (this.style.color == "green"){
+                $(this).removeClass("glyphicon-check");
+                $(this).addClass("glyphicon-unchecked");
+                this.style.color = "";
+            }
+            else{
+                $(this).removeClass("glyphicon-unchecked");
+                $(this).addClass("glyphicon-check");
+                this.style.color = "green";
+            }
+        });
+    </script>
     <!-- Footer -->
     <footer id="res-foot">
         <br><br><br>
