@@ -35,14 +35,14 @@ $(document).ready(function() {
     //$('.camp-info').hide();
     //$('#camp-info-clay').show();
 
-    $('.camp-selection-container img').click(function(e) {
+    /*$('.camp-selection-container img').click(function(e) {
         var src = $(e.target).attr('src');
         var camp = src.substring(src.lastIndexOf('/') + 1, src.length - 4);
         $('.camp-info').hide();
         $('#camp-info-' + camp).show();
         $('.camp-selection-container img').css('height', '75px');
         $(e.target).css('height', '100px');
-    });
+    });*/
 
     $('#btn-group-age').click(function(e){
 
