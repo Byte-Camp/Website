@@ -119,9 +119,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <video playsinline autoplay muted loop poster="website-banner-comp.png" id="bgvid">
-                        <source src="web video.webm" type="video/webm">
-                        <source src="web video.mp4" type="video/mp4">
+                    <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop poster="website-banner-comp.png" id="bgvid">
                     </video>
                     <div id="videocover" style='z-index: -99; background-color: #FFEBA4; opacity: 0.4;'></div>
                     <style media="screen">
@@ -142,6 +140,27 @@
                             background-size: cover;
                         }
                     </style>
+                    <script type="text/javascript">
+                        function detectmob() {
+
+                            if( navigator.userAgent.match(/Android/i)
+                                || navigator.userAgent.match(/webOS/i)
+                                || navigator.userAgent.match(/iPhone/i)
+                                || navigator.userAgent.match(/iPad/i)
+                                || navigator.userAgent.match(/iPod/i)
+                                || navigator.userAgent.match(/BlackBerry/i)
+                                || navigator.userAgent.match(/Windows Phone/i)
+                            ){
+
+                                // If mobile, then we do all this
+
+                            }
+                            else {
+                                // If not mobile then do this
+                                document.getElementById("bgvid").innerHTML = '<source src="web video.webm" type="video/webm"><source src="web video.mp4" type="video/mp4">>';
+                            }
+                        } // detectmob
+                    </script>
                     <div class="col-md-8 col-md-offset-2">
                         <img src="static/img/website-logo.png" class="animate-in hatch delay05" style="width:80%"/>
                         <div class="intro-text animate-in hatch delay1">
@@ -233,45 +252,6 @@
     </section>
 
 
-    <!-- Calendar Section
-	<section id="calendar" class="content-section text-center" style="padding-top:0; padding-left:0;">
-		<div class="accent-section calendar-section">
-			<div class="container">
-			<h2>Calendar</h2>
-				<div class="col-lg-12">
-					<iframe src="http://bytecamp.ca/" id="iFrame1" style="width:100%; height:1350px;" frameBorder="0" >Your browser doesn't support our embedded calendar! Please go to the calendar page.</iframe>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-    <!-- Contact Section
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Byte Camp</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-	-->
-
-    <!-- Map Section
-    <div id="map"></div>
-	-->
 
     <!-- Footer -->
     <footer style='margin-top:100px;'>
