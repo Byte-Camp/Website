@@ -24,25 +24,35 @@
     <link href="../static/css/vendor/aos.css" rel="stylesheet">
     <script src="../static/js/vendor/aos.js"></script>
 
-
     <style>
-      .lilclayguy{
-        height: 50px;
-        transition: 1s;
-        cursor: help;
-      }
-      .lilclayguy:hover{
-        height: 100px;
-      }
-    </style>
+        .lilclayguy{
+            height: 50px;
+            transition: 1s;
+            cursor: help;
+        }
+        .lilclayguy:hover{
+            height: 100px;
+        }
+        #camps-nav {
+            background: #Ffdf70; /* For browsers that do not support gradients */
+        }
+        #camps-foot {
+            background: #FFDF70; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#ff5964 , #FFDF70); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#ff5964, #FFDF70); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#ff5964, #FFDF70); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#ff5964, #FFDF70); /* Standard syntax */
+        }
 
+
+    </style>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script>AOS.init();</script>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px darkkhaki;" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+    <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
                 <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
@@ -73,7 +83,7 @@
 			                <li role="separator" class="divider"></li>
 			                <li><a href="#">Best Of's</a></li>
 			                <li role="separator" class="divider"></li>
-			                <li><a href="http://bytecamp.wixsite.com/bytecampresources">Resources</a></li>
+			                <li><a href="resources.html">Resources</a></li>
 			            </ul>
 		            </li>
                     <li class="dropdown">
@@ -105,7 +115,15 @@
 
     <!-- Program select -->
     <a id="programs" class="anchor"></a>
-    <div id="programs-section" class="content-section accent-section" style="padding-top:50px;">
+    <div id="programs-section" class="content-section accent-section" style="padding:0px; padding-top:50px; background-color:#ff5964;">
+    	<!--<h1  class="text-center">Camp Descriptions</h1>-->
+        <div class="text-center" style="margin-bottom:20px;">
+            <div class="btn-group btn-group-lg" role="group" id="btn-group-age" aria-label="...">
+                <button type="button" class="btn btn-primary" id="allyrbutton">ALL</button>
+                <button type="button" class="btn btn-primary" id="9yrbutton">9-12 years</button>
+                <button type="button" class="btn btn-primary" id="11yrbutton">11-14 years</button>
+            </div>
+        </div>
 
         <div class="container">
             <!-- ROW 1 -->
@@ -120,7 +138,7 @@
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Learn stop motion animation and movie editing!</p>
-                            <a class="btn btn-primary btn-lg" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
                     </div>
@@ -171,9 +189,9 @@
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
                             <img src="../static/img/icons/coding.png" style="display:inline; width: 75px;">
-                            <h1 class="text-center camp-text" style="line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 25px; margin-bottom:0;">Introduction to Coding</h1>
+                            <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 25px; margin-bottom:0;">Introduction to Coding</h1>
                             <hr style='margin:5px'>
-                            <h4 style='margin-bottom: 0px'><span class='camp-text'>9-12 yrs,</span> <span class='camp-text'>$200-$280,</span> <span class='camp-text'>4-5 full days</span></h4>
+                            <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Learn real coding skills by making games in Scratch!</p>
                             <a class="btn btn-primary btn-lg" style="margin: 10px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
@@ -186,160 +204,72 @@
 
         </div>  <!-- End container -->
 
-        </div>
-
-
-        <img src='..\static\img\icons\clay.png' class='lilclayguy hidden-xs' style='position: fixed; bottom: 10px; right: 10px;'/>
-
-
-        <!-- A Day in the life of a Byte Camper -->
-        <a id="dayinthelife" class="anchor"></a>
-        <div class="container-fluid" style="background:url(../static/img/controller-tile.png) top left fixed;background-color:#FFDF70;">
-            <div class="col-lg-10 col-sm-10 col-centered" style="background-color:white; background-image: url('../static/img/textures/wrinkledlight.png'); margin-bottom: 50px; margin-top: 50px;padding: 30px; border-radius: 2px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="text-center">
-                    <h1>A Day in the Life of a Byte Camper</h1>
-                    <!-- Indicators -->
-                      <ol class="carousel-indicators" >
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="0" class="active"><p>9:00 am</p></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="1"><p>10:00 am</p></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="2"><p>11:00 am</p></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="3"><p>12:00 pm</p></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="4"><p>1:00 pm</p></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="5"><p>2:00 pm</p></li>
-                        <li data-target="#day-in-the-life-carousel" data-slide-to="6"><p>3:00 pm</p></li>
-                      </ol>
-                    <div> <!-- wrap @img width -->
-                      <div id="day-in-the-life-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
-
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner vertical" role="listbox">
-                              <div class="item active">
-                                <div class="col-lg-6 ">
-                                    <img src="../static/img/banners/3D-girl.jpg" alt="First Slide" class='carousel-img'>
-                                </div>
-                                <div class='col-lg-6'>
-                                    <h2>9:00 am - Arrival</h2>
-                                    <p>Camp is now in session! The campers are in the room and the instructors are
-                                        going over the plan for the day.</p>
-                                    <p>We'll do some work on our projects for about an hour while the leaders interject with lessons and tips!</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                              <div class="col-lg-6">
-                                  <img src="../static/img/banners/dodgeball-computer.jpg" alt="First Slide" class='carousel-img'>
-                              </div>
-                              <div class='col-lg-6'>
-                                  <h2>10:00 am - Break</h2>
-                                  <p>It's time for a break! Let's head outside for some games! Camoflauge, dodgeball, ninja, who knows?</p>
-                                  <p>All outdoor breaks are minimum 45 minutes and happen rain or shine - make sure to check the weather!</p>
-                              </div>
-                            </div>
-                            <div class="item">
-                              <div class="col-lg-6 ">
-                                  <img src="../static/img/banners/Dave-music.jpg" alt="First Slide" class='carousel-img'>
-                              </div>
-                              <div class='col-lg-6'>
-                                  <h2>11:00 am - Creating</h2>
-                                  <p>We're back inside (after a much needed water break) for some coding, animating,
-                                    whatever! We've got more to teach, and more to learn.</p>
-                                  <p></p>
-                              </div>
-                            </div>
-                            <div class="item">
-                              <div class="col-lg-6 ">
-                                  <img src="../static/img/banners/RANDOM-LUNCH-PHOTO-PLEASE-REPLACE.jpg" alt="First Slide" class='carousel-img'>
-                              </div>
-                              <div class='col-lg-6'>
-                                  <h2>12:00 pm - Lunch</h2>
-                                  <p>It's time to #lunchitup! Campers head outside with the lunches they brought for some
-                                  refueling and some more games - Werewolf and "I'm Going Camping" are always popular!</p>
-                                  <p></p>
-                              </div>
-                            </div>
-                            <div class="item">
-                              <div class="col-lg-6 ">
-                                  <img src="../static/img/banners/Dave-music.jpg" alt="First Slide" class='carousel-img'>
-                              </div>
-                              <div class='col-lg-6'>
-                                  <h2>1:00 pm - Working</h2>
-                                  <p>Now full and exhausted from running in the sun, we'll head back in for another hour of
-                                  learning, working, and creating!</p>
-                                  <p></p>
-                              </div>
-                            </div>
-                        </div>
-
-                        <!-- Controls
-                        <a class="left carousel-control" href="#day-in-the-life-carousel" role="button" data-slide="prev">
-                          <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#day-in-the-life-carousel" role="button" data-slide="next">
-                          <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                        -->
-                      </div>
-                    </div>
-
+                    <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 50px;">Claymation</h1>
+                    <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                    <p style='margin:0'>9-12 yrs, $200-$280, 4-5 full days</p>
                 </div>
-            </div>
-        </div>
+              </div>
+              <div class="modal-body">
+                  <!--<div class="row">
+                      <div class="col-xs-12" style='margin-bottom:20px;'>
+                          <p style='font-size: 20px'>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
+                          work with a partner to build their own clay characters, sets and props, develop their own
+                          script, shoot their movie scene, and then learn to edit and add sounds and special effects
+                          to complete the whole project. Don't worry parents, there will be plenty of time devoted to
+                          outdoor games and activities!</p>
+                          <a class="btn btn-primary btn-lg" style="display:block; margin: auto; width: 300px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                      </div>
+                      <video class="col-xs-12" poster="../static/img/clay-poster.png" controls>
+                          <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video>
 
-        <div class="col-lg-6 col-sm-12">
-            <div class="camps-content">
-                <div class="camp-info" id="camp-info-clay">
-                    <div id="clay-header">
-                        <div class="text-center">
-                            <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
-                            <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 50px;">Claymation</h1>
-                            <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
-                            <p>(9-12 yrs, $200-$280, 4-5 full days)</p>
-                            <hr>
-                        </div>
-                    </div>
+                  </div>-->
 
-                    <div class="row">
-                        <div class="col-lg-7 col-md-6 col-sm-6">
-                            <p>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
-                            work with a partner to build their own clay characters, sets and props, develop their own
-                            script, shoot their movie scene, and then learn to edit and add sounds and special effects
-                            to complete the whole project. Don't worry parents, there will be plenty of time devoted to
-                            outdoor games and activities!</p>
-                        </div>
-
-                        <hr class="hidden-lg hidden-md hidden-sm col-xs-11 col-centered">
-
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="hidden-lg hidden-md hidden-sm col-xs-12"><BR></div>
-                            <video class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 col-centered" poster="../static/img/clay-poster.png" controls>
-                                <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-
-                      <div class="row">
-                          <div class="text-center">
-                              <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray; display:inline-block;"><i class="fa fa-calendar" aria-hidden="true"></i> Check the Calendar!</a>
-                              <a class="btn btn-primary btn-lg" style="margin: 30px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" aria-hidden="true"></i> Register!</a>
-                          </div>
+                  <div class="row">
+                      <video class="col-xs-12 col-md-6" poster="../static/img/clay-poster.png" controls>
+                          <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video>
+                      <div class="col-xs-12 col-md-6">
+                          <p style='font-size: 20px;'>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
+                          work with a partner to build their own clay characters, sets and props, develop their own
+                          script, shoot their movie scene, and then learn to edit and add sounds and special effects
+                          to complete the whole project. Don't worry parents, there will be plenty of time devoted to
+                          outdoor games and activities!</p>
+                          <a class="btn btn-primary btn-lg" style="display:block; margin: auto; width: 200px; border-radius: 10px; box-shadow: 0px 3px 5px gray;"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                       </div>
 
-                </div>
+                 </div>
+              </div>
+              <!--<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
             </div>
+          </div>
         </div>
+
+        </div>
+        <img src='..\static\img\icons\clay.png' class='lilclayguy hidden-xs' style='position: fixed; bottom: 10px; right: 10px;'/>
+    </div>
 
     <!-- Footer -->
-	<footer style="background-color:#FFDF70;">
+	<footer id="camps-foot">
 		<br><br><br>
 		<div class="container text-center">
 			<img src="../static/img/website-logo.png" style="width:30%"/>
 			<p>Copyright &copy; Byte Camp 2016</p>
 		</div>
 	</footer>
-
     <!-- jQuery -->
     <script src="../static/js/vendor/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->

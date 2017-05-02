@@ -1,11 +1,17 @@
-$(function switchCamp(camp){
-    console.log(camp);
+function switchCamp(camp){
     $(".resource-info").each(function(i){
-        console.log($(this).attr('id'));
-        if($(this).attr('id') == camp){
-            $(this).slideDown(1000);
+        if($(this).attr('id') == "camp-info-" + $(camp).attr('value')){
+            $(this).show();
         } else {
-            $(this).slideUp(1000);
+            $(this).hide();
         }
     });
-});
+}
+
+$(document).on('ready', function(){
+
+    $(".camp-selection-container img").hover(function(){
+        $('#camp-name-hover').text($(this).attr('alt'));
+    })
+
+})
