@@ -906,6 +906,21 @@ a.anchor {
     height: 1000px;
 }
 
+.res-btn{
+    height:75px;
+    margin: 10px;
+}
+
+.res-btn-small {
+    height:40px;
+    margin: 10px;
+}
+
+.res-btn-inline{
+    display: inline-block;
+    height:75px;
+    margin: 10px;
+}
 
 .camps-content{
     background-color: white;

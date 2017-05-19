@@ -63,63 +63,12 @@
 
     <script>AOS.init();</script>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="visibility:hidden;">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="../index.html">
-                    <i class="fa fa-play-circle"></i> <span class="light">Byte Camp</span>
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#register">Register Now</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs<span class="caret"></span></a>
-                        <ul class="dropdown-menu navbar-custom">
-                            <li><a href="../index.html#calendar">Calendar</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="camps.html#programs">Camp Descriptions</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Best Of's</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Resources</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
-                        <ul class="dropdown-menu navbar-custom">
-                            <li><a href="about_us.html#what">Who are We?</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="about_us.html#who">Contact Us</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop poster="website-banner-comp.png" id="bgvid">
+                    <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop poster="static/img/banners/website-banner-comp.png" id="bgvid">
                     </video>
                     <div id="videocover" style='z-index: -99; background-color: #FFEBA4; opacity: 0.4;'></div>
                     <style media="screen">
@@ -157,18 +106,18 @@
                             }
                             else {
                                 // If not mobile then do this
-                                document.getElementById("bgvid").innerHTML = '<source src="web video.webm" type="video/webm"><source src="web video.mp4" type="video/mp4">>';
+                                document.getElementById("bgvid").innerHTML = '<source src="static/vid/index/web video.webm" type="video/webm"><source src="static/vid/index/web video.mp4" type="video/mp4">';
                             }
                         } // detectmob
                     </script>
                     <div class="col-md-8 col-md-offset-2">
-                        <img src="static/img/website-logo.png" class="animate-in hatch delay05" style="width:80%"/>
+                        <img src="static/img/icons/other/website-logo.png" class="animate-in hatch delay05" style="width:80%"/>
                         <div class="intro-text animate-in hatch delay1">
                             <div style='display:inline-block; width:49%; text-align: right;' id='camp-switch'>Creative tech</div>
                             <div style='display:inline-block; width:49%; text-align: left; padding:0;'>camps for kids.</div>
                             </div>
                         </div>
-                            <br><a href="#" class="btn btn-warning btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
+                            <br><a href="html/calendar/calendar_2017.html" class="btn btn-warning btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
                         <a href="#menu" class="btn btn-circle page-scroll animate-in pullDown delay15">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -183,39 +132,39 @@
 		<section id="menu" class="container text-center content-section">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
-					<a href="#calendar" id='btn-text-blue'>
-						<img class='index-btn-img' src="static/img/btn_blue.png"/>
+					<a href="html/calendar/calendar_2017.html" id='btn-text-blue'>
+						<img class='index-btn-img' src="static/img/buttons/btn_blue.png"/>
 						<p class="index-btn-text">Calendar</p>
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
 					<a href="html/camps.html" id='btn-text-red'>
-						<img class="index-btn-img" src="static/img/btn_red.png" />
+						<img class="index-btn-img" src="static/img/buttons/btn_red.png" />
 						<p class="index-btn-text">Camps</p>
 					</a>
 				</div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
 					<a href="html/about_us.html" id='btn-text-green'>
-						<img class="index-btn-img" src="static/img/btn_green.png" />
+						<img class="index-btn-img" src="static/img/buttons/btn_green.png" />
 						<p class="index-btn-text">Who Are We?</p>
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
-					<a href="#" id='btn-text-orange'>
-						<img class="index-btn-img" src="static/img/btn_orange.png" />
+					<a href="html/byte-o-vision.html" id='btn-text-orange'>
+						<img class="index-btn-img" src="static/img/buttons/btn_orange.png" />
 						<p class="index-btn-text">Byte-O-Vision</p>
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
 					<a href="html/resources.html" id='btn-text-purple'>
-						<img class="index-btn-img" src="static/img/btn_purple.png" />
+						<img class="index-btn-img" src="static/img/buttons/btn_purple.png" />
 						<p class="index-btn-text">Resources</p>
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
 					<a href="html/faq.html" id='btn-text-yellow'>
-						<img class="index-btn-img" src="static/img/btn_yellow.png" />
+						<img class="index-btn-img" src="static/img/buttons/btn_yellow.png" />
 						<p class="index-btn-text">FAQ</p>
 					</a>
 				</div>
@@ -224,7 +173,7 @@
 	</div>
 
     <!-- About Section -->
-    <section id="about" class="container-fluid content-section" style="padding-top:0; padding-bottom: 0;">
+    <section id="about" class="container-fluid content-section" style="padding-bottom: 100px;">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 text-center" style="margin-top: 50px;">
                 <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><a href="html/about_us.html">About Byte Camp</a></h2>
@@ -254,9 +203,9 @@
 
 
     <!-- Footer -->
-    <footer style='margin-top:100px;'>
+    <footer id='index-foot'>
         <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-            <img src="static/img/website-logo.png" style="width:30%"/>
+            <img src="static/img/icons/other/website-logo.png" style="width:30%"/>
             <p>Copyright &copy; Byte Camp 2017</p>
         </div>
     </footer>
@@ -270,7 +219,7 @@
     <!-- Theme JavaScript -->
     <script src="static/js/main.js"></script>
     <script type="text/javascript">
-    /* This code switches up the main words _____ camps for kids
+    // This code switches up the main words _____ camps for kids
         var array = ['Coding', '2D Animation', 'Music Video', 'Claymation', '2D Game Design', '3D Game Design', '3D Animation', 'VFX'];
         var i=0;
         setTimeout(function(){

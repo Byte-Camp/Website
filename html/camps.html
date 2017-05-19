@@ -38,10 +38,10 @@
         }
         #camps-foot {
             background: #FFDF70; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(#ff5964 , #FFDF70); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(#ff5964, #FFDF70); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(#ff5964, #FFDF70); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#ff5964, #FFDF70); /* Standard syntax */
+            background: -webkit-linear-gradient(#905a2d , #FFDF70); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#905a2d, #FFDF70); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#905a2d, #FFDF70); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#905a2d, #FFDF70); /* Standard syntax */
         }
 
         body{
@@ -74,13 +74,13 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload='init()'>
     <script>AOS.init();</script>
 
-        <canvas id="canvas" style='position:absolute;top:0;' width="100" height="100"></canvas>
+    <canvas id="canvas" style='position:absolute;top:0;' width="100" height="100"></canvas>
 
     <!-- Navigation -->
     <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
+                <a href="../index.html" ><img src="../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
                 <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
                     <span class="light">Byte Camp</span>
                 </a>
@@ -97,16 +97,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#register">Register Now</a>
+                        <a class="page-scroll" href="calendar/calendar_2017.html">Register Now</a>
                     </li>
                     <li class="dropdown">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
 			            <ul class="dropdown-menu navbar-custom">
-			                <li><a href="../index.html#calendar">Calendar</a></li>
+			                <li><a href="calendar/calendar_2017.html">Calendar</a></li>
 			                <li role="separator" class="divider"></li>
 			                <li><a href="camps.html#programs">Camp Descriptions</a></li>
 			                <li role="separator" class="divider"></li>
-			                <li><a href="#">Best Of's</a></li>
+			                <li><a href="byte-o-vision.html">Best Of's</a></li>
 			                <li role="separator" class="divider"></li>
 			                <li><a href="resources.html">Resources</a></li>
 			            </ul>
@@ -155,14 +155,14 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" style="padding-bottom:100px;">
             <!-- ROW 1 -->
             <div class="row">
                 <!-- CLAYMATION -->
                 <div class="col-lg-6 col-sm-12">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-clay">
-                            <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 75px;">
                             <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 50px; margin-bottom:0;">Claymation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
@@ -180,7 +180,7 @@
                 <div class="col-lg-6 col-sm-12">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
-                            <img src="../static/img/icons/2dtab.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2dtab.png" style="display:inline; width: 75px;">
                             <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 30px; margin-bottom:0;">2D Tablet Animation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
@@ -200,7 +200,7 @@
                 <div class="col-lg-6 col-sm-12">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-mv">
-                            <img src="../static/img/icons/mv.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/mv.png" style="display:inline; width: 75px;">
                             <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 25px; margin-bottom:0;">Music Video Production</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
@@ -218,7 +218,7 @@
                 <div class="col-lg-6 col-sm-12">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
-                            <img src="../static/img/icons/coding.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/coding.png" style="display:inline; width: 75px;">
                             <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 25px; margin-bottom:0;">Introduction to Coding</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$280, 4-5 full days</h4>
@@ -241,9 +241,9 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="text-center">
-                    <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                    <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 75px;">
                     <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px; font-size: 50px;">Claymation</h1>
-                    <img src="../static/img/icons/clay.png" style="display:inline; width: 75px;">
+                    <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 75px;">
                     <p style='margin:0'>9-12 yrs, $200-$280, 4-5 full days</p>
                 </div>
               </div>
@@ -265,8 +265,8 @@
                   </div>-->
 
                   <div class="row">
-                      <video class="col-xs-12 col-md-6" poster="../static/img/clay-poster.png" controls>
-                          <source src="../static/img/lost_zebra_comp.mp4" type="video/mp4">
+                      <video class="col-xs-12 col-md-6" poster="../static/img/banners/clay-banner.png" controls>
+                          <source src="../static/vid/camps/lost_zebra_comp.mp4" type="video/mp4">
                           Your browser does not support the video tag.
                       </video>
                       <div class="col-xs-12 col-md-6">
@@ -289,17 +289,16 @@
         </div>
 
         </div>
-        <img src='..\static\img\icons\clay.png' class='lilclayguy hidden-xs' style='position: fixed; bottom: 10px; right: 10px;'/>
+        <img src='../static/img/icons/bc/clay.png' class='lilclayguy hidden-xs' style='position: fixed; bottom: 10px; right: 10px;'/>
     </div>
 
     <!-- Footer -->
-	<footer id="camps-foot">
-		<br><br><br>
-		<div class="container text-center">
-			<img src="../static/img/website-logo.png" style="width:30%"/>
-			<p>Copyright &copy; Byte Camp 2016</p>
-		</div>
-	</footer>
+    <footer id='camps-foot'>
+        <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <img src="../static/img/icons/other/website-logo.png" style="width:30%"/>
+            <p>Copyright &copy; Byte Camp 2017</p>
+        </div>
+    </footer>
     <!-- jQuery -->
     <script src="../static/js/vendor/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
