@@ -23,48 +23,7 @@
     <link href="../static/css/vendor/animate.css" rel="stylesheet">
     <link href="../static/css/vendor/aos.css" rel="stylesheet">
     <script src="../static/js/vendor/aos.js"></script>
-
-    <style>
-        .lilclayguy{
-            height: 50px;
-            transition: 1s;
-            cursor: help;
-        }
-        .lilclayguy:hover{
-            height: 100px;
-        }
-        #camps-nav {
-            background: #Ffdf70; /* For browsers that do not support gradients */
-        }
-        #camps-foot {
-            background: #FFDF70; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(#905a2d , #FFDF70); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(#905a2d, #FFDF70); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(#905a2d, #FFDF70); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#905a2d, #FFDF70); /* Standard syntax */
-        }
-
-        #phys, #stat {
-            position:absolute;
-            top:0px;
-            left:0px;
-            -webkit-transform: translate3d(0,0,1px);
-            -o-transform: translate3d(0,0,1px);
-            -moz-transform: translate3d(0,0,1px);
-            -ms-transform: translate3d(0,0,1px);
-            transform: translate3d(0,0,1px);
-            background-color: black;
-            -webkit-perspective: 1000;
-            -webkit-backface-visibility: hidden;
-        }
-
-        #phys, #stat {
-            -webkit-transition-property: -webkit-transform;
-            -webkit-transition-duration: 0.1;
-        }
-
-
-    </style>
+    
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload='init()'>
@@ -150,38 +109,15 @@
                 <button type="button" class="btn btn-primary" id="11yrbutton" data-filter=".older">11-14 years</button>
             </div>
         </div>
-        <style>
-            .camp-header{
-                display: inline;
-                line-height: 50px;
-                vertical-align: middle;
-                font-size: 25px;
-                margin-bottom:0;
-            }
-            .camp-btns{
-                margin: 10px;
-                border-radius:10px; 
-                box-shadow: 0px 3px 5px gray;
-            }
-            .camp-modal-btns{
-                display:block;
-                margin: auto;
-                width: 200px;
-                border-radius:10px;
-                box-shadow: 0px 3px 5px gray;
-            }
-            .camp-modal-header{
-                font-size:40px;
-            }
-        </style>
+
         <div class="container" style="padding-bottom:100px;">
             <!-- ROW 1 -->
             <div class="row_camps">
                 <!-- CLAYMATION -->
-                <div class="element-item col-lg-6 col-sm-12 younger" data-category="younger">
+                <div class="element-item col-lg-6 col-xs-12 younger" data-category="younger">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-clay">
-                            <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/clay.png" class="camp-icns">
                             <h1 class="text-center camp-header">Claymation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
@@ -197,10 +133,10 @@
 
 
                 <!-- 2D TABLET ANIMATION -->
-                <div class="element-item col-lg-6 col-sm-12 younger" data-category="younger">
+                <div class="element-item col-lg-6 col-xs-12 younger" data-category="younger">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
-                            <img src="../static/img/icons/bc/2dtab.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2dtab.png" class="camp-icns">
                             <h1 class="text-center camp-header">2D Tablet Animation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
@@ -213,10 +149,10 @@
                 </div>
                 
                 <!-- MUSIC VIDEO -->
-                <div class="element-item col-lg-6 col-sm-12 younger" data-category="younger">
+                <div class="element-item col-lg-6 col-xs-12 younger" data-category="younger">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-mv">
-                            <img src="../static/img/icons/bc/mv.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/mv.png" class="camp-icns">
                             <h1 class="text-center camp-header">Music Video Production</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
@@ -229,10 +165,10 @@
                 </div>
 
                 <!-- INTRO TO CODE -->
-                <div class="element-item col-lg-6 col-sm-12 younger" data-category="younger">
+                <div class="element-item col-lg-6 col-xs-12 younger" data-category="younger">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
-                            <img src="../static/img/icons/bc/coding.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/coding.png" class="camp-icns">
                             <h1 class="text-center camp-header">Introduction to Coding</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
@@ -245,10 +181,10 @@
                 </div>
                 
                 <!-- 2D GAMES -->
-                <div class="element-item col-lg-6 col-sm-12 older" data-category="older">
+                <div class="element-item col-lg-6 col-xs-12 older" data-category="older">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dg">
-                            <img src="../static/img/icons/bc/2d.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2d.png" class="camp-icns">
                             <h1 class="text-center camp-header">2D Video Game Design</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
@@ -261,10 +197,10 @@
                 </div>
 
                 <!-- 3D ANIMATION -->
-                <div class="element-item col-lg-6 col-sm-12 older" data-category="older">
+                <div class="element-item col-lg-6 col-xs-12 older" data-category="older">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-3da">
-                            <img src="../static/img/icons/bc/3d.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/3d.png" class="camp-icns">
                             <h1 class="text-center camp-header">3D Animation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
@@ -277,10 +213,10 @@
                 </div>
 
                 <!-- 3D GAMES -->
-                <div class="element-item col-lg-6 col-sm-12 older" data-category="older">
+                <div class="element-item col-lg-6 col-xs-12 older" data-category="older">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-3dg">
-                            <img src="../static/img/icons/bc/3dgames.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/3dgames.png" class="camp-icns">
                             <h1 class="text-center camp-header">3D Video Game Design</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
@@ -293,10 +229,10 @@
                 </div>
 
                 <!-- BUILD AN APP -->
-                <div class="element-item col-lg-6 col-sm-12 older" data-category="older">
+                <div class="element-item col-lg-6 col-xs-12 older" data-category="older">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-baa">
-                            <img src="../static/img/icons/bc/baa.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/baa.png" class="camp-icns">
                             <h1 class="text-center camp-header">Build An App</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
@@ -321,9 +257,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/clay.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">Claymation</h1>
-                            <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/clay.png" class="camp-icns">
                             <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -354,9 +290,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/2Dtab.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2Dtab.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">2D Tablet Animation</h1>
-                            <img src="../static/img/icons/bc/2Dtab.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2Dtab.png" class="camp-icns">
                             <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -387,9 +323,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/mv.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/mv.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">Music and Video Production</h1>
-                            <img src="../static/img/icons/bc/mv.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/mv.png" class="camp-icns">
                             <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -419,9 +355,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/coding.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/coding.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">Introduction To Coding</h1>
-                            <img src="../static/img/icons/bc/coding.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/coding.png" class="camp-icns">
                             <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -451,9 +387,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/2d.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2d.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">2D Video Game Design</h1>
-                            <img src="../static/img/icons/bc/2d.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/2d.png" class="camp-icns">
                             <p style='margin:0'>11-14 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -483,9 +419,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/3d.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/3d.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">3D Animation</h1>
-                            <img src="../static/img/icons/bc/3d.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/3d.png" class="camp-icns">
                             <p style='margin:0'>11-14 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -516,9 +452,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/3dgames.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/3dgames.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">3D Game Design</h1>
-                            <img src="../static/img/icons/bc/3dgames.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/3dgames.png" class="camp-icns">
                             <p style='margin:0'>11-14 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -549,9 +485,9 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/baa.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/baa.png" class="camp-icns">
                             <h1 class="text-center camp-header camp-modal-header">Build An App</h1>
-                            <img src="../static/img/icons/bc/baa.png" style="display:inline; width: 75px;">
+                            <img src="../static/img/icons/bc/baa.png" class="camp-icns">
                             <p style='margin:0'>11-14 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
@@ -600,8 +536,10 @@
     <script src="../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
     <script src="../static/js/falling-content.js" charset="utf-8"></script>
     <script src="../static/js/vendor/isotope.pkgd.min.js" charset="utf-8"></script>
+    
     <!-- Theme JavaScript -->
     <script src="../static/js/main.js"></script>
+    <script src="../static/js/camps.js"></script>
 </body>
 
 </html>

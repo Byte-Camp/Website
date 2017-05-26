@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,38 +9,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
-    <!-- jQuery -->
-    <script src="../static/js/vendor/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/vendor/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="../static/js/main.js"></script>
-
-
-
-    <title>FAQs - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
+    <title>Programs - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/vendor/animate.css" rel="stylesheet">
+    <link href="../static/css/vendor/aos.css" rel="stylesheet">
+    <script src="../static/js/vendor/aos.js"></script>
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-color:white;">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
+    <script>AOS.init();</script>
+
+    <!--canvas id="canvas" style='position:absolute;top:0;' width="100" height="100"></canvas-->
 
     <!-- Navigation -->
     <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
@@ -95,618 +83,657 @@
         <!-- /.container -->
     </nav>
 
-    
-    <div class="container-fluid content-section" style="background:url(../static/img/controller-tile.png) top left fixed; padding-top: 100px; background-color:#FFDF70;">
-        <!-- Search Bar -->
-        <div class="container">	
-	        <div class="col-md-5 col-centered">
-	            <div id="custom-search-input">
-	                <div class="input-group col-md-12">
-	                    <input id="text-input" type="text" class="form-control input-lg" placeholder="What are you looking for?"/>
-	                    <span class="input-group-btn">
-	                        <button class="btn btn-info btn-lg" type="button" onclick="Javascript:searchSite();">
-	                            <i class="fa fa-search"></i>
-	                        </button>
-	                    </span>
-	                </div><BR>
-	            </div>
-	        </div>
+    <!-- Intro Header -->
+    <div id="header">
+        
+        <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+            <div class="col-lg-12">
+                <h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">FAQs</h1>
+            </div>
         </div>
-		
-       	<!-- FAQs -->
-    	<div class="container col-lg-10 col-md-10 col-centered" style="background-color:#217D9F; padding:10px; border-radius:15px 25px 15px 50px;">
-			<div class="row col-centered">
-				<!-- Column 1,1 -->
-				<div class="faq-col col-lg-4 col-md-4 col-sm-4">
-					<h4 class="faq-header">Registration</h4>
-					<div class="panel-group accordion">
-						<!-- faq(1,1,1) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse111">
-								<div class="faq-dropdown-o">
-									How can I register in a camp?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse111" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,1,2) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse112">
-								<div class="faq-dropdown-e">
-									Why can't I register in the camp I want?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse112" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,1,3) -->
-		                <div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse113">
-								<div class="faq-dropdown-o">
-									Who can I speak to about registering?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse113" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,1,4) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse114">
-								<div class="faq-dropdown-e">
-									When can I register in a camp?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse114" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,1,5) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse115">
-								<div class="faq-dropdown-o">
-									Are there Byte Camps during the school year?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse115" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,1,6) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse116">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse116" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-					</div>
-				</div>
-
-				<!-- Column 1,2 -->
-				<div class="faq-col col-lg-4 col-md-4 col-sm-4">
-					<h4 class="faq-header">Camp Information</h4>
-					<div class="panel-group accordion" >
-						<!-- faq(1,2,1) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse121">
-								<div class="faq-dropdown-o" >
-									What camps and programs do Byte Camp offer?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse121" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,2,2) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse122">
-								<div class="faq-dropdown-e">
-									Do I need to supply my own laptop/tablet?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse122" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq1(1,2,3) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse123">
-								<div class="faq-dropdown-o">
-									Will lunch and snacks be provided?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse123" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,2,4) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse124">
-								<div class="faq-dropdown-e">
-									Can I sign up for a camp that I'm too young for?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse124" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,2,5) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse125">
-								<div class="faq-dropdown-o">
-									Why do we spend so much time outside?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse125" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,2,6) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse126">
-								<div class="faq-dropdown-e">
-									How come we dont face the front during camp?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse126" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-					</div>
-				</div>
-
-				<!-- Column 1,3 -->
-				<div class="faq-col col-lg-4 col-md-4 col-sm-4">
-					<h4 class="faq-header">The Organization</h4>
-					<div class="panel-group accordion">
-						<!-- faq(1,3,1) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse131">
-								<div class="faq-dropdown-o">
-									Why are the camps so inexpensive/expensive?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse131" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,3,2) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse132">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse132" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,3,3) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse133">
-								<div class="faq-dropdown-o">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse133" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,3,4) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse134">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse134" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,3,5) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse135" >
-								<div class="faq-dropdown-o">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>				
-							</div>
-		                    <div id="collapse135" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(1,3,6) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse136">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse136" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br><br>
-       	
-       	<!-- FAQs -->
-    	<div class="container col-lg-10 col-md-10 col-centered" style="background-color:#217D9F; padding:10px; border-radius:50px 15px 25px 10px;">
-			<div class="row col-centered">
-				<!-- Column 2,1 -->
-				<div class="faq-col col-lg-4 col-md-4 col-sm-4">
-					<h4 class="faq-header">Student Work</h4>
-					<div class="panel-group accordion">
-						<!-- faq(2,1,1) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse211">
-								<div class="faq-dropdown-o">
-									Where can I find my project online?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse211" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,1,2) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse212">
-								<div class="faq-dropdown-e">
-									How can I use my USB wristband at home?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse212" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,1,3) -->
-		                <div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse213">
-								<div class="faq-dropdown-o">
-									Will my online project be available for everyone to see?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse213" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,1,4) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse214">
-								<div class="faq-dropdown-e">
-									When can I register in a camp?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse214" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,1,5) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse215">
-								<div class="faq-dropdown-o">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse215" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,1,6) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse216">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse216" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-					</div>
-				</div>
-
-				<!-- Column 2,2 -->
-				<div class="faq-col col-lg-4 col-md-4 col-sm-4">
-					<h4 class="faq-header">Software & Resources</h4>
-					<div class="panel-group accordion" >
-						<!-- faq(2,2,1) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse221">
-								<div class="faq-dropdown-o" >
-									What camps and programs do Byte Camp offer?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse221" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,2,2) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse222">
-								<div class="faq-dropdown-e">
-									Where can I find help downloading a program used by Byte Camp?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse222" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,2,3) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse223">
-								<div class="faq-dropdown-o">
-									Is the software we use free and available to download?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse223" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,2,4) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse224">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse224" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,2,5) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse225">
-								<div class="faq-dropdown-o">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse25" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,2,6) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse226">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse226" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-					</div>
-				</div>
-
-				<!-- Column 2,3 -->
-				<div class="faq-col col-lg-4 col-md-4 col-sm-4">
-					<h4 class="faq-header">Other</h4>
-					<div class="panel-group accordion">
-						<!-- faq(2,3,1) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse231">
-								<div class="faq-dropdown-o">
-									Where can I find my project online?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse231" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,3,2) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse232">
-								<div class="faq-dropdown-e">
-									How can I use my USB wristband at home?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse232" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,3,3) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse233">
-								<div class="faq-dropdown-o">
-									Will my online project be available for everyone to see?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse233" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,3,4) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse234">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse234" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,3,5) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse235" >
-								<div class="faq-dropdown-o">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>				
-							</div>
-		                    <div id="collapse235" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-		                
-		                <!-- faq(2,3,6) -->
-						<div class="panel panel-default" style="border-radius:15px 15px 25px 25px; border:none; background-color:#217D9F;">
-		                    <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse236">
-								<div class="faq-dropdown-e">
-									Why is Byte Camp the best tech camp for kids?
-								</div>
-								<i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>		
-							</div>
-		                    <div id="collapse236" class="panel-collapse collapse faq-info">
-								<div class="panel-body">
-									Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-								</div>
-		                    </div>
-		                </div>
-					</div>
-				</div>
-			</div>
-		</div>
     </div>
-	    <!-- Footer -->
-    <footer id='faq-foot' style="background-color:#FFDF70;">
+    <!--div id="header">
+
+        <div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;">
+
+        </div>
+    </div>
+    <div id='box2d-faq'>
+
+    </div-->
+    <!-- Program select -->
+    <a id="faqs" class="anchor"></a>
+    
+    <div class="container-fluid content-section">
+        
+        <!-- Search Bar -->
+        <div class="container"> 
+            <div class="col-md-5 col-centered">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input id="text-input" type="text" class="form-control input-lg" placeholder="What are you looking for?"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-info btn-lg" type="button" onclick="searchSite();">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div><BR>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQs -->
+        <div class="container col-lg-10 col-md-10 col-centered faq-container">
+            <div class="row col-centered">
+                <!-- Column 1,1 -->
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
+                    <h4 class="faq-header">Registration</h4>
+                    <div class="panel-group accordion">
+                        <!-- faq(1,1,1) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse111">
+                                <div class="faq-dropdown-o">
+                                    How can I register in a camp?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse111" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,1,2) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse112">
+                                <div class="faq-dropdown-e">
+                                    Why can't I register in the camp I want?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse112" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,1,3) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse113">
+                                <div class="faq-dropdown-o">
+                                    Who can I speak to about registering?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse113" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,1,4) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse114">
+                                <div class="faq-dropdown-e">
+                                    When can I register in a camp?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse114" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,1,5) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse115">
+                                <div class="faq-dropdown-o">
+                                    Are there Byte Camps during the school year?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse115" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,1,6) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse116">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse116" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 1,2 -->
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
+                    <h4 class="faq-header">Camp Information</h4>
+                    <div class="panel-group accordion" >
+                        <!-- faq(1,2,1) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse121">
+                                <div class="faq-dropdown-o" >
+                                    What camps and programs do Byte Camp offer?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse121" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,2,2) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse122">
+                                <div class="faq-dropdown-e">
+                                    Do I need to supply my own laptop/tablet?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse122" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq1(1,2,3) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse123">
+                                <div class="faq-dropdown-o">
+                                    Will lunch and snacks be provided?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse123" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,2,4) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse124">
+                                <div class="faq-dropdown-e">
+                                    Can I sign up for a camp that I'm too young for?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse124" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,2,5) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse125">
+                                <div class="faq-dropdown-o">
+                                    Why do we spend so much time outside?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse125" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,2,6) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse126">
+                                <div class="faq-dropdown-e">
+                                    How come we dont face the front during camp?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse126" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 1,3 -->
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
+                    <h4 class="faq-header">The Organization</h4>
+                    <div class="panel-group accordion">
+                        <!-- faq(1,3,1) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse131">
+                                <div class="faq-dropdown-o">
+                                    Why are the camps so inexpensive/expensive?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse131" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,3,2) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse132">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse132" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,3,3) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse133">
+                                <div class="faq-dropdown-o">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse133" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,3,4) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse134">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse134" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,3,5) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse135" >
+                                <div class="faq-dropdown-o">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>               
+                            </div>
+                            <div id="collapse135" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(1,3,6) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse136">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse136" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        
+        <!-- FAQs -->
+        <div class="container col-lg-10 col-md-10 col-centered faq-container">
+            <div class="row col-centered">
+                <!-- Column 2,1 -->
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
+                    <h4 class="faq-header">Student Work</h4>
+                    <div class="panel-group accordion">
+                        <!-- faq(2,1,1) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse211">
+                                <div class="faq-dropdown-o">
+                                    Where can I find my project online?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse211" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,1,2) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse212">
+                                <div class="faq-dropdown-e">
+                                    How can I use my USB wristband at home?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse212" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,1,3) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse213">
+                                <div class="faq-dropdown-o">
+                                    Will my online project be available for everyone to see?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse213" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,1,4) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse214">
+                                <div class="faq-dropdown-e">
+                                    When can I register in a camp?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse214" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,1,5) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse215">
+                                <div class="faq-dropdown-o">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse215" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,1,6) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse216">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse216" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2,2 -->
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
+                    <h4 class="faq-header">Software & Resources</h4>
+                    <div class="panel-group accordion" >
+                        <!-- faq(2,2,1) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse221">
+                                <div class="faq-dropdown-o" >
+                                    What camps and programs do Byte Camp offer?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse221" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,2,2) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse222">
+                                <div class="faq-dropdown-e">
+                                    Where can I find help downloading a program used by Byte Camp?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse222" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,2,3) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse223">
+                                <div class="faq-dropdown-o">
+                                    Is the software we use free and available to download?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse223" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,2,4) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse224">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse224" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,2,5) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse225">
+                                <div class="faq-dropdown-o">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse25" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,2,6) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse226">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse226" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2,3 -->
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
+                    <h4 class="faq-header">Other</h4>
+                    <div class="panel-group accordion">
+                        <!-- faq(2,3,1) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse231">
+                                <div class="faq-dropdown-o">
+                                    Where can I find my project online?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse231" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,3,2) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse232">
+                                <div class="faq-dropdown-e">
+                                    How can I use my USB wristband at home?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse232" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,3,3) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse233">
+                                <div class="faq-dropdown-o">
+                                    Will my online project be available for everyone to see?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse233" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,3,4) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse234">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse234" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,3,5) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse235" >
+                                <div class="faq-dropdown-o">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>               
+                            </div>
+                            <div id="collapse235" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- faq(2,3,6) -->
+                        <div class="panel panel-default faq-item">
+                            <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse236">
+                                <div class="faq-dropdown-e">
+                                    Why is Byte Camp the best tech camp for kids?
+                                </div>
+                                <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
+                            </div>
+                            <div id="collapse236" class="panel-collapse collapse faq-info">
+                                <div class="panel-body">
+                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer id='camps-foot'>
         <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
             <img src="../static/img/icons/other/website-logo.png" style="width:30%"/>
             <p>Copyright &copy; Byte Camp 2017</p>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="../static/js/vendor/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+
+    <!--script src="../static/js/vendor/box2d.min.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
+    <script src="../static/js/falling-content.js" charset="utf-8"></script-->
+    
+    <!-- Theme JavaScript -->
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/faq.js"></script>
 </body>
 
 </html>
