@@ -1,15 +1,3 @@
-<?php
-    include('db_utils/connect.php');
-
-    $conn = db_connect();
-    #$user = getSessionUser();
-    $email = 'adarguy10@gmail.com';
-    $id = sprintf(
-        "SELECT ID FROM `instructors` WHERE email = '%s'",
-        mysqli_real_escape_string($conn, $email)
-    );
-    echo "<script>alert(".$id.");</script>"
-?>
 <html lang="en">
 
 <head>
@@ -27,7 +15,7 @@
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="../../static/css/main.css" rel="stylesheet">
@@ -38,13 +26,50 @@
     <link href="../../static/css/main.css" rel="stylesheet">
 
 </head>
+<?php
+    include('db_utils/connect.php');
+    $conn = db_connect();
+    #$user = getSessionUser();
+
+    $email = 'claire.coupland@gmail.com';
+    // Check username and password against accounts
+    $query = sprintf(
+        "SELECT * FROM instructors WHERE email = '%s'",
+        mysqli_real_escape_string($conn, $email)
+    );
+    $result = mysqli_query($conn, $query);
+    // Check for successful user look up
+    if (!$result) {
+        $error = sprintf("Query Failed: %s", mysql_error());
+        echo $error;
+    }
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+        $firstname = $row["first name"];
+        $lastname = $row["last name"];
+        $id = $row["ID"];
+    }
+    mysqli_close($conn);
+    
+    /*
+    $sql_van="SELECT * FROM `instructors` WHERE ";
+    $result_van = mysql_query($sql_van);
+    //$row = mysql_fetch_array($result_van);
+    while ($row = mysql_fetch_array($result_van)) {
+
+        foreach($row as $key => $var){
+            echo $key . ' = ' . $var . '<br />';
+        }
+    }
+    */
+?>
+
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
-
     <script>AOS.init();</script>
 
 
-	<!-- NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -74,7 +99,7 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="../camps.html#programs">Camp Descriptions</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../byte-o-vision.html">Best Of's</a></li>
+                            <li><a href="../byte-o-vision.html">Best Ofs</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="../resources.html">Resources</a></li>
                         </ul>
@@ -87,14 +112,12 @@
                             <li><a href="../about_us.html#who">Contact Us</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="../faq.html">FAQs</a></li>
-                        </ul>
+                        </ul>$host = "localhost:3306";
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-
     <!-- BANNER -->
     <div id="header">
         <div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url() no-repeat bottom center scroll;">
