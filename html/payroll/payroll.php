@@ -26,43 +26,7 @@
     <link href="../../static/css/main.css" rel="stylesheet">
 
 </head>
-<?php
-    include('db_utils/connect.php');
-    $conn = db_connect();
-    #$user = getSessionUser();
 
-    $email = 'claire.coupland@gmail.com';
-    // Check username and password against accounts
-    $query = sprintf(
-        "SELECT * FROM instructors WHERE email = '%s'",
-        mysqli_real_escape_string($conn, $email)
-    );
-    $result = mysqli_query($conn, $query);
-    // Check for successful user look up
-    if (!$result) {
-        $error = sprintf("Query Failed: %s", mysql_error());
-        echo $error;
-    }
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_array($result);
-        $firstname = $row["first name"];
-        $lastname = $row["last name"];
-        $id = $row["ID"];
-    }
-    mysqli_close($conn);
-    
-    /*
-    $sql_van="SELECT * FROM `instructors` WHERE ";
-    $result_van = mysql_query($sql_van);
-    //$row = mysql_fetch_array($result_van);
-    while ($row = mysql_fetch_array($result_van)) {
-
-        foreach($row as $key => $var){
-            echo $key . ' = ' . $var . '<br />';
-        }
-    }
-    */
-?>
 
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
@@ -112,7 +76,7 @@
                             <li><a href="../about_us.html#who">Contact Us</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="../faq.html">FAQs</a></li>
-                        </ul>$host = "localhost:3306";
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -128,8 +92,8 @@
     <!-- CALENDAR -->
     <a id="payroll" class="anchor"></a>
     <div id="payroll-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; padding-bottom:50px; margin-bottom:100px;">
-        <h3 class="text-center" style="margin:10px;">Instructor: Adar Guy</h3>
-        <h3 class="text-center">Pay Period: July 1st - July 12th</h3>
+        <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: </h3>
+        <h3 id="pay-period" class="text-center"></h3>
 
         <div class="container text-center">
             <div class="container col-xs-1"></div>
@@ -143,19 +107,38 @@
         <div class="container">
             <div class="container col-xs-1"></div>
             <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label>1</label>
+                <label id="day1"></label>
             </div>
             <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label>1</label>
+                <label id="day2"></label>
             </div>
             <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label>1</label>
+                <label id="day3"></label>
             </div>
             <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label>1</label>
+                <label id="day4"></label>
             </div>
             <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label>1</label>
+                <label id="day5"></label>
+            </div>
+            <div class="container col-xs-1"></div>
+        </div>
+        <div class="container">
+            <div class="container col-xs-1"></div>
+            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day6"></label>
+            </div>
+            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day7"></label>
+            </div>
+            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day8"></label>
+            </div>
+            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day9"></label>
+            </div>
+            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day10"></label>
             </div>
             <div class="container col-xs-1"></div>
         </div>
@@ -169,7 +152,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Edit Hours for: June 1st</h4>
+                    <h4 id='modal-title' class="modal-title">Edit Hours for: </h4>
                 </div>
                 <div class="modal-body col-xs-10 col-centered">
                     <form>
@@ -229,7 +212,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Make Change</button>
+                    <button type="submit" class="btn btn-primary">Submit Change</button>
                 </div>
             </div>
         </div>
@@ -265,19 +248,6 @@
     <script src="../../static/js/vendor/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../static/js/vendor/bootstrap.min.js"></script>
-    <script>
-        $('.btn-minus').on('click', function(){
-            if(parseFloat($(this).parent().siblings('input').val()) > 0){
-                $(this).parent().siblings('input').val(parseFloat($(this).parent().siblings('input').val()) - 0.25)  
-            }
-            
-        })
-
-        $('.btn-plus').on('click', function(){
-            $(this).parent().siblings('input').val(parseFloat($(this).parent().siblings('input').val()) + 0.25)
-        })
-    
-    </script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!-- Theme JavaScript -->
@@ -290,4 +260,90 @@
     <script src="../../static/js/falling-content.js" charset="utf-8"></script>
 </body>
 
+<script>
+    i = 0; 
+    var d = new Date(new Date().getFullYear(), 0, 1);
+    while (d.getDay() != 1){
+        d = new Date(new Date().getFullYear(), 0, i);
+        i++;
+    }
+    var start_of_year = new Date(d);
+    var today = new Date();
+    var StartDate = new Date(start_of_year);
+    var i = 14;
+    while(true){
+        if((today.getDate()-StartDate.getDate() < 14) && (StartDate.getMonth() == today.getMonth())){
+            break;
+        }
+        StartDate.setDate(StartDate.getDate()+14);
+    }
+    var EndDate = new Date(StartDate);
+    EndDate.setDate(EndDate.getDate()+14)
+    var month = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var weekday = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    start = month[StartDate.getMonth()]+' '+StartDate.getDate();
+    end = month[EndDate.getMonth()]+' '+EndDate.getDate();
+    document.getElementById('pay-period').innerHTML = 'Pay Period: '+start+' - '+end;
+
+    nextDay = new Date(StartDate);
+    for (i=0; i<10; i++){
+        document.getElementById('day'+(i+1)).innerHTML = '&nbsp'+nextDay.getDate()+'&nbsp';
+        nextDay.setDate(nextDay.getDate()+1);
+        if (nextDay.getDay() == 6){
+            nextDay.setDate(nextDay.getDate()+2);
+        }
+    }
+    
+    $('.btn-minus').on('click', function(){
+        if(parseFloat($(this).parent().siblings('input').val()) > 0){
+            $(this).parent().siblings('input').val(parseFloat($(this).parent().siblings('input').val()) - 0.25);
+        }
+        
+    });
+
+    $('.btn-plus').on('click', function(){
+        $(this).parent().siblings('input').val(parseFloat($(this).parent().siblings('input').val()) + 0.25);
+    });
+    
+    $('.square').on('click', function(){
+        curr_date = StartDate.getDate();
+        curr_month = month[StartDate.getMonth()];
+        var clicked_date = parseInt((this.innerHTML.split('&nbsp')[1]).substring(1));
+        if (clicked_date < curr_date){
+            curr_month = month[StartDate.getMonth()+1];
+        }
+        document.getElementById('modal-title').innerHTML = 'Edit Hours for: '+curr_month+' '+this.innerHTML;
+    });
+
+    
+</script>
+
+<?php
+    include('db_utils/connect.php');
+    $conn = db_connect();
+    #$user = getSessionUser();
+
+    $email = 'claire.coupland@gmail.com';
+    $query = sprintf(
+        "SELECT * FROM instructors WHERE email = '%s'",
+        mysqli_real_escape_string($conn, $email)
+    );
+    $result = mysqli_query($conn, $query);
+    // Check for successful user look up
+    if (!$result) {
+        $error = sprintf("Query Failed: %s", mysql_error());
+        echo $error;
+    }
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+        $firstname = $row["first name"];
+        $lastname = $row["last name"];
+        $instructor_id = $row["ID"];
+        echo '  <script>
+                    document.getElementById("instructor").innerHTML += "'.$firstname.'&nbsp'.$lastname.'";
+                </script>';
+        
+    }
+    mysqli_close($conn);
+?>
 </html>
