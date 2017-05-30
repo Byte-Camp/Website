@@ -1021,3 +1021,28 @@ a.anchor {
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 0.1;
 }
+
+.day {
+    background-color:#3B839E;
+    height:50px; 
+}
+.square {
+    margin:0px;
+    padding:0px;
+    background-color:#fff;
+    border:2px solid black;
+    min-height:150px;
+}
+.square:hover {
+    background-color:#ddd;
+    color:#000;
+}
+.square-info{
+    text-align:center;
+    margin-bottom:5px;
+    margin-top:0px;
+}
+.loc-name {
+    margin-top:-15px;
+    margin-bottom:10px;
+}

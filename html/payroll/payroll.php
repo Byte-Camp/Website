@@ -1,5 +1,133 @@
 <html lang="en">
+<?php
+    
+    include('db_utils/connect.php');
+    include('connect/user.php');
+    include('utils/payPeriod.php');
+    
+    $email = get_user();
+    if (!isset($email)){
+        echo '<script>location.href = "index.php"</script>';
+    }
+    $arr = get_period();
+    $payPeriod = $arr[0];
+    $days = $arr[1];
+    $months = $arr[2];
+    $startDay = $arr[3];
 
+    $conn = db_connect();
+    
+    //$email = 'claire.coupland@gmail.com';
+    $query = sprintf(
+        "SELECT * FROM instructors WHERE email = '%s'",
+        mysqli_real_escape_string($conn, $email)
+    );
+    $result_instructor = mysqli_query($conn, $query);
+    if (!$result_instructor) {
+        $error = sprintf("Query Failed: %s", mysql_error());
+        echo $error;
+    }
+    else if (mysqli_num_rows($result_instructor) > 0) {
+        $row_instructor = mysqli_fetch_array($result_instructor);
+        $firstname = $row_instructor["first name"];
+        $lastname = $row_instructor["last name"];
+        $instructor_id = $row_instructor["ID"];
+        $city = $row_instructor["city"];
+
+        $query = sprintf(
+            "SELECT * FROM `schools` WHERE city = '%s' LIMIT 1",
+            mysqli_real_escape_string($conn, $city)
+        );
+        $result_city = mysqli_query($conn, $query);
+        if (!$result_city) {
+            $error = sprintf("Query Failed: %s", mysql_error());
+            echo $error;
+        }
+        else if (mysqli_num_rows($result_city) > 0) {
+            $row_city = mysqli_fetch_array($result_city);
+
+            $query = sprintf(
+                "SELECT * FROM `schools` WHERE `District Number` = '%s'",
+                mysqli_real_escape_string($conn, 61)
+            );
+            $result_region = mysqli_query($conn, $query);
+            if (!$result_region) {
+                $error = sprintf("Query Failed: %s", mysql_error());
+                echo $error;
+            }
+            else if (mysqli_num_rows($result_region) > 0) {
+                //echo'   <script>';
+                $locations = Array();
+                while ($row_region = mysqli_fetch_array($result_region)){
+                    array_push($locations, $row_region['School Name']);
+                    /*echo'
+                            document.getElementById("location").innerHTML += "<option>'.$row_region['School Name'].'</option>";
+                            console.log("'.$row_region['School Name'].'");
+                        ';
+                    */
+                }
+                //echo'   </script>';
+            }
+        }
+
+        $query = sprintf(
+            "SELECT * FROM `instructor instance` WHERE instructor_ID = '%s'",
+            mysqli_real_escape_string($conn, $instructor_id)
+        );
+        $result_inst_instance = mysqli_query($conn, $query);
+        if (!$result_inst_instance) {
+            $error = sprintf("Query Failed: %s", mysql_error());
+            echo $error;
+        }
+        else if (mysqli_num_rows($result_inst_instance) > 0) {
+            $temp = 0;
+            while ($row_inst_instance = mysqli_fetch_array($result_inst_instance)){
+                if($temp == 5){
+                    break;
+                }
+                $temp += 1;
+                
+                $program_ID = $row_inst_instance['program_ID'];
+                $query = sprintf(
+                    "SELECT * FROM programs WHERE ID = '%s'",
+                    mysqli_real_escape_string($conn, $temp+1) //should be $program_ID
+                );
+                
+                $result_programs = mysqli_query($conn, $query);
+                if (!$result_programs) {
+                    $error = sprintf("Query Failed: %s", mysql_error());
+                    echo $error;
+                }
+                
+                else if (mysqli_num_rows($result_programs) > 0) {
+                    $row_programs = mysqli_fetch_array($result_programs);
+                    $camp = $row_programs['program'];
+                    if (!$camp){
+                        $camp = $row_programs['program format'];
+                    }   
+                }    
+            }
+        }
+    }
+    $query = sprintf(
+        "SELECT * FROM `program dates` WHERE ID = 2391"
+    );
+    
+    $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        $error = sprintf("Query Failed: %s", mysql_error());
+        echo $error;
+    }
+    
+    else if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+        //echo '  <script>
+        //            alert("'.$row['ID'].'");
+        //        </script>';
+    }
+    mysqli_close($conn);
+?>
 <head>
 
     <meta charset="utf-8">
@@ -24,12 +152,11 @@
     <script src="../../static/js/vendor/aos.js"></script>
     <!-- Theme CSS -->
     <link href="../../static/css/main.css" rel="stylesheet">
-
 </head>
 
 
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script>AOS.init();</script>
 
 
@@ -54,7 +181,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="">Logout</a>
+                        <a class="page-scroll" href="connect/logout.php">Logout</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
@@ -84,7 +211,10 @@
     </nav>
     <!-- BANNER -->
     <div id="header">
-        <div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url() no-repeat bottom center scroll;">
+        <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
+            <div class="col-lg-12">
+                <h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Staff Payroll</h1>
+            </div>
         </div>
     </div>
 
@@ -92,8 +222,8 @@
     <!-- CALENDAR -->
     <a id="payroll" class="anchor"></a>
     <div id="payroll-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; padding-bottom:50px; margin-bottom:100px;">
-        <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: </h3>
-        <h3 id="pay-period" class="text-center"></h3>
+        <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: <?php echo $firstname.'&nbsp'.$lastname ?></h3>
+        <h3 id="pay-period" class="text-center">Pay Period: <?php echo $payPeriod ?> </h3>
 
         <div class="container text-center">
             <div class="container col-xs-1"></div>
@@ -106,39 +236,79 @@
         </div>
         <div class="container">
             <div class="container col-xs-1"></div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day1"></label>
+            <div id="1" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day1"> <?php echo $days[0] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day2"></label>
+            <div id="2" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day2"> <?php echo $days[1] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day3"></label>
+            <div id="3" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day3"> <?php echo $days[2] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day4"></label>
+            <div id="4" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day4"> <?php echo $days[3] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day5"></label>
+            <div id="5" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day5"> <?php echo $days[4] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
             <div class="container col-xs-1"></div>
         </div>
         <div class="container">
             <div class="container col-xs-1"></div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day6"></label>
+            <div id="6" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day6"> <?php echo $days[5] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day7"></label>
+            <div id="7" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day7"> <?php echo $days[6] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day8"></label>
+            <div id="8" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day8"> <?php echo $days[7] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day9"></label>
+            <div id="9" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day9"> <?php echo $days[8] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
-            <div class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day10"></label>
+            <div id="10" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                <label id="day10"> <?php echo $days[9] ?> </label>
+                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
+                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
+                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
+                <h5 class="square-info">Total:<br> 7 Hours</h5>
             </div>
             <div class="container col-xs-1"></div>
         </div>
@@ -157,55 +327,61 @@
                 <div class="modal-body col-xs-10 col-centered">
                     <form>
                         <div class="form-group">
-                            <label for="exampleSelect1">Location</label>
-                            <select class="form-control" id="exampleSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option selected>Windsor Pavilion</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <label for="location">Location</label>
+                            <select class="form-control" id="location">
+                            <?php 
+                                foreach ($locations as &$loc) {
+                                    echo '<option value="'.$loc.'">'.$loc.'</option>';
+                                }
+                            ?>
                             </select>
                         </div>
 
                         <div class="form-group col-xs-6">
                             <!-- START TIME -->
-                            <label for="exampleInputEmail1">Start Time</label>
+                            <label for="start">Start Time</label>
                             <div class="input-group" style="width:75%">
-                                
-                                <input type="text" class="form-control" value="0">
+                                <input id="start" type="text" class="form-control" value="0">
                                 <span class="input-group-btn">
                                     <button class="btn btn-minus" type="button">-</button>
                                     <button class="btn btn-plus" type="button">+</button>
                                 </span>
                             </div>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small class="form-text text-muted">If you started earlier than 30 min before camp start-time please explain why in the comments section.</small>
+                            <br>
                             <!-- END TIME -->
-                            <label for="exampleInputEmail1">End Time</label>
+                            <label for="drive">End Time</label>
                             <div class="input-group" style="width:75%">
-                                
-                                <input type="text" class="form-control" value="0">
+                                <input id="drive" type="text" class="form-control" value="0">
                                 <span class="input-group-btn">
                                     <button class="btn btn-minus" type="button">-</button>
                                     <button class="btn btn-plus" type="button">+</button>
                                 </span>
                             </div>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small class="form-text text-muted">If you ended later than 30 minutes after camp end-time please explain why in the comments section.</small>
+                            <br>
                             <!-- DRIVE TIME -->
-                            <label for="exampleInputEmail1">Drive Time</label>
+                            <label for="drive">Drive Time</label>
                             <div class="input-group" style="width:75%">
-                                
-                                <input type="text" class="form-control" value="0">
+                                <input id="drive" type="text" class="form-control" value="0">
                                 <span class="input-group-btn">
                                     <button class="btn btn-minus" type="button">-</button>
                                     <button class="btn btn-plus" type="button">+</button>
                                 </span>
                             </div>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small class="form-text text-muted">If you you edit this please explain why in the comments section.</small>
+                            <br>
+                            
+                            <div class="input-group" style="width:75%">
+                                <label for="mgr-ok">Manager OK</label>
+                                <br>
+                                <span id="mgr-ok" class="glyphicon glyphicon-ok btn-success"></span> 
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleTextarea">Comments</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="10" style="width:45%" placeholder="Example:
+                            <textarea class="form-control" id="exampleTextarea" rows="15" style="width:45%" placeholder="Example:
                                             Added 0.5 HRS to END TIME because camper stayed late"></textarea>
                         </div>
 
@@ -217,24 +393,7 @@
             </div>
         </div>
     </div>
-    
-    <style>
-        .day{
-            background-color:#3B839E;
-            height:50px; 
-        }
-        .square{
-            margin:0px;
-            padding:0px;
-            background-color:#fff;
-            border:2px solid black;
-            min-height:150px;
-        }
-        .square:hover{
-            background-color:#ddd;
-            color:#000;
-        }
-    </style>
+
         <!-- Footer -->
     <footer id='payroll-foot'>
         <!--div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true"-->
@@ -244,6 +403,8 @@
         </div>
     </footer>
 
+    <!-- Google Maps API -->
+    <!--script src='https://maps.googleapis.com/maps/api/js?'></script-->
     <!-- jQuery -->
     <script src="../../static/js/vendor/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -252,98 +413,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!-- Theme JavaScript -->
     <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/payroll.js"></script>
+    <script>
+        $('.square').on('click', function(){
+            <?php echo "
+            var curr_month = ('".$months[((int)date("m"))-1]."');
+            var start_date = ('".$startDay."');
+            "; ?>;
 
-    <script src="../../static/js/vendor/box2d.min.js" charset="utf-8"></script>
-    <script src="../../static/js/resources.js" charset="utf-8"></script>
-    <script src="../../static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
-    <script src="../../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
-    <script src="../../static/js/falling-content.js" charset="utf-8"></script>
+            var clicked_date = document.getElementById('day'+this.id).innerHTML;
+            if (parseInt(clicked_date) < parseInt(start_date)){
+                <?php echo "curr_month = ('".$months[((int)date("m"))]."');"; ?>;
+            }
+            document.getElementById('modal-title').innerHTML = 'Edit Hours for: '+curr_month+' '+clicked_date;
+        });        
+    </script>
 </body>
-
-<script>
-    i = 0; 
-    var d = new Date(new Date().getFullYear(), 0, 1);
-    while (d.getDay() != 1){
-        d = new Date(new Date().getFullYear(), 0, i);
-        i++;
-    }
-    var start_of_year = new Date(d);
-    var today = new Date();
-    var StartDate = new Date(start_of_year);
-    var i = 14;
-    while(true){
-        if((today.getDate()-StartDate.getDate() < 14) && (StartDate.getMonth() == today.getMonth())){
-            break;
-        }
-        StartDate.setDate(StartDate.getDate()+14);
-    }
-    var EndDate = new Date(StartDate);
-    EndDate.setDate(EndDate.getDate()+14)
-    var month = ['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    var weekday = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    start = month[StartDate.getMonth()]+' '+StartDate.getDate();
-    end = month[EndDate.getMonth()]+' '+EndDate.getDate();
-    document.getElementById('pay-period').innerHTML = 'Pay Period: '+start+' - '+end;
-
-    nextDay = new Date(StartDate);
-    for (i=0; i<10; i++){
-        document.getElementById('day'+(i+1)).innerHTML = '&nbsp'+nextDay.getDate()+'&nbsp';
-        nextDay.setDate(nextDay.getDate()+1);
-        if (nextDay.getDay() == 6){
-            nextDay.setDate(nextDay.getDate()+2);
-        }
-    }
     
-    $('.btn-minus').on('click', function(){
-        if(parseFloat($(this).parent().siblings('input').val()) > 0){
-            $(this).parent().siblings('input').val(parseFloat($(this).parent().siblings('input').val()) - 0.25);
-        }
-        
-    });
-
-    $('.btn-plus').on('click', function(){
-        $(this).parent().siblings('input').val(parseFloat($(this).parent().siblings('input').val()) + 0.25);
-    });
-    
-    $('.square').on('click', function(){
-        curr_date = StartDate.getDate();
-        curr_month = month[StartDate.getMonth()];
-        var clicked_date = parseInt((this.innerHTML.split('&nbsp')[1]).substring(1));
-        if (clicked_date < curr_date){
-            curr_month = month[StartDate.getMonth()+1];
-        }
-        document.getElementById('modal-title').innerHTML = 'Edit Hours for: '+curr_month+' '+this.innerHTML;
-    });
-
-    
-</script>
-
-<?php
-    include('db_utils/connect.php');
-    $conn = db_connect();
-    #$user = getSessionUser();
-
-    $email = 'claire.coupland@gmail.com';
-    $query = sprintf(
-        "SELECT * FROM instructors WHERE email = '%s'",
-        mysqli_real_escape_string($conn, $email)
-    );
-    $result = mysqli_query($conn, $query);
-    // Check for successful user look up
-    if (!$result) {
-        $error = sprintf("Query Failed: %s", mysql_error());
-        echo $error;
-    }
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_array($result);
-        $firstname = $row["first name"];
-        $lastname = $row["last name"];
-        $instructor_id = $row["ID"];
-        echo '  <script>
-                    document.getElementById("instructor").innerHTML += "'.$firstname.'&nbsp'.$lastname.'";
-                </script>';
-        
-    }
-    mysqli_close($conn);
-?>
 </html>

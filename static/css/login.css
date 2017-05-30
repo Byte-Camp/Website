@@ -1,0 +1,14 @@
+body{
+    position:absolute;
+    background:url('../../static/img/banners/website-banner-blurred.png') no-repeat right center;
+    min-height:100%;
+    background-size:cover;
+}
+.login-input {
+    width:100%;
+}
+.login-section {
+    padding:0px;
+    margin-top:250px;
+    padding-bottom:50px;
+}
