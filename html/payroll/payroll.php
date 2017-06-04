@@ -1,135 +1,41 @@
 <html lang="en">
-<?php
-    
+<?php   
     include('db_utils/connect.php');
     include('connect/user.php');
     include('utils/payPeriod.php');
+    include('utils/instructorInfo.php');
     
-    $email = get_user();
-    if (!isset($email)){
-        echo '<script>location.href = "index.php"</script>';
-    }
-    $arr = get_period();
-    $payPeriod = $arr[0];
-    $days = $arr[1];
-    $months = $arr[2];
-    $startDay = $arr[3];
 
+    $_USER = get_user();
+    $email = $_USER['email'];
+    if (!isset($email)) { echo '<script>location.href = "index.php"</script>'; }
     $conn = db_connect();
-    
-    //$email = 'claire.coupland@gmail.com';
-    $query = sprintf(
-        "SELECT * FROM instructors WHERE email = '%s'",
-        mysqli_real_escape_string($conn, $email)
-    );
-    $result_instructor = mysqli_query($conn, $query);
-    if (!$result_instructor) {
-        $error = sprintf("Query Failed: %s", mysql_error());
-        echo $error;
-    }
-    else if (mysqli_num_rows($result_instructor) > 0) {
-        $row_instructor = mysqli_fetch_array($result_instructor);
-        $firstname = $row_instructor["first name"];
-        $lastname = $row_instructor["last name"];
-        $instructor_id = $row_instructor["ID"];
-        $city = $row_instructor["city"];
+    $firstname = $_USER['firstname'];
+    $lastname = $_USER['lastname'];
+    $instructor_id = $_USER['id'];
+    $city = $_USER['city'];
 
-        $query = sprintf(
-            "SELECT * FROM `schools` WHERE city = '%s' LIMIT 1",
-            mysqli_real_escape_string($conn, $city)
-        );
-        $result_city = mysqli_query($conn, $query);
-        if (!$result_city) {
-            $error = sprintf("Query Failed: %s", mysql_error());
-            echo $error;
-        }
-        else if (mysqli_num_rows($result_city) > 0) {
-            $row_city = mysqli_fetch_array($result_city);
 
-            $query = sprintf(
-                "SELECT * FROM `schools` WHERE `District Number` = '%s'",
-                mysqli_real_escape_string($conn, 61)
-            );
-            $result_region = mysqli_query($conn, $query);
-            if (!$result_region) {
-                $error = sprintf("Query Failed: %s", mysql_error());
-                echo $error;
-            }
-            else if (mysqli_num_rows($result_region) > 0) {
-                //echo'   <script>';
-                $locations = Array();
-                while ($row_region = mysqli_fetch_array($result_region)){
-                    array_push($locations, $row_region['School Name']);
-                    /*echo'
-                            document.getElementById("location").innerHTML += "<option>'.$row_region['School Name'].'</option>";
-                            console.log("'.$row_region['School Name'].'");
-                        ';
-                    */
-                }
-                //echo'   </script>';
-            }
-        }
+    $_PERIOD = get_period();
+    $payPeriod = $_PERIOD['payPeriod'];
+    $days = $_PERIOD['days'];
+    $months = $_PERIOD['months'];
+    $dates = $_PERIOD['dates'];
+    $currMonth = $months[((int)date("m"))-1];
+    $currDate = ((int)date("d"))-1;
+    $dates = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
 
-        $query = sprintf(
-            "SELECT * FROM `instructor instance` WHERE instructor_ID = '%s'",
-            mysqli_real_escape_string($conn, $instructor_id)
-        );
-        $result_inst_instance = mysqli_query($conn, $query);
-        if (!$result_inst_instance) {
-            $error = sprintf("Query Failed: %s", mysql_error());
-            echo $error;
-        }
-        else if (mysqli_num_rows($result_inst_instance) > 0) {
-            $temp = 0;
-            while ($row_inst_instance = mysqli_fetch_array($result_inst_instance)){
-                if($temp == 5){
-                    break;
-                }
-                $temp += 1;
-                
-                $program_ID = $row_inst_instance['program_ID'];
-                $query = sprintf(
-                    "SELECT * FROM programs WHERE ID = '%s'",
-                    mysqli_real_escape_string($conn, $temp+1) //should be $program_ID
-                );
-                
-                $result_programs = mysqli_query($conn, $query);
-                if (!$result_programs) {
-                    $error = sprintf("Query Failed: %s", mysql_error());
-                    echo $error;
-                }
-                
-                else if (mysqli_num_rows($result_programs) > 0) {
-                    $row_programs = mysqli_fetch_array($result_programs);
-                    $camp = $row_programs['program'];
-                    if (!$camp){
-                        $camp = $row_programs['program format'];
-                    }   
-                }    
-            }
-        }
-    }
-    $query = sprintf(
-        "SELECT * FROM `program dates` WHERE ID = 2391"
-    );
-    
-    $result = mysqli_query($conn, $query);
 
-    if (!$result) {
-        $error = sprintf("Query Failed: %s", mysql_error());
-        echo $error;
-    }
-    
-    else if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_array($result);
-        //echo '  <script>
-        //            alert("'.$row['ID'].'");
-        //        </script>';
-    }
+    $_INFO = get_info($conn, $instructor_id, $dates);
+    $program = $_INFO['program'];
+    $startTime = $_INFO['startTime'];
+    $endTime = $_INFO['endTime'];
+    $total = $_INFO['total'];
+
+
     mysqli_close($conn);
 ?>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -159,7 +65,6 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script>AOS.init();</script>
 
-
     <!-- NAVIGATION -->
     <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
@@ -188,11 +93,11 @@
                         <ul class="dropdown-menu navbar-custom">
                             <li><a href="../calendar/calendar_2017.html">Calendar</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../camps.html#programs">Camp Descriptions</a></li>
-                            <li role="separator" class="divider"></li>
                             <li><a href="../byte-o-vision.html">Best Ofs</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../resources.html">Resources</a></li>
+                            <li><a href="../resources.html">Public Resources</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="../camps.html#programs">Staff Resources</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -209,6 +114,7 @@
             </div>
         </div>
     </nav>
+
     <!-- BANNER -->
     <div id="header">
         <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
@@ -217,7 +123,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- CALENDAR -->
     <a id="payroll" class="anchor"></a>
@@ -236,85 +141,43 @@
         </div>
         <div class="container">
             <div class="container col-xs-1"></div>
-            <div id="1" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day1"> <?php echo $days[0] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="2" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day2"> <?php echo $days[1] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="3" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day3"> <?php echo $days[2] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="4" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day4"> <?php echo $days[3] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="5" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day5"> <?php echo $days[4] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[0] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
+            <?php 
+                for ($i=0;$i<5;$i++){
+                    $enable = 'modal';
+                    if ($program[$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
+                    echo '
+                    <div id="'.$i.'" class="square container col-xs-2" data-toggle="'.$enable.'" data-target="#edit_square">
+                        <label id="day'.$i.'"> '.$days[$i].' </label>
+                        '.$program[$i].'
+                        <h6 class="square-info"> '.$startTime[$i].' </h6>
+                        <h6 class="square-info"> '.$endTime[$i].' </h6>
+                        <h5 class="square-info"> '.$total[$i].' </h5>
+                    </div>
+                    '; 
+                }
+            ?>    
             <div class="container col-xs-1"></div>
         </div>
         <div class="container">
             <div class="container col-xs-1"></div>
-            <div id="6" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day6"> <?php echo $days[5] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="7" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day7"> <?php echo $days[6] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="8" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day8"> <?php echo $days[7] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="9" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day9"> <?php echo $days[8] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
-            <div id="10" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
-                <label id="day10"> <?php echo $days[9] ?> </label>
-                <h4 class="square-info loc-name hidden-xs hidden-sm"><?php echo $locations[1] ?></h4>
-                <h6 class="square-info">Start Time:<br> 8:30 am</h6>
-                <h6 class="square-info">End Time:<br> 3:30 pm</h6>
-                <h5 class="square-info">Total:<br> 7 Hours</h5>
-            </div>
+            <?php 
+                for ($i=5;$i<10;$i++){
+                    $enable = 'modal';
+                    if ($program[$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
+                    echo '
+                    <div id="'.$i.'" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                        <label id="day'.$i.'"> '.$days[$i].' </label>
+                        '.$program[$i].'
+                        <h6 class="square-info"> '.$startTime[$i].' </h6>
+                        <h6 class="square-info"> '.$endTime[$i].' </h6>
+                        <h5 class="square-info"> '.$total[$i].' </h5>
+                    </div>
+                    '; 
+                }
+            ?>    
             <div class="container col-xs-1"></div>
         </div>
 	</div>
-
-
 
     <!-- EDIT MODAL -->
     <div class="modal fade" id="edit_square" role="dialog">
@@ -326,20 +189,20 @@
                 </div>
                 <div class="modal-body col-xs-10 col-centered">
                     <form>
-                        <div class="form-group">
+                        <!--div class="form-group">
                             <label for="location">Location</label>
-                            <select class="form-control" id="location">
-                            <?php 
+                            <select class="form-control" id="location"-->
+                            <!--?php 
                                 foreach ($locations as &$loc) {
                                     echo '<option value="'.$loc.'">'.$loc.'</option>';
                                 }
-                            ?>
-                            </select>
-                        </div>
+                            ?-->
+                            <!--/select>
+                        </div-->
 
                         <div class="form-group col-xs-6">
                             <!-- START TIME -->
-                            <label for="start">Start Time</label>
+                            <label for="start">Add to Start Time</label>
                             <div class="input-group" style="width:75%">
                                 <input id="start" type="text" class="form-control" value="0">
                                 <span class="input-group-btn">
@@ -350,7 +213,7 @@
                             <small class="form-text text-muted">If you started earlier than 30 min before camp start-time please explain why in the comments section.</small>
                             <br>
                             <!-- END TIME -->
-                            <label for="drive">End Time</label>
+                            <label for="drive">Add to End Time</label>
                             <div class="input-group" style="width:75%">
                                 <input id="drive" type="text" class="form-control" value="0">
                                 <span class="input-group-btn">
@@ -369,7 +232,7 @@
                                     <button class="btn btn-plus" type="button">+</button>
                                 </span>
                             </div>
-                            <small class="form-text text-muted">If you you edit this please explain why in the comments section.</small>
+                            <small class="form-text text-muted">Specify your TOTAL driving time</small>
                             <br>
                             
                             <div class="input-group" style="width:75%">
@@ -384,7 +247,6 @@
                             <textarea class="form-control" id="exampleTextarea" rows="15" style="width:45%" placeholder="Example:
                                             Added 0.5 HRS to END TIME because camper stayed late"></textarea>
                         </div>
-
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -394,7 +256,7 @@
         </div>
     </div>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer id='payroll-foot'>
         <!--div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true"-->
         <div class="container text-center">
@@ -417,12 +279,15 @@
     <script>
         $('.square').on('click', function(){
             <?php echo "
-            var curr_month = ('".$months[((int)date("m"))-1]."');
-            var start_date = ('".$startDay."');
+            var curr_month = ('".$currMonth."');
+            var curr_date = ('".$currDate."');
             "; ?>;
 
             var clicked_date = document.getElementById('day'+this.id).innerHTML;
-            if (parseInt(clicked_date) < parseInt(start_date)){
+            if (parseInt(clicked_date) > parseInt(curr_date)+14) {
+                <?php echo "curr_month = ('".$months[((int)date("m"))-2]."');"; ?>;
+            }
+            else if (parseInt(clicked_date) < parseInt(curr_date-14)) {
                 <?php echo "curr_month = ('".$months[((int)date("m"))]."');"; ?>;
             }
             document.getElementById('modal-title').innerHTML = 'Edit Hours for: '+curr_month+' '+clicked_date;

@@ -1031,7 +1031,7 @@ a.anchor {
     padding:0px;
     background-color:#fff;
     border:2px solid black;
-    min-height:150px;
+    min-height:200px;
 }
 .square:hover {
     background-color:#ddd;
@@ -1043,6 +1043,6 @@ a.anchor {
     margin-top:0px;
 }
 .loc-name {
-    margin-top:-15px;
+    margin-top:0px;
     margin-bottom:10px;
 }

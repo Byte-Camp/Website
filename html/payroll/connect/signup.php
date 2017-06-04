@@ -25,8 +25,12 @@
         }
         else {
             $_SESSION['signup_user'] = $username;
-            header("location: homepage.php");
+            header("location: ../payroll.php");
+            mysqli_close($conn);
+            exit;
         }
-        mysqli_close($conn);
+        
     }
+    header("location: ../index.php");
+    exit;
 ?>
