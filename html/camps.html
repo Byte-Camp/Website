@@ -103,11 +103,10 @@
                 || navigator.userAgent.match(/Windows Phone/i)
             ){
                 alert('mobile');
-                document.getElementById('title-grab').innerHTML = '';
-                document.getElementById('title-grab').innerHTML = '<div class="container-fluid banner"></div>';
+                document.getElementById('title-grab').innerHTML = '<br><br>';
             }
             else {
-                //alert('computer');
+                alert('computer');
             }
             init();
         } // detectmob
