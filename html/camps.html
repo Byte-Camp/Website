@@ -43,7 +43,7 @@
     </div>
 
     <div id="title-mobile">
-        <div id="header">
+        <div id="header-mobile">
             <div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>
         </div>
 
@@ -114,14 +114,14 @@
                 || navigator.userAgent.match(/BlackBerry/i)
                 || navigator.userAgent.match(/Windows Phone/i)
             ){
-                //alert('mobile');
+                alert('mobile');
                 document.getElementById('title-grab').innerHTML = '';
             }
             else {
-                //alert('computer');
-                document.getElementById('title-mobile').innerHTML = '';
-            }
-            init();
+                alert('computer');
+                document.getElementById('title-mobile').innerHTML = '';             
+                init();
+            }           
         } // detectmob
     </script>
 
