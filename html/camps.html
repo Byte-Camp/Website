@@ -102,15 +102,12 @@
                 || navigator.userAgent.match(/BlackBerry/i)
                 || navigator.userAgent.match(/Windows Phone/i)
             ){
-                //alert('mobile');
+                alert('mobile');
                 document.getElementById('title-grab').innerHTML = '';
-                document.getElementById('title-grab').innerHTML = 
-                '<div id="header">'+
-                    '<div class="container-fluid banner"></div>'+
-                '</div>';
+                document.getElementById('title-grab').innerHTML = '<div class="container-fluid banner"></div>';
             }
             else {
-                //alert('computer');
+                alert('computer');
             }
             init();
         } // detectmob
