@@ -26,7 +26,7 @@
     
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload='init()'>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload='detectmob()'>
     <script>AOS.init();</script>
     <!--div id="title-grab">
         <canvas id="canvas" style='position:absolute;top:0;' width="100" height="100"></canvas>
@@ -92,7 +92,24 @@
         </div>
         <!-- /.container -->
     </nav>
-    
+    <script type="text/javascript">
+        function detectmob() {
+            if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ){
+                alert('mobile');
+            }
+            else {
+                alert('computer');
+            }
+            init();
+        } // detectmob
+    </script>
 
     <!-- Program select -->
     <a id="programs" class="anchor"></a>
@@ -132,7 +149,7 @@
                 <div class="element-item col-lg-6 col-xs-12 younger" data-category="younger">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-2dtab">
-                            <img src="../static/img/icons/bc/2dtab.png" class="camp-icns">
+                            <img src="../static/img/icons/bc/2Dtab.png" class="camp-icns">
                             <h1 class="text-center camp-header">2D Tablet Animation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
@@ -212,7 +229,7 @@
                 <div class="element-item col-lg-6 col-xs-12 older" data-category="older">
                     <div class="camps-content">
                         <div class="camp-info text-center" id="camp-info-3dg">
-                            <img src="../static/img/icons/bc/3dgames.png" class="camp-icns">
+                            <img src="../static/img/icons/bc/3Dgames.png" class="camp-icns">
                             <h1 class="text-center camp-header">3D Video Game Design</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
