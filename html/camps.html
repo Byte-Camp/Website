@@ -93,9 +93,10 @@
         </div>
         <!-- /.container -->
     </nav>
-    
+
     <script type="text/javascript">
         function detectmob() {
+            init();  
             if( navigator.userAgent.match(/Android/i)
                 || navigator.userAgent.match(/webOS/i)
                 || navigator.userAgent.match(/iPhone/i)
@@ -104,13 +105,12 @@
                 || navigator.userAgent.match(/BlackBerry/i)
                 || navigator.userAgent.match(/Windows Phone/i)
             ){
-                //alert('mobile');
+                alert('mobile');
                 document.getElementById('title-grab').innerHTML = '';
             }
             else {
-                //alert('computer');
-            }
-            init();           
+                alert('computer');
+            }                    
         } // detectmob
     </script>
 
