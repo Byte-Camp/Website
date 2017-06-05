@@ -39,7 +39,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
     <script>AOS.init();</script>
-    
+
     <!-- Navigation -->
     <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
@@ -96,9 +96,9 @@
     </div>
     <!-- HERE IS ALL THE RESOURCE INFO -->
     <a id="resources" class="anchor"></a>
-    <div id="resources-section" class="container content-section accent-section" style="padding-top:50px; padding-bottom:100px; background-color:#A11692;">
+    <div id="resources-section" class="container content-section accent-section" style="padding-top:50px; padding-bottom:100px; background-color:#A11692; min-height:1000px;">
     	<div class="camp-selection-container hidden-xs col-sm-3 col-md-2 text-center">
-            <img class="res-btn" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2dtab.png" alt='2D Tablet Animation'> <p style="padding:0; margin:0;" title='2D Animation'>2D Animation</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2Dtab.png" alt='2D Tablet Animation'> <p style="padding:0; margin:0;" title='2D Animation'>2D Animation</p>
             <img class="res-btn" onclick="switchCamp(this)" value='clay' src="../static/img/icons/bc/clay.png" alt='Claymation'> <p style="padding:0; margin:0;">Claymation</p>
             <img class="res-btn" onclick="switchCamp(this)" value='coding' src="../static/img/icons/bc/coding.png" alt='Intro to Coding'> <p style="padding:0; margin:0;">Intro to Code</p>
             <img class="res-btn" onclick="switchCamp(this)" value='mv' src="../static/img/icons/bc/mv.png" alt='Music Video'> <p style="padding:0; margin:0;">Music Video</p>
@@ -107,13 +107,13 @@
             <div class="clearfix hidden-lg"></div>
             
             <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3d.png" alt='3D Animation' title="3D Animation">
-            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3dgames.png" alt='3D Games' title="3D Game Design"> <p style="padding:0; margin:0;">Blender</p>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3Dgames.png" alt='3D Games' title="3D Game Design"> <p style="padding:0; margin:0;">Blender</p>
             <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/cyoa.png" alt='Code Your Own Adventure' title="Code Your Own Adventure">
             <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/baa.png" alt='Build An App' title="Build An App"> <p style="padding:0; margin:0;">HTML/JS/CSS</p>
         </div>
         
     	<div class="camp-selection-container hidden-sm hidden-md hidden-lg hidden-xl text-center">
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2dtab.png" alt='2D Tablet Animation' title='2D Tablet Animation'>
+            <img class="res-btn-inline" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2Dtab.png" alt='2D Tablet Animation' title='2D Tablet Animation'>
             <img class="res-btn-inline" onclick="switchCamp(this)" value='clay' src="../static/img/icons/bc/clay.png" alt='Claymation' title='Claymation'>
             <img class="res-btn-inline" onclick="switchCamp(this)" value='coding' src="../static/img/icons/bc/coding.png" alt='Introduction to Coding' title='Introduction to Coding'>
             <img class="res-btn-inline" onclick="switchCamp(this)" value='mv' src="../static/img/icons/bc/mv.png" alt='Music and Video Production' title='Music and Video Production'>
@@ -126,227 +126,255 @@
             <img class="res-btn-inline" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/cyoa.png" alt='Code Your Own Adventure' title='Code Your Own Adventure'>
             <img class="res-btn-inline" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/baa.png" alt='Build An App' title='Build An App'>
         </div>
-        <div class="container col-xs-offset-1 col-sm-offset-0 col-xs-10 col-sm-8">
+        <div class="container col-sm-offset-0 col-xs-12 col-sm-8">
 	        <h3 class='text-center' id='camp-name-hover' style='color:white; margin:0;'>Choose a camp</h3>
 	        <div class="resource-content container col-xs-12">
 
 	            <!-- Default -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-default" value="default">
-	                <div class="text-center">
-	                    <img src="../static/img/buttons/btn_home.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Resources</h2>
-	                    <img src="../static/img/buttons/btn_home.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-default" value="default">
+	                <div>
+	                    <img src="../static/img/buttons/btn_home.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Resources</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/buttons/btn_home.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
-	                <p class="text-center" style="margin: 0px; font-size: 24px;">Welcome to Byte Camp's Resource Page! 
+	                <h3 class="res-header-1">Software</h3>
+	                <p style="margin: 0px; font-size: 24px;">Welcome to Byte Camp's Resource Page! 
 	                Here we hold all the very important software we use in each of our camps.
 	                Click on a camp to get started!</p>
 	            </div>
 
 	            <!-- 2d tablet -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-2dtab">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/2dtab.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">2D Animation</h2>
-	                    <img src="../static/img/icons/bc/2dtab.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-2dtab">
+	                <div>
+	                    <img src="../static/img/icons/bc/2Dtab.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">2D Animation</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/2Dtab.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px; font-size: 24px;">Download Flip-A-Clip from the Google Play or iTunes Store:</p>
-	                <a class="col-xs-6 text-center" href="https://play.google.com/store/apps/details?id=com.vblast.flipaclip&hl=en">
-	                    <img src="../static/img/icons/software/flipaclip.png" height="100px">
-	                    <p>for Android</p>
-	                </a>
-	                <a class="col-xs-6 text-center" href="https://itunes.apple.com/us/app/flipaclip-cartoon-animation/id1101848914?mt=8">
-	                    <img src="../static/img/icons/software/flipaclip.png" height="100px">
-	                    <p>for iOS</p>
-	                </a>
+	                <p class="res-header-2">Download Flip-A-Clip from the Google Play or iTunes Store:</p>
+	                <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.vblast.flipaclip&hl=en">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/flipaclip.png" height="75">
+                                <p>Android</p>
+                            </div>
+                        </a>
+                        <a href="https://itunes.apple.com/us/app/flipaclip-cartoon-animation/id1101848914?mt=8"">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/flipaclip.png" height="75">
+                                <p>iOS</p>
+                            </div>
+                        </a>
+                    </div>
 	                <br>
-	                <h3 class="text-center" style="margin: 25px;">Documents</h3>
-	                <div class="text-center">
+	                <h3 class="res-header-1">Documents</h3>
+	                <div>
 	                    <a href="../static/docs/Storyboards.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
-	                            <p class="text-center">Storyboards</p>
+	                            <p>Storyboards</p>
 	                        </div>
 	                    </a>
 	                    <a href="../static/docs/Scripts.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
-	                            <p class="text-center">Scripts</p>
+	                            <p>Scripts</p>
 	                        </div>
 	                    </a>
 	                </div>
 	            </div>
 
 	            <!-- Claymation -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-clay">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Claymation</h2>
-	                    <img src="../static/img/icons/bc/clay.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-clay">
+	                <div>
+	                    <img src="../static/img/icons/bc/clay.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Claymation</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/clay.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px; font-size: 24px;">Download your free version of AnimatorDV here:</p>
-	                <a class="text-center" href="http://animatordv.com/download_free.php">
-	                    <img src="../static/img/icons/software/animatorDV.png" style="display: block; margin: auto;">
+	                <p class="res-header-2">Download your free version of AnimatorDV here:</p>
+	                <a href="http://animatordv.com/download_free.php">
+	                    <img src="../static/img/icons/software/animatorDV.png" style="width:100%;">
 	                    <p>ANIMATOR DV</p>
 	                </a>
 	                <br>
-	                <h3 class="text-center" style="margin: 25px;">Documents</h3>
-	                <div class="text-center">
+	                <h3 class="res-header-1">Documents</h3>
+	                <div>
 	                    <a href="../static/docs/Storyboards.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
-	                            <p class="text-center">Storyboards</p>
+	                            <p>Storyboards</p>
 	                        </div>
 	                    </a>
 	                    <a href="../static/docs/Scripts.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
-	                            <p class="text-center">Scripts</p>
+	                            <p>Scripts</p>
 	                        </div>
 	                    </a>
 	                </div>
 	            </div>
 
 	            <!-- Intro to Code -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-coding">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/coding.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Intro to Code</h2>
-	                    <img src="../static/img/icons/bc/coding.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-coding">
+	                <div>
+	                    <img src="../static/img/icons/bc/coding.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Intro to Code</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/coding.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px; font-size: 24px;">Play around with the online version or download the offline version here:</p>
-	                <a class="col-xs-6 text-center" href="https://scratch.mit.edu/projects/editor/?tip_bar=home">
-	                    <img src="../static/img/icons/software/scratch.png" height="100px">
-	                    <p>Online</p>
-	                </a>
-	                <a class="col-xs-6 text-center" href="https://scratch.mit.edu/scratch2download/">
-	                    <img src="../static/img/icons/software/scratch.png" height="100px">
-	                    <p>Offline</p>
-	                </a>
+	                <p class="res-header-2">Play around with the online version or download the offline version here:</p>
+	                <div>
+                        <a href="https://scratch.mit.edu/projects/editor/?tip_bar=home">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/scratch.png" height="75">
+                                <p>Online</p>
+                            </div>
+                        </a>
+                        <a href="https://scratch.mit.edu/scratch2download/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/scratch.png" height="75">
+                                <p>Offline</p>
+                            </div>
+                        </a>
+                    </div>
 	                <br>
-	                <h3 class="text-center" style="margin-bottom: 25px;">Documents</h3>
+	                <h3 class="res-header-1">Documents</h3>
 	                <p>There are no documents available yet! Please request any documents you would like here.</p>
 	            </div>
 
 	            <!-- Music Video -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-mv">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/mv.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Music Video</h2>
-	                    <img src="../static/img/icons/bc/mv.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-mv">
+	                <div>
+	                    <img src="../static/img/icons/bc/mv.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Music Video</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/mv.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px;">Download the free LMMS icons/software here:</p>
-	                <a class="text-center" href="https://lmms.io/download/">
-	                    <img src="../static/img/icons/software/lmms.png" height="100px" style="display: block; margin: auto;">
-	                    <p>LMMS</p>
-	                </a>
+	                <p class="res-header-2">Download the free LMMS icons/software here:</p>
+	                <div>
+                        <a href="https://lmms.io/download/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/lmms.png" height="75">
+                                <p>LMMS</p>
+                            </div>
+                        </a>
+                    </div>
 	                <br>
-	                <h3 class="text-center" style="margin: 25px;">Documents</h3>
+	                <h3 class="res-header-1">Documents</h3>
 	                <p>There are no documents available yet! Please request any documents you would like here.</p>
 	            </div>
 
 	            <!-- 2d games -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-2d">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/2d.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">2D Games</h2>
-	                    <img src="../static/img/icons/bc/2d.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-2d">
+	                <div>
+	                    <img src="../static/img/icons/bc/2d.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">2D Games</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/2d.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px;">Play with the online version, or download this package to install Mighty Editor:</p>
-	                <a class="col-xs-6 text-center" href="http://mightyeditor.mightyfingers.com/">
-	                    <img src="../static/img/icons/software/mightyeditor.png" height="100px">
-	                    <p>Online Editor</p>
-	                </a>
-	                <a class="col-xs-6 text-center" href="" download>
-	                    <img src="../static/img/icons/software/mightyeditor.png" height="100px">
-	                    <p>Install Package</p>
-	                </a>
+                    <p class="res-header-2">Play with the online version, or download this package to install Mighty Editor:</p>
+                    <div>
+                        <a href="http://mightyeditor.mightyfingers.com/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/mightyeditor.png" height="75">
+                                <p>Online Editor</p>
+                            </div>
+                        </a>
+                        <a href="" download>
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/mightyeditor.png" height="75">
+                                <p>Install Package</p>
+                            </div>
+                        </a>
+                    </div>
 	                <br>
-	                <h3 class="text-center" style="margin: 25px;">Documents</h3>
+	                <h3 class="res-header-1">Documents</h3>
 	                <p>There are no documents available yet! Please request any documents you would like here.</p>
 	            </div>
 
 	            <!-- blender -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-blender">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/3d.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Blender</h2>
-	                    <img src="../static/img/icons/bc/3dgames.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-blender">
+	                <div>
+	                    <img src="../static/img/icons/bc/3d.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Blender</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/3Dgames.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px; font-size: 24px;">Download your free version of Blender here:</p>
-	                <a class="text-center" href="http://animatordv.com/download_free.php">
-	                    <img src="../static/img/icons/software/blender.png" height="100px" style="display: block; margin: auto;">
+	                <p class="res-header-2">Download your free version of Blender here:</p>
+	                <a href="http://animatordv.com/download_free.php">
+	                    <img src="../static/img/icons/software/blender.png" height="75" style="display: block; margin: auto;">
 	                    <p>Blender</p> 
 	                </a>
 	                <br>
-	                <h3 class="text-center" style="margin: 25px;">Documents</h3>
-	                <div class="text-center">
+	                <h3 class="res-header-1">Documents</h3>
+	                <div>
 	                    <a href="../static/docs/Storyboards.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
-	                            <p class="text-center">Storyboards</p>
+	                            <p>Storyboards</p>
 	                        </div>
 	                    </a>
 	                    <a href="../static/docs/Scripts.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
-	                            <p class="text-center">Scripts</p>
+	                            <p>Scripts</p>
 	                        </div>
 	                    </a>
 	                </div>
 	            </div>
 
 	            <!-- html/js/css -->
-	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-html">
-	                <div class="text-center">
-	                    <img src="../static/img/icons/bc/cyoa.png" style="display:inline; width: 50px;">
-	                    <h2 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">HTML/JS/CSS</h2>
-	                    <img src="../static/img/icons/bc/baa.png" style="display:inline; width: 50px;">
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-html">
+	                <div>
+	                    <img src="../static/img/icons/bc/cyoa.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">HTML/JS/CSS</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/baa.png" class="res-icon">
 	                </div>
 	                <hr>
-	                <h3 class="text-center" style="margin: 25px;">Software</h3>
+	                <h3 class="res-header-1">Software</h3>
 	                <br>
-	                <p class="text-center" style="padding-bottom:50px; margin: 0px;">All you need is a good text editor and web browser! We recommend Atom and Mozilla Firefox which you can download here:</p>
-	                <a class="col-xs-6 text-center" href="https://atom.io/">
-	                    <img src="../static/img/icons/software/atom.png" height="100px">
-	                    <p>Atom</p>
-	                </a>
-	                <a class="col-xs-6 text-center" href="https://www.mozilla.org/en-US/firefox/new/">
-	                    <img src="../static/img/icons/software/firefox.png" height="100px">
-	                    <p>Mozilla Firefox</p>
-	                </a>
-	                <p class="text-center" style="margin: 0px;">Some other options for text editor's:</p>
-	                <p class="text-center" ><a href="https://www.sublimetext.com/2">Sublime Text, </a> <a href="https://notepad-plus-plus.org/download/v7.4.1.html">Notepad++</a></p>
-	                <p class="text-center" style="margin: 0px;">Some other options for web browser's:</p>
-	                <p class="text-center" ><a href="https://www.google.com/chrome/">Google Chrome, </a> <a href="http://www.opera.com/download">Opera</a></p>
+	                <p class="res-header-2">All you need is a good text editor and web browser! We recommend Atom and Mozilla Firefox which you can download here:</p>
+	                <div>
+                        <a href="https://atom.io/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/atom.png" height="75">
+                                <p>Atom</p>
+                            </div>
+                        </a>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/firefox.png" height="75">
+                                <p>Mozilla Firefox</p>
+                            </div>
+                        </a>
+                    </div>
+	                <p style="margin: 0px;">Some other options for text editor's:</p>
+	                <p><a href="https://www.sublimetext.com/2">Sublime Text, </a> <a href="https://notepad-plus-plus.org/download/v7.4.1.html">Notepad++</a></p>
+	                <p style="margin: 0px;">Some other options for web browser's:</p>
+	                <p><a href="https://www.google.com/chrome/">Google Chrome, </a> <a href="http://www.opera.com/download">Opera</a></p>
 	                <br>
-	                <h3 class="text-center" style="margin: 25px;">Documents</h3>
+	                <h3 class="res-header-1">Documents</h3>
 	                <p>There are no documents available yet! Please request any documents you would like here.</p>
 	            </div>
 	        </div>
         </div>
 	</div>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer id='resources-foot'>
         <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
             <img src="../static/img/icons/other/website-logo.png" style="width:30%"/>

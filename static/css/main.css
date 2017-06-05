@@ -886,10 +886,22 @@ a.anchor {
 }
 
 .camp-info{
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .resource-content{
+  background-color: white;
+  background-image: url('../img/textures/wrinkledlight.png');
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 30px;
+  height:900px;
+}
+
+@media (max-width: 768px) {
+  .resource-content{
     background-color: white;
     background-image: url('../img/textures/wrinkledlight.png');
     border-radius: 2px;
@@ -897,134 +909,158 @@ a.anchor {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 30px;
-    height: 1000px;
+    height:1300px;
+  }
 }
 
 .res-btn{
-    height:75px;
-    margin: 10px;
+  height:75px;
+  margin: 10px;
 }
 
 .res-btn-small {
-    height:40px;
-    margin: 10px;
+  height:40px;
+  margin: 10px;
 }
 
 .res-btn-inline{
-    display: inline-block;
-    height:75px;
-    margin: 10px;
+  display: inline-block;
+  height:75px;
+  margin: 10px;
+}
+
+.res-icon{
+  display:inline;
+  width: 50px;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.res-title{
+  display: inline;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.res-header-1{
+  margin-bottom:25px;
+}
+
+.res-header-2{
+  padding-bottom:50px;
+  margin:0px;
+  font-size:24px;
 }
 
 .camps-content{
-    background-color: white;
-    background-image: url('../img/textures/wrinkledlight.png');
-    border-radius: 2px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 30px;
-    transition: 0.3s;
-    cursor: default;
+  background-color: white;
+  background-image: url('../img/textures/wrinkledlight.png');
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 30px;
+  transition: 0.3s;
+  cursor: default;
 }
 
 .camps-content:hover{
-    transform:scale(1.05) rotate(2deg);
-    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+  transform:scale(1.05) rotate(2deg);
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 .modal-content{
-    background-image: url('../img/textures/wrinkledlight.png');
-    border-radius:0px;
+  background-image: url('../img/textures/wrinkledlight.png');
+  border-radius:0px;
 }
 
 .camp-header{
-    display: inline;
-    line-height: 50px;
-    vertical-align: middle;
-    font-size: 25px;
-    margin-bottom:0;
+  display: inline;
+  line-height: 50px;
+  vertical-align: middle;
+  font-size: 25px;
+  margin-bottom:0;
 }
 .camp-btns{
-    margin: 10px;
-    border-radius:10px; 
-    box-shadow: 0px 3px 5px gray;
+  margin: 10px;
+  border-radius:10px; 
+  box-shadow: 0px 3px 5px gray;
 }
 .camp-modal-btns{
-    display:block;
-    margin: auto;
-    width: 200px;
-    border-radius:10px;
-    box-shadow: 0px 3px 5px gray;
+  display:block;
+  margin: auto;
+  width: 200px;
+  border-radius:10px;
+  box-shadow: 0px 3px 5px gray;
 }
 .camp-modal-header{
-    font-size:40px;
+  font-size:40px;
 }
 .camp-icns{
-    display:inline;
-    width:75px;
+  display:inline;
+  width:75px;
 }
 
 .lilclayguy{
-    height: 50px;
-    transition: 1s;
-    cursor: help;
+  height: 50px;
+  transition: 1s;
+  cursor: help;
 }
 .lilclayguy:hover{
-    height: 100px;
+  height: 100px;
 }
 #camps-nav {
-    background: #Ffdf70; /* For browsers that do not support gradients */
+  background: #Ffdf70; /* For browsers that do not support gradients */
 }
 #camps-foot {
-    background: #FFDF70; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#905a2d , #FFDF70); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#905a2d, #FFDF70); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#905a2d, #FFDF70); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#905a2d, #FFDF70); /* Standard syntax */
+  background: #FFDF70; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#905a2d , #FFDF70); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#905a2d, #FFDF70); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#905a2d, #FFDF70); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#905a2d, #FFDF70); /* Standard syntax */
 }
 
 #phys, #stat {
-    position:absolute;
-    top:0px;
-    left:0px;
-    -webkit-transform: translate3d(0,0,1px);
-    -o-transform: translate3d(0,0,1px);
-    -moz-transform: translate3d(0,0,1px);
-    -ms-transform: translate3d(0,0,1px);
-    transform: translate3d(0,0,1px);
-    background-color: black;
-    -webkit-perspective: 1000;
-    -webkit-backface-visibility: hidden;
+  position:absolute;
+  top:0px;
+  left:0px;
+  -webkit-transform: translate3d(0,0,1px);
+  -o-transform: translate3d(0,0,1px);
+  -moz-transform: translate3d(0,0,1px);
+  -ms-transform: translate3d(0,0,1px);
+  transform: translate3d(0,0,1px);
+  background-color: black;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 }
 
 #phys, #stat {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 0.1;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.1;
 }
 
 .day {
-    background-color:#3B839E;
-    height:50px; 
+  background-color:#3B839E;
+  height:50px; 
 }
 .square {
-    margin:0px;
-    padding:0px;
-    background-color:#fff;
-    border:2px solid black;
-    min-height:200px;
+  margin:0px;
+  padding:0px;
+  background-color:#fff;
+  border:2px solid black;
+  min-height:200px;
 }
 .square:hover {
-    background-color:#ddd;
-    color:#000;
+  background-color:#ddd;
+  color:#000;
 }
 .square-info{
-    text-align:center;
-    margin-bottom:5px;
-    margin-top:0px;
+  text-align:center;
+  margin-bottom:5px;
+  margin-top:0px;
 }
 .loc-name {
-    margin-top:0px;
-    margin-bottom:10px;
+  margin-top:0px;
+  margin-bottom:10px;
 }
