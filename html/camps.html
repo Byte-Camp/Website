@@ -26,7 +26,7 @@
     
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload='detectmob()'>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script>AOS.init();</script>
     
     <!-- Navigation -->
@@ -81,48 +81,18 @@
         <!-- /.container -->
     </nav>
     
-    <div id="title-grab">  
+    <div id="title-grab">
+        <canvas id="canvas" style="position:absolute;top:0;" width="100" height="100"></canvas>
+        <div id="header">
+            <div class="container-fluid banner"></div>
+        </div>
+        <div id="box2d-container">
+            <div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">
+                <h1 class="text-center banner-text" style="padding:0;margin:0;cursor:-webkit-grab;cursor:grab;">CAMPS</h1>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript">
-        function detectmob() {     
-            /*if( navigator.userAgent.match(/Android/i)
-                || navigator.userAgent.match(/webOS/i)
-                || navigator.userAgent.match(/iPhone/i)
-                || navigator.userAgent.match(/iPad/i)
-                || navigator.userAgent.match(/iPod/i)
-                || navigator.userAgent.match(/BlackBerry/i)
-                || navigator.userAgent.match(/Windows Phone/i)
-            ){
-                document.getElementById('title-grab').innerHTML = 
-                '<div id="header">'+
-                    '<div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>'+
-                '</div>';
-            }
-            else {
-                document.getElementById('title-grab').innerHTML = 
-                '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="100"></canvas>'+
-                '<div id="header">'+
-                    '<div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>'+
-                '</div>'+
-                '<div id="box2d-container">'+
-                    '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
-                        '<h1 class="text-center banner-text" style="padding:0;margin:0;cursor:-webkit-grab;cursor:grab;">CAMPS</h1>'+
-                    '</div>'+
-                '</div>';
-            }*/
-            document.getElementById('title-grab').innerHTML = 
-                '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="100"></canvas>'+
-                '<div id="header">'+
-                    '<div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>'+
-                '</div>'+
-                '<div id="box2d-container">'+
-                    '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
-                        '<h1 class="text-center banner-text" style="padding:0;margin:0;cursor:-webkit-grab;cursor:grab;">CAMPS</h1>'+
-                    '</div>'+
-                '</div>';
-            init();                     
-        } // detectmob
-    </script>
+    
     
     <!-- Program select -->
     <a id="programs" class="anchor"></a>
@@ -566,7 +536,33 @@
     <!-- Theme JavaScript -->
     <script src="../static/js/main.js"></script>
     <script src="../static/js/camps.js"></script>
-    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ){
+                document.getElementById('title-grab').innerHTML = '';
+            }
+            else {
+                document.getElementById('title-grab').innerHTML = 
+                '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="100"></canvas>'+
+                '<div id="header">'+
+                    '<div class="container-fluid banner"></div>'+
+                '</div>'+
+                '<div id="box2d-container">'+
+                    '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                        '<h1 class="text-center banner-text" style="padding:0;margin:0;cursor:-webkit-grab;cursor:grab;">CAMPS</h1>'+
+                    '</div>'+
+                '</div>';
+            }
+            init(); 
+        });
+    </script>
 </body>
 
 </html>
