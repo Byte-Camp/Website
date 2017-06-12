@@ -20,6 +20,7 @@
     $payPeriod = $_PERIOD['payPeriod'];
     $days = $_PERIOD['days'];
     $months = $_PERIOD['months'];
+    $weekdays = $_PERIOD['weekdays'];
     $dates = $_PERIOD['dates'];
     $currMonth = $months[((int)date("m"))-1];
     $currDate = ((int)date("d"))-1;
@@ -130,13 +131,13 @@
         <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: <?php echo $firstname.'&nbsp'.$lastname ?></h3>
         <h3 id="pay-period" class="text-center">Pay Period: <?php echo $payPeriod ?> </h3>
 
-        <div class="container text-center">
+        <div class="container text-center hidden-xs hidden-sm">
             <div class="container col-xs-1"></div>
-            <div class="day container col-xs-2"><p>Monday</p></div>
-            <div class="day container col-xs-2"><p>Tuesday</p></div>
-            <div class="day container col-xs-2"><p>Wednesday</p></div>
-            <div class="day container col-xs-2"><p>Thursday</p></div>
-            <div class="day container col-xs-2"><p>Friday</p></div>
+            <div class="day container col-xs-2"><p><?php echo $weekdays[1]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $weekdays[2]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $weekdays[3]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $weekdays[4]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $weekdays[5]; ?></p></div>
             <div class="container col-xs-1"></div>
         </div>
         <div class="container">
@@ -146,13 +147,14 @@
                     $enable = 'modal';
                     if ($program[$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
                     echo '
-                    <div id="'.$i.'" class="square container col-xs-2" data-toggle="'.$enable.'" data-target="#edit_square">
+                    <div id="'.$i.'" class="square container col-md-2" data-toggle="'.$enable.'" data-target="#edit_square">
+                        <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$weekdays[$i+1].'</p></div>
                         <label id="day'.$i.'"> '.$days[$i].' </label>
                         '.$program[$i].'
                         <h6 class="square-info"> '.$startTime[$i].' </h6>
                         <h6 class="square-info"> '.$endTime[$i].' </h6>
                         <h5 class="square-info"> '.$total[$i].' </h5>
-                    </div>
+                    </div><br class="hidden-md hidden-lg hidden-xl">
                     '; 
                 }
             ?>    
@@ -165,13 +167,14 @@
                     $enable = 'modal';
                     if ($program[$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
                     echo '
-                    <div id="'.$i.'" class="square container col-xs-2" data-toggle="modal" data-target="#edit_square">
+                    <div id="'.$i.'" class="square container col-md-2" data-toggle="'.$enable.'" data-target="#edit_square">
+                        <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$weekdays[$i-4].'</p></div>
                         <label id="day'.$i.'"> '.$days[$i].' </label>
                         '.$program[$i].'
                         <h6 class="square-info"> '.$startTime[$i].' </h6>
                         <h6 class="square-info"> '.$endTime[$i].' </h6>
                         <h5 class="square-info"> '.$total[$i].' </h5>
-                    </div>
+                    </div><br class="hidden-md hidden-lg hidden-xl">
                     '; 
                 }
             ?>    

@@ -1,7 +1,7 @@
 <?php
     function get_period() {
         $months = array('January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
-        $weekday = array('Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        $weekdays = array('Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
         
         $start_of_year = date("Y-m-d", strtotime("Monday", mktime(0, 0, 0, 1, 1)));
         $today = date("Y-m-d"); $i = 2;
@@ -46,6 +46,7 @@
         $_PERIOD['payPeriod'] = $payPeriod;
         $_PERIOD['days'] = $days;
         $_PERIOD['months'] = $months;
+        $_PERIOD['weekdays'] = $weekdays;
         $_PERIOD['dates'] = $dates;
 
         return $_PERIOD;
