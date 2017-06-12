@@ -138,7 +138,8 @@ img::-moz-selection {
 }
 .accent-section{
 	position:relative;
-	background-color: #fBf8f8;
+  background: url('../img/textures/wrinkledlight.png');
+	/*background-color: #fBf8f8;*/
 	width:100%;
 }
 .accent-section a:hover{
@@ -153,10 +154,10 @@ img::-moz-selection {
 .faq-info {
   border-radius:0px 10px 10px 10px;
   font-family:helvetica;
-  background-color:#FFEDCD;
+  background-color:#fbfaf4;
 }
 .faq-title {
-	font-family:helvetica;
+	/*font-family:helvetica;*/
 	border:none;
 }
 .faq-icon{
@@ -173,12 +174,12 @@ img::-moz-selection {
 	padding:5px;
 }
 .faq-dropdown:hover {
-  background-color:#eae9e3;
+  background-color:#fbfaf4;
 }
 .faq-container{
   padding:5px;
-  background-color:#f4f2e8;
-  border:7px solid #fff;
+  background-image: url('../img/textures/wrinkledlight.png');
+  /*background-color:#f4f2e8;*/
 }
 .faq-item{
   background-color:transparent;
@@ -923,12 +924,13 @@ a.anchor {
   margin: 10px;
 }
 
-.res-btn-inline{
-  display: inline-block;
-  height:75px;
-  margin: 10px;
+@media (max-width: 768px) {
+  .res-btn-small {
+    display: inline-block;
+    height:75px;
+    margin: 10px;
+  }
 }
-
 .res-icon{
   display:inline;
   width: 50px;

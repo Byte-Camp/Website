@@ -29,15 +29,15 @@
     <style>
     	#resources-foot {
             background: #FFDF70; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient(#A11692 , #FFDF70); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient(#A11692, #FFDF70); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient(#A11692, #FFDF70); /* For Firefox 3.6 to 15 */
-            background: linear-gradient(#A11692, #FFDF70); /* Standard syntax */
+            background: -webkit-linear-gradient(#7e438b , #FFDF70); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#7e438b, #FFDF70); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#7e438b, #FFDF70); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#7e438b, #FFDF70); /* Standard syntax */
         }
     </style>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()" style="background-color:#7e438b;">
     <script>AOS.init();</script>
 
     <!-- Navigation -->
@@ -96,37 +96,21 @@
     </div>
     <!-- HERE IS ALL THE RESOURCE INFO -->
     <a id="resources" class="anchor"></a>
-    <div id="resources-section" class="container content-section accent-section" style="padding-top:50px; padding-bottom:100px; background-color:#A11692; min-height:1000px;">
-    	<div class="camp-selection-container hidden-xs col-sm-3 col-md-2 text-center">
-            <img class="res-btn" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2Dtab.png" alt='2D Tablet Animation'> <p style="padding:0; margin:0;" title='2D Animation'>2D Animation</p>
-            <img class="res-btn" onclick="switchCamp(this)" value='clay' src="../static/img/icons/bc/clay.png" alt='Claymation'> <p style="padding:0; margin:0;">Claymation</p>
-            <img class="res-btn" onclick="switchCamp(this)" value='coding' src="../static/img/icons/bc/coding.png" alt='Intro to Coding'> <p style="padding:0; margin:0;">Intro to Code</p>
-            <img class="res-btn" onclick="switchCamp(this)" value='mv' src="../static/img/icons/bc/mv.png" alt='Music Video'> <p style="padding:0; margin:0;">Music Video</p>
-            <img class="res-btn" onclick="switchCamp(this)" value='2d' src="../static/img/icons/bc/2d.png" alt='2D Games'> <p style="padding:0; margin:0;">2D Games</p>
-            
-            <div class="clearfix hidden-lg"></div>
-            
-            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3d.png" alt='3D Animation' title="3D Animation">
-            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3Dgames.png" alt='3D Games' title="3D Game Design"> <p style="padding:0; margin:0;">Blender</p>
-            <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/cyoa.png" alt='Code Your Own Adventure' title="Code Your Own Adventure">
-            <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/baa.png" alt='Build An App' title="Build An App"> <p style="padding:0; margin:0;">HTML/JS/CSS</p>
+    <div id="resources-section" class="container content-section" style="padding:0px; margin:0px; padding-top:50px; padding-bottom:100px; min-height:1000px;">
+    	<div class="camp-selection-container col-sm-3 col-md-2 text-center" style="padding-top:50px; padding-bottom:50px;">
+            <img class="res-btn" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2Dtab.png" alt='2D Tablet Animation' title='2D Tablet Animation'><p class="hidden-xs" style="padding:0; margin:0;">2D Animation</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='clay' src="../static/img/icons/bc/clay.png" alt='Claymation' title='Claymation'><p class="hidden-xs" style="padding:0; margin:0;">Claymation</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='coding' src="../static/img/icons/bc/coding.png" alt='Introduction to Coding' title='Introduction to Coding'><p class="hidden-xs" style="padding:0; margin:0;">Intro to Code</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='mv' src="../static/img/icons/bc/mv.png" alt='Music and Video Production' title='Music and Video Production'><p class="hidden-xs" style="padding:0; margin:0;">Music Video</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='2d' src="../static/img/icons/bc/2d.png" alt='2D Games' title='2D Games'><p class="hidden-xs" style="padding:0; margin:0;">2D Games</p>
+            <div class="clearfix hidden-xs"></div>           
+            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3d.png" alt='3D Animation' title='3D Animation'>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3Dgames.png" alt='3D Games' title='3D Games'><p class="hidden-xs" style="padding:0; margin:0;">Blender</p>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/cyoa.png" alt='Code Your Own Adventure' title='Code Your Own Adventure'>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/baa.png" alt='Build An App' title='Build An App'><p class="hidden-xs" style="padding:0; margin:0;">HTML/JS/CSS</p>
         </div>
-        
-    	<div class="camp-selection-container hidden-sm hidden-md hidden-lg hidden-xl text-center">
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2Dtab.png" alt='2D Tablet Animation' title='2D Tablet Animation'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='clay' src="../static/img/icons/bc/clay.png" alt='Claymation' title='Claymation'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='coding' src="../static/img/icons/bc/coding.png" alt='Introduction to Coding' title='Introduction to Coding'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='mv' src="../static/img/icons/bc/mv.png" alt='Music and Video Production' title='Music and Video Production'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='2d' src="../static/img/icons/bc/2d.png" alt='2D Games' title='2D Games'>
-            
-            <div class="clearfix hidden-lg"></div>
-            
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3d.png" alt='3D Animation' title='3D Animation'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3Dgames.png" alt='3D Games' title='3D Games'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/cyoa.png" alt='Code Your Own Adventure' title='Code Your Own Adventure'>
-            <img class="res-btn-inline" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/baa.png" alt='Build An App' title='Build An App'>
-        </div>
-        <div class="container col-sm-offset-0 col-xs-12 col-sm-8">
+
+        <div class="container col-sm-offset-1 col-xs-12 col-sm-8">
 	        <h3 class='text-center' id='camp-name-hover' style='color:white; margin:0;'>Choose a camp</h3>
 	        <div class="resource-content container col-xs-12">
 
@@ -172,13 +156,13 @@
 	                <br>
 	                <h3 class="res-header-1">Documents</h3>
 	                <div>
-	                    <a href="../static/docs/Storyboards.pdf">
+	                    <a href="../static/doc/Storyboards.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
 	                            <p>Storyboards</p>
 	                        </div>
 	                    </a>
-	                    <a href="../static/docs/Scripts.pdf">
+	                    <a href="../static/doc/Scripts.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
 	                            <p>Scripts</p>
@@ -205,13 +189,13 @@
 	                <br>
 	                <h3 class="res-header-1">Documents</h3>
 	                <div>
-	                    <a href="../static/docs/Storyboards.pdf">
+	                    <a href="../static/doc/Storyboards.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
 	                            <p>Storyboards</p>
 	                        </div>
 	                    </a>
-	                    <a href="../static/docs/Scripts.pdf">
+	                    <a href="../static/doc/Scripts.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
 	                            <p>Scripts</p>
@@ -292,7 +276,7 @@
                                 <p>Online Editor</p>
                             </div>
                         </a>
-                        <a href="" download>
+                        <a href="../static/doc/mightyeditor-linux.zip">
                             <div class="doc-container">
                                 <img src="../static/img/icons/software/mightyeditor.png" height="75">
                                 <p>Install Package</p>
@@ -322,13 +306,13 @@
 	                <br>
 	                <h3 class="res-header-1">Documents</h3>
 	                <div>
-	                    <a href="../static/docs/Storyboards.pdf">
+	                    <a href="../static/doc/Storyboards.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
 	                            <p>Storyboards</p>
 	                        </div>
 	                    </a>
-	                    <a href="../static/docs/Scripts.pdf">
+	                    <a href="../static/doc/Scripts.pdf">
 	                        <div class="doc-container">
 	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
 	                            <p>Scripts</p>
