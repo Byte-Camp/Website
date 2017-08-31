@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+			var time1,time2,time3,time4,time5,time6;
+			var mole1,mole2,mole3,mole4,mole5,mole6;
+			var si, score;
+			
+			function init(){
+				time1 = Math.floor(Math.random()*50)+30;
+				time2 = Math.floor(Math.random()*50)+30;
+				time3 = Math.floor(Math.random()*50)+30;
+				time4 = Math.floor(Math.random()*50)+30;
+				time5 = Math.floor(Math.random()*50)+30;
+				time6 = Math.floor(Math.random()*50)+30;
+
+				mole1 = document.getElementById("mole1");
+				mole2 = document.getElementById("mole2");
+				mole3 = document.getElementById("mole3");
+				mole4 = document.getElementById("mole4");
+				mole5 = document.getElementById("mole5");
+				mole6 = document.getElementById("mole6");
+
+				mole1.addEventListener("click",moleHit);
+				mole2.addEventListener("click",moleHit);
+				mole3.addEventListener("click",moleHit);
+				mole4.addEventListener("click",moleHit);
+				mole5.addEventListener("click",moleHit);
+				mole6.addEventListener("click",moleHit);				
+				si = setInterval("gameClock()",100);
+				score = 0;
+			}
+			
+			function gameClock() {
+				time1 = moleClock(mole1,time1);
+				time2 = moleClock(mole2,time2);
+				time3 = moleClock(mole3,time3);
+				time4 = moleClock(mole4,time4);
+				time5 = moleClock(mole5,time5);
+				time6 = moleClock(mole6,time6);				
+			}
+			
+			function moleHit(){
+				if (this == mole1) time1 = hitMole(time1);
+				if (this == mole2) time2 = hitMole(time2);
+				if (this == mole3) time3 = hitMole(time3);
+				if (this == mole4) time4 = hitMole(time4);
+				if (this == mole5) time5 = hitMole(time5);
+				if (this == mole6) time6 = hitMole(time6);
+			}
+			
+			function hitMole(time) {
+			   if(time >= 11 && time <= 20)
+				{
+					time = 9;
+					score += 1;
+					document.getElementById("score").innerHTML = score;
+				}
+				return time;
+			}
+			
+			function moleClock(mole,time){
+				time = time -1;
+				if(time == 21){
+					mole.src = "head.png";
+				}
+				if(time == 20){
+					mole.src = "whole.png";
+				}
+				if(time == 11){
+					mole.src = "head.png";
+				}
+				if(time == 10){
+					mole.src = "bg.png";
+					time = Math.floor(Math.random()*50)+30;
+				}
+				if(time<10){
+					mole.src = "oww.png";
+
+				}
+				if(time == 0){
+					mole.src = "bg.png";
+					time = Math.floor(Math.random()*50)+30;
+				}
+				return time;
+			}
+		</script>
+	</head>
+	<body onLoad="init()">
+		<div>
+			<center>
+				<p><span id="score">0</span></p>
+				<img id="mole1" src="bg.png"/>
+				<img id="mole2" src="bg.png"/>
+				<img id="mole3" src="bg.png"/>	<br>
+				<img id="mole4" src="bg.png"/>
+				<img id="mole5" src="bg.png"/>
+				<img id="mole6" src="bg.png"/>
+			<center>	
+		</div>
+	</body>
+</html>

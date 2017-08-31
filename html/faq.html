@@ -26,7 +26,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-color:#fff; margin-top:10%;">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-color:#fff;">
     <script>AOS.init();</script>
 
     <!-- Navigation -->
@@ -81,29 +81,17 @@
         <!-- /.container -->
     </nav>
     
+    <div id='title-grab'>
+    </div>
+
     <!-- Program select -->
     <a id="faqs" class="anchor"></a>
-    <div class="container-fluid content-section">
-        <!-- Search Bar -->
-        <div class="container col-md-5 col-centered" style="margin-top:-50px; padding-bottom:100px;">
-            <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input id="text-input" type="text" class="form-control input-lg" placeholder="What are you looking for?"/>
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button" onclick="searchSite();">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div><BR>
-            </div>
-        </div>
-
-        
+    <div class="container-fluid content-section">    
         <!-- FAQs -->
         <div class="container col-lg-10 col-md-10 col-centered">
             <div class="row col-centered">
                 <!-- Column 1,1 -->
-                <div class=" faq-col col-lg-4 col-md-4 col-sm-4">
+                <div class="faq-col col-lg-4 col-md-4 col-sm-4">
                     
                     <div class="panel-group accordion faq-container">
                         <h4 class="faq-header">Registration</h4>
@@ -117,7 +105,7 @@
                             </div>
                             <div id="collapse111" class="panel-collapse collapse faq-info">
                                 <div class="panel-body">
-                                    Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
+                                    You can register by visiting our calendar page and selecting the camp that interests you most!
                                 </div>
                             </div>
                         </div>
@@ -686,7 +674,22 @@
                 </div>
             </div>
         </div>
+
+        <!-- Search Bar -->
+        <div class="container col-md-5 col-centered" style="padding:50px;">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input id="text-input" type="text" class="form-control input-lg" placeholder="Can't find what you're looking for?"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button" onclick="searchSite();">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div><BR>
+            </div>
+        </div>
     </div>
+
     <!-- Footer -->
     <footer id='faq-foot'>
         <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
@@ -704,14 +707,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
 
-    <!--script src="../static/js/vendor/box2d.min.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/box2d.min.js" charset="utf-8"></script>
     <script src="../static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
     <script src="../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
-    <script src="../static/js/falling-content.js" charset="utf-8"></script-->
+    <script src="../static/js/falling-content.js" charset="utf-8"></script>
     
     <!-- Theme JavaScript -->
     <script src="../static/js/main.js"></script>
     <script src="../static/js/faq.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            /*if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ){
+                document.getElementById('title-grab').innerHTML = '';
+            }
+            else {*/
+            document.getElementById('title-grab').innerHTML = 
+            '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>'+
+            '<div id="header">'+
+                '<div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>'+
+            '</div>'+
+
+            '<div id="box2d-container">'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">FAQ</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">?</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">?</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">?</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">?</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">?</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">?</h1>'+
+                '</div>'
+            '</div>';
+            //}
+        });
+    </script>
 </body>
 
 </html>
