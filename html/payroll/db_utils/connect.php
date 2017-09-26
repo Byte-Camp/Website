@@ -6,7 +6,7 @@ function db_connect() {
     $db = "byteDB";
     $port = 3306;
     $connection = mysqli_connect($host, $user, $pass, $db, $port) or die (mysql_error());
-
+    echo "connected!";
     return $connection;
     
 }

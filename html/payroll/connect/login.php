@@ -7,23 +7,28 @@
 	    $email = stripslashes($_POST['email']);
 	    $password = stripslashes($_POST['password']);
         $password = $password . 'somesortofsalt';
-
-	    $conn = db_connect();
+		$conn = db_connect();
+        
+        echo $email;
+        echo $password;
+	    
 	    $query = sprintf(
-	        'SELECT * FROM instructors WHERE email = "%s"',
+	        'SELECT * FROM instructor WHERE email = "%s"',
 	        mysqli_real_escape_string($conn, $email)
 	    );
 	    $result = mysqli_query($conn, $query);
-
+	    echo "SOMETHING1";
 	    if (!$result) {
 	        $error = sprintf('Query Failed: %s', mysql_error());
             echo $error;
         }
+        echo "SOMETHING2";
         if (mysqli_num_rows($result) > 0) {
         	$row_instructor = mysqli_fetch_array($result);
-       		$firstname = $row_instructor['first name'];
-        	$lastname = $row_instructor['last name'];
-	        $instructor_id = $row_instructor['ID'];
+       		$firstname = $row_instructor['first_name'];
+       		echo "NAME: ".$firstname;
+        	$lastname = $row_instructor['last_name'];
+	        $instructor_id = $row_instructor['instructor_id'];
 	        $city = $row_instructor['city'];
 
             $_SESSION['email'] = $email;
