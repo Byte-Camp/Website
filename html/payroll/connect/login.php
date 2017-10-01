@@ -12,8 +12,8 @@
         $password = $password . 'somesortofsalt';
 		$connection = db_connect();
 		VerifyAccountsTable($connection); 
-	    //echo "<script>alert('".$email."');</script>";
-	    //echo "<script>alert('".$password."');</script>";
+	    echo "<script>alert('".$email."');</script>";
+	    echo "<script>alert('".$password."');</script>";
 	}
 ?>
 
