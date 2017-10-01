@@ -3,12 +3,18 @@
 <h1>Sample page</h1>
 <?php
 	include('../db_utils/connect.php');
-	$connection = db_connect();
-	VerifyAccountsTable($connection); 
-
-	/* If input fields are populated, add a row to the Employees table. */
-	$employee_name = htmlentities($_POST['Name']);
-	$employee_address = htmlentities($_POST['Address']);
+	if (!isset($_SESSION)) {
+		@session_start();
+	}
+	if (isset($_POST['submit-login'])) {
+	    $email = stripslashes($_POST['email']);
+	    $password = stripslashes($_POST['password']);
+        $password = $password . 'somesortofsalt';
+		$connection = db_connect();
+		VerifyAccountsTable($connection); 
+	    //echo "<script>alert('".$email."');</script>";
+	    //echo "<script>alert('".$password."');</script>";
+	}
 ?>
 
 <?php
@@ -24,25 +30,12 @@ while($query_data = mysqli_fetch_row($result)) {
 }
 ?>
 
-</table>
-
 </body>
 </html>
 
 <?php
 /*
-	echo "<script>alert('hi');</script>";
-	include('../db_utils/connect.php');
-	if (!isset($_SESSION)) {
-		@session_start();
-	}
-	if (isset($_POST['submit-login'])) {
-	    $email = stripslashes($_POST['email']);
-	    $password = stripslashes($_POST['password']);
-        $password = $password . 'somesortofsalt';
-		$conn = db_connect();
-	    echo "<script>alert('".$email."');</script>";
-	    echo "<script>alert('".$password."');</script>";
+
 
 	    $query = sprintf(
 	        'SELECT * FROM accounts WHERE instructor_email = "%s"',
