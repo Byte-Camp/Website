@@ -4,49 +4,16 @@
 <?php
 	include('../db_utils/connect.php');
 	$connection = db_connect();
-	VerifyEmployeesTable($connection); 
+	VerifyAccountsTable($connection); 
 
 	/* If input fields are populated, add a row to the Employees table. */
 	$employee_name = htmlentities($_POST['Name']);
 	$employee_address = htmlentities($_POST['Address']);
-
-	if (strlen($employee_name) || strlen($employee_address)) {
-	AddEmployee($connection, $employee_name, $employee_address);
-	}
 ?>
-
-<!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
-  <table border="0">
-    <tr>
-      <td>Name</td>
-      <td>Address</td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" name="Name" maxlength="45" size="30" />
-      </td>
-      <td>
-        <input type="text" name="Address" maxlength="90" size="60" />
-      </td>
-      <td>
-        <input type="submit" value="Add Data" />
-      </td>
-    </tr>
-  </table>
-</form>
-
-<!-- Display table data. -->
-<table border="1" cellpadding="2" cellspacing="2">
-  <tr>
-    <td>ID</td>
-    <td>Name</td>
-    <td>Address</td>
-  </tr>
 
 <?php
 
-$result = mysqli_query($connection, "SELECT * FROM Employees"); 
+$result = mysqli_query($connection, "SELECT * FROM accounts"); 
 
 while($query_data = mysqli_fetch_row($result)) {
   echo "<tr>";

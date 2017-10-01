@@ -9,47 +9,24 @@ function db_connect() {
 }
 
 /* Check whether the table exists and, if not, create it. */
-function VerifyEmployeesTable($connection) {
-  if(!TableExists("Employees", $connection, DB_DATABASE)) 
-  { 
-     $query = "CREATE TABLE `Employees` (
-         `ID` int(11) NOT NULL AUTO_INCREMENT,
-         `Name` varchar(45) DEFAULT NULL,
-         `Address` varchar(90) DEFAULT NULL,
-         PRIMARY KEY (`ID`),
-         UNIQUE KEY `ID_UNIQUE` (`ID`)
-       ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
-
-     if(!mysqli_query($connection, $query)) echo("<p>Error creating table.</p>");
-  }
-  else
-  {
-    echo "<script>alert('SOMETHING1');</script>";
-  }
+function VerifyAccountsTable($connection) {
+    if(!TableExists("accounts", $connection)) { 
+        echo "<script>alert('Error with the Accounts Table.');</script>";
+    } else {
+        echo "<script>alert('Accounts Table is Functioning Correctly.');</script>";
+    }
 }
 
 /* Check for the existence of a table. */
-function TableExists($tableName, $connection, $dbName) {
-  $t = mysqli_real_escape_string($connection, $tableName);
-  $d = mysqli_real_escape_string($connection, $dbName);
-
-  $checktable = mysqli_query($connection, 
-      "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME = '$t' AND TABLE_SCHEMA = '$d'");
-
-  if(mysqli_num_rows($checktable) > 0) return true;
-
-  return false;
+function TableExists($tableName, $connection) {
+    $t = mysqli_real_escape_string($connection, $tableName);
+    $d = mysqli_real_escape_string($connection, DB_DATABASE);
+    $checktable = mysqli_query($connection, "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME = '$t' AND TABLE_SCHEMA = '$d'");
+    if(mysqli_num_rows($checktable) > 0) return true;
+    return false;
 }
 
-/* Add an employee to the table. */
-function AddEmployee($connection, $name, $address) {
-   $n = mysqli_real_escape_string($connection, $name);
-   $a = mysqli_real_escape_string($connection, $address);
 
-   $query = "INSERT INTO `Employees` (`Name`, `Address`) VALUES ('$n', '$a');";
-
-   if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
-}
 
 /*
 function db_connect() {
