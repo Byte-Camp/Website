@@ -22,6 +22,7 @@
 	    $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) > 0) {
         	echo "YAY";
+        	header('Location: ../payroll.php');
         	/*$row_instructor = mysqli_fetch_array($result);
        		$firstname = $row_instructor['first_name'];
        		echo "NAME: ".$firstname;
@@ -34,10 +35,10 @@
             $_SESSION['lastname'] = $lastname;
             $_SESSION['id'] = $instructor_id;
             $_SESSION['city'] = $city;*/
-	        //header('Location: ../payroll.php');
+	        
 	    } 
         db_close();
-        //exit;
+        exit;
 	}
 	//header('Location: ../index.php');
     //exit;
