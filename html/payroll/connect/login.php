@@ -14,42 +14,15 @@
 		VerifyAccountsTable($connection); 
 	    echo "<script>alert('".$email."');</script>";
 	    echo "<script>alert('".$password."');</script>";
-	}
-?>
-
-<?php
-
-$result = mysqli_query($connection, "SELECT * FROM accounts"); 
-
-while($query_data = mysqli_fetch_row($result)) {
-  echo "<tr>";
-  echo "<td>",$query_data[0], "</td>",
-       "<td>",$query_data[1], "</td>",
-       "<td>",$query_data[2], "</td>";
-  echo "</tr>";
-}
-?>
-
-</body>
-</html>
-
-<?php
-/*
-
 
 	    $query = sprintf(
 	        'SELECT * FROM accounts WHERE instructor_email = "%s"',
-	        mysqli_real_escape_string($conn, $email)
+	        mysqli_real_escape_string($connection, $email)
 	    );
-	    $result = mysqli_query($conn, $query);
-	    echo "<script>alert('SOMETHING1');</script>";
-	    if (!$result) {
-	        $error = sprintf('Query Failed: %s', mysql_error());
-            echo $error;
-        }
-        echo "<script>alert('SOMETHING2');</script>";
+	    $result = mysqli_query($connection, $query);
         if (mysqli_num_rows($result) > 0) {
-        	$row_instructor = mysqli_fetch_array($result);
+        	echo "YAY";
+        	/*$row_instructor = mysqli_fetch_array($result);
        		$firstname = $row_instructor['first_name'];
        		echo "NAME: ".$firstname;
         	$lastname = $row_instructor['last_name'];
@@ -60,13 +33,28 @@ while($query_data = mysqli_fetch_row($result)) {
             $_SESSION['firstname'] = $firstname;
             $_SESSION['lastname'] = $lastname;
             $_SESSION['id'] = $instructor_id;
-            $_SESSION['city'] = $city;
-	        header('Location: ../payroll.php');
-	        mysqli_close($conn);
-	        exit;
-	    }    
+            $_SESSION['city'] = $city;*/
+	        //header('Location: ../payroll.php');
+	    } 
+        db_close();
+        //exit;
 	}
 	//header('Location: ../index.php');
     //exit;
-*/
 ?>
+
+<?php
+/*
+$result = mysqli_query($connection, "SELECT * FROM accounts"); 
+
+while($query_data = mysqli_fetch_row($result)) {
+  echo "<tr>";
+  echo "<td>",$query_data[0], "</td>",
+       "<td>",$query_data[1], "</td>",
+       "<td>",$query_data[2], "</td>";
+  echo "</tr>";
+}*/
+?>
+
+</body>
+</html>

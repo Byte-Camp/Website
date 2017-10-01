@@ -26,6 +26,10 @@ function TableExists($tableName, $connection) {
     return false;
 }
 
+function db_close() {
+    mysqli_free_result($result);
+    mysqli_close($connection);
+}
 
 
 /*
@@ -41,12 +45,4 @@ function db_connect() {
     
 }
 */
-?>
-
-<!-- Clean up. -->
-<?php
-
-  mysqli_free_result($result);
-  mysqli_close($connection);
-
 ?>
