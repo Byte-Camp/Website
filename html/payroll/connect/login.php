@@ -20,7 +20,7 @@
             echo $error;
         }
         echo "SOMETHING2";
-        else if (mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($result) > 0) {
         	/*$row_instructor = mysqli_fetch_array($result);
        		$firstname = $row_instructor['first_name'];
        		echo "NAME: ".$firstname;
