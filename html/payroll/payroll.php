@@ -9,7 +9,7 @@
     $_USER = get_user();
     $email = $_USER['email'];
     if (!isset($email)) { echo '<script>location.href = "index.php"</script>'; }
-    $conn = db_connect();
+    /*$conn = db_connect();
     $firstname = $_USER['firstname'];
     $lastname = $_USER['lastname'];
     $instructor_id = $_USER['id'];
@@ -34,7 +34,7 @@
     $total = $_INFO['total'];
 
 
-    mysqli_close($conn);
+    mysqli_close($conn);*/
 ?>
 <head>
     <meta charset="utf-8">
