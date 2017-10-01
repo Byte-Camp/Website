@@ -1,14 +1,12 @@
+<?php include "../../../../../inc/dbinfo.inc"; ?>
+
 <?php
 function db_connect() {
-    $host = "bytecamp-db.cjniwxkrwxjh.us-east-2.rds.amazonaws.com";
-    $user = "adminBC";
-    $pass = "2201Chambers";
-    $db = "byteDB";
-    $port = 3306;
-    $connection = mysqli_connect($host, $user, $pass, $db, $port) or die (mysql_error());
-    echo "connected!";
+    /* Connect to MySQL and select the database. */
+    $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+    if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    $database = mysqli_select_db($connection, DB_DATABASE);
     return $connection;
-    
 }
 
 /*
