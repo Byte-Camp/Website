@@ -8,7 +8,43 @@
 
     $_USER = get_user();
     if (!isset($_USER['email'])) { echo '<script>location.href = "index.php"</script>'; }
-
+    echo "<script>alert('".$_USER['email']."');</script>";
+    $connection = db_connect();
+            
+    $query = sprintf(
+        'SELECT * FROM accounts WHERE instructor_email = "%s"',
+        mysqli_real_escape_string($connection, $_SESSION['email'])
+    );
+    $result = mysqli_query($connection, $query);
+    echo "<script>alert('WHAT');</script>";
+    if (mysqli_num_rows($result) > 0) {
+        //$row = mysqli_fetch_array($result);
+        echo "<script>alert('YAY');</script>";
+        //$_SESSION['firstname'] = $row['first_name'];
+        //$_SESSION['lastname'] = $row['last_name'];
+        //$_SESSION['id'] = $row['id'];
+        //$_SESSION['city'] = $row['city'];   
+    }
+    db_close($result, $connection);
+    /*$email = $_USER['email'];
+    $connection = db_connect();
+    
+    $query = sprintf(
+        'SELECT * FROM accounts WHERE instructor_email = "%s"',
+        mysqli_real_escape_string($connection, $email)
+    );
+    $result = mysqli_query($connection, $query);
+    
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+        echo "<script>alert('YAY');</script>";
+        $_USER['firstname'] = $row['first_name'];
+        $_USER['lastname'] = $row['last_name'];
+        $_USER['id'] = $row['id'];
+        $_USER['city'] = $row['city'];  
+    }*/ 
+    //db_close($result, $connection);
+    /*
     echo "<script>console.log('user');</script>";
     $_PERIOD = get_period();
     $currMonth = $_PERIOD['months'][((int)date("m"))-1];
@@ -17,7 +53,7 @@
     echo "<script>console.log('period');</script>";
 
     $_INFO = get_info($_USER['id'], $_PERIOD['dates']);
-    echo "<script>console.log('info');</script>";
+    echo "<script>console.log('info');</script>";*/
 ?>
 <head>
     <meta charset="utf-8">
@@ -50,7 +86,7 @@
     <script>AOS.init();</script>
 
     <!-- NAVIGATION -->
-    <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
+    <!--nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="../../index.html" ><img src="../../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
@@ -62,10 +98,10 @@
                 </button>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            < Collect the nav links, forms, and other content for toggling >
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    < Hidden li included to remove active class from about link when scrolled up past about section >
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -97,7 +133,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav-->
 
     <!-- BANNER -->
     <div id="header">
