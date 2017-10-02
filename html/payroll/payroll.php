@@ -1,5 +1,6 @@
 <html lang="en">
-<?php   
+<?php
+    include('db_utils/connect.php');
     include('connect/user.php');
     include('utils/payPeriod.php');
     include('utils/instructorInfo.php');
@@ -8,14 +9,15 @@
     $_USER = get_user();
     if (!isset($_USER['email'])) { echo '<script>location.href = "index.php"</script>'; }
 
-
+    echo "<script>console.log('user');</script>";
     $_PERIOD = get_period();
     $currMonth = $_PERIOD['months'][((int)date("m"))-1];
     $currDate = ((int)date("d"))-1;
     //$_PERIOD['dates'] = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
-
+    echo "<script>console.log('period');</script>";
 
     $_INFO = get_info($_USER['id'], $_PERIOD['dates']);
+    echo "<script>console.log('info');</script>";
 ?>
 <head>
     <meta charset="utf-8">
