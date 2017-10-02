@@ -8,7 +8,7 @@ function db_connect() {
     return $connection;
 }
 
-function db_close() {
+function db_close($result, $connection) {
     mysqli_free_result($result);
     mysqli_close($connection);
 }

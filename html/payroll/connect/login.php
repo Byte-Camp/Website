@@ -1,6 +1,6 @@
 <?php
 	include('../db_utils/connect.php');
-	
+
 	if (!isset($_SESSION)) {
 		@session_start();
 	}
@@ -18,7 +18,7 @@
         	$_SESSION['email'] = $email;
         	header('Location: ../payroll.php');        
 	    } 
-        db_close();
+        db_close($result, $connection);
         exit;
 	}
 	header('Location: ../index.php');

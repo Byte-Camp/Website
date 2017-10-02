@@ -1,35 +1,36 @@
 <?php
-    function get_info($conn, $instructor_id, $dates) {
+    function get_info($instructor_id, $dates) {
+        $connection = db_connect();
         $query = sprintf(
             "SELECT * 
             FROM `program dates` 
             WHERE 
                 ID IN (SELECT program_ID FROM `instructor instance` WHERE instructor_ID = '%s')",
-            mysqli_real_escape_string($conn, $instructor_id)
+            mysqli_real_escape_string($connection, $instructor_id)
         );
-        $result_inst_instance = mysqli_query($conn, $query);
-        if (!$result_inst_instance) {
+        $result = mysqli_query($connection, $query);
+        if (!$result) {
             $error = sprintf("Query Failed: %s", mysql_error());
             echo $error;
         }
-        else if (mysqli_num_rows($result_inst_instance) > 0) {
+        else if (mysqli_num_rows($result) > 0) {
             $program = $dates; $startTime = $dates; $endTime = $dates; $total = $dates;
-            while ($row_inst_instance = mysqli_fetch_array($result_inst_instance)){
+            while ($row_inst_instance = mysqli_fetch_array($result)){
                 $date = $row_inst_instance['date']; 
 
                 if (($key = array_search($date, $program)) !== false){
                     $program_ID = $row_inst_instance['program ID'];
                     $query = sprintf(
                         "SELECT * FROM `programs` WHERE ID = '%s'",
-                        mysqli_real_escape_string($conn, $program_ID)
+                        mysqli_real_escape_string($connection, $program_ID)
                     );
-                    $result_programs = mysqli_query($conn, $query);
-                    if (!$result_programs) {
+                    $result = mysqli_query($connection, $query);
+                    if (!$result) {
                         $error = sprintf("Query Failed: %s", mysql_error());
                         echo $error;
                     }
-                    else if (mysqli_num_rows($result_programs) > 0) {
-                        $row_programs = mysqli_fetch_array($result_programs);
+                    else if (mysqli_num_rows($result) > 0) {
+                        $row_programs = mysqli_fetch_array($result);
                         
                         $s = date('h:i',strtotime($row_programs['starttime']));
                         $e = date('h:i',strtotime($row_programs['endtime']));
@@ -55,8 +56,8 @@
             $_INFO['startTime'] = $startTime;
             $_INFO['endTime'] = $endTime;
             $_INFO['total'] = $total;
-
-            return $_INFO;
         }
+        db_close($result, $connection);
+        return $_INFO;
     }
 ?>

@@ -9,7 +9,7 @@
     $_USER = get_user();
     $email = $_USER['email'];
     if (!isset($email)) { echo '<script>location.href = "index.php"</script>'; }
-    /*$conn = db_connect();
+    $conn = db_connect();
     $firstname = $_USER['firstname'];
     $lastname = $_USER['lastname'];
     $instructor_id = $_USER['id'];
@@ -27,14 +27,11 @@
     $dates = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
 
 
-    $_INFO = get_info($conn, $instructor_id, $dates);
+    $_INFO = get_info($_USER['id'], $dates);
     $program = $_INFO['program'];
     $startTime = $_INFO['startTime'];
     $endTime = $_INFO['endTime'];
     $total = $_INFO['total'];
-
-
-    mysqli_close($conn);*/
 ?>
 <head>
     <meta charset="utf-8">
@@ -128,7 +125,7 @@
     <!-- CALENDAR -->
     <a id="payroll" class="anchor"></a>
     <div id="payroll-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; padding-bottom:50px; margin-bottom:100px;">
-        <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: <?php echo $firstname.'&nbsp'.$lastname ?></h3>
+        <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: <?php echo $_USER['firstname'].'&nbsp'.$_USER['lastname'] ?></h3>
         <h3 id="pay-period" class="text-center">Pay Period: <?php echo $payPeriod ?> </h3>
 
         <div class="container text-center hidden-xs hidden-sm">
