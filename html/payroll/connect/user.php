@@ -14,6 +14,7 @@
 		    $result = mysqli_query($connection, $query);
 	        if (mysqli_num_rows($result) > 0) {
 	        	$row = mysqli_fetch_array($result);
+	        	echo "<script>alert('".$row['first_name']."');</script>";
 	        	$_SESSION['firstname'] = $row['first_name'];
 	        	$_SESSION['lastname'] = $row['last_name'];
 	        	$_SESSION['id'] = $row['id'];
