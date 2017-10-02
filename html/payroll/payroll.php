@@ -1,37 +1,21 @@
 <html lang="en">
 <?php   
-    include('db_utils/connect.php');
     include('connect/user.php');
     include('utils/payPeriod.php');
     include('utils/instructorInfo.php');
     
 
     $_USER = get_user();
-    $email = $_USER['email'];
-    if (!isset($email)) { echo '<script>location.href = "index.php"</script>'; }
-    $conn = db_connect();
-    $firstname = $_USER['firstname'];
-    $lastname = $_USER['lastname'];
-    $instructor_id = $_USER['id'];
-    $city = $_USER['city'];
+    if (!isset($_USER['email'])) { echo '<script>location.href = "index.php"</script>'; }
 
 
     $_PERIOD = get_period();
-    $payPeriod = $_PERIOD['payPeriod'];
-    $days = $_PERIOD['days'];
-    $months = $_PERIOD['months'];
-    $weekdays = $_PERIOD['weekdays'];
-    $dates = $_PERIOD['dates'];
-    $currMonth = $months[((int)date("m"))-1];
+    $currMonth = $_PERIOD['months'][((int)date("m"))-1];
     $currDate = ((int)date("d"))-1;
-    $dates = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
+    //$_PERIOD['dates'] = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
 
 
-    $_INFO = get_info($_USER['id'], $dates);
-    $program = $_INFO['program'];
-    $startTime = $_INFO['startTime'];
-    $endTime = $_INFO['endTime'];
-    $total = $_INFO['total'];
+    $_INFO = get_info($_USER['id'], $_PERIOD['dates']);
 ?>
 <head>
     <meta charset="utf-8">
@@ -126,15 +110,15 @@
     <a id="payroll" class="anchor"></a>
     <div id="payroll-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; padding-bottom:50px; margin-bottom:100px;">
         <h3 id="instructor" class="text-center" style="margin:10px;">Instructor: <?php echo $_USER['firstname'].'&nbsp'.$_USER['lastname'] ?></h3>
-        <h3 id="pay-period" class="text-center">Pay Period: <?php echo $payPeriod ?> </h3>
+        <h3 id="pay-period" class="text-center">Pay Period: <?php echo $_PERIOD['payPeriod'] ?> </h3>
 
         <div class="container text-center hidden-xs hidden-sm">
             <div class="container col-xs-1"></div>
-            <div class="day container col-xs-2"><p><?php echo $weekdays[1]; ?></p></div>
-            <div class="day container col-xs-2"><p><?php echo $weekdays[2]; ?></p></div>
-            <div class="day container col-xs-2"><p><?php echo $weekdays[3]; ?></p></div>
-            <div class="day container col-xs-2"><p><?php echo $weekdays[4]; ?></p></div>
-            <div class="day container col-xs-2"><p><?php echo $weekdays[5]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $_PERIOD['weekdays'][1]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $_PERIOD['weekdays'][2]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $_PERIOD['weekdays'][3]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $_PERIOD['weekdays'][4]; ?></p></div>
+            <div class="day container col-xs-2"><p><?php echo $_PERIOD['weekdays'][5]; ?></p></div>
             <div class="container col-xs-1"></div>
         </div>
         <div class="container">
@@ -142,15 +126,15 @@
             <?php 
                 for ($i=0;$i<5;$i++){
                     $enable = 'modal';
-                    if ($program[$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
+                    if ($_INFO['program'][$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
                     echo '
                     <div id="'.$i.'" class="square container col-md-2" data-toggle="'.$enable.'" data-target="#edit_square">
-                        <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$weekdays[$i+1].'</p></div>
-                        <label id="day'.$i.'"> '.$days[$i].' </label>
-                        '.$program[$i].'
-                        <h6 class="square-info"> '.$startTime[$i].' </h6>
-                        <h6 class="square-info"> '.$endTime[$i].' </h6>
-                        <h5 class="square-info"> '.$total[$i].' </h5>
+                        <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$_PERIOD['weekdays'][$i+1].'</p></div>
+                        <label id="day'.$i.'"> '.$_PERIOD['days'][$i].' </label>
+                        '.$_INFO['program'][$i].'
+                        <h6 class="square-info"> '.$_PERIOD['startTime'][$i].' </h6>
+                        <h6 class="square-info"> '.$_PERIOD['endTime'][$i].' </h6>
+                        <h5 class="square-info"> '.$_PERIOD['total'][$i].' </h5>
                     </div><br class="hidden-md hidden-lg hidden-xl">
                     '; 
                 }
@@ -162,15 +146,15 @@
             <?php 
                 for ($i=5;$i<10;$i++){
                     $enable = 'modal';
-                    if ($program[$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
+                    if ($_INFO['program'][$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
                     echo '
                     <div id="'.$i.'" class="square container col-md-2" data-toggle="'.$enable.'" data-target="#edit_square">
-                        <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$weekdays[$i-4].'</p></div>
-                        <label id="day'.$i.'"> '.$days[$i].' </label>
-                        '.$program[$i].'
-                        <h6 class="square-info"> '.$startTime[$i].' </h6>
-                        <h6 class="square-info"> '.$endTime[$i].' </h6>
-                        <h5 class="square-info"> '.$total[$i].' </h5>
+                        <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$_PERIOD['weekdays'][$i-4].'</p></div>
+                        <label id="day'.$i.'"> '.$_PERIOD['days'][$i].' </label>
+                        '.$_INFO['program'][$i].'
+                        <h6 class="square-info"> '.$_PERIOD['startTime'][$i].' </h6>
+                        <h6 class="square-info"> '.$_PERIOD['endTime'][$i].' </h6>
+                        <h5 class="square-info"> '.$_PERIOD['total'][$i].' </h5>
                     </div><br class="hidden-md hidden-lg hidden-xl">
                     '; 
                 }
@@ -285,10 +269,10 @@
 
             var clicked_date = document.getElementById('day'+this.id).innerHTML;
             if (parseInt(clicked_date) > parseInt(curr_date)+14) {
-                <?php echo "curr_month = ('".$months[((int)date("m"))-2]."');"; ?>;
+                <?php echo "curr_month = ('".$_PERIOD['months'][((int)date("m"))-2]."');"; ?>;
             }
             else if (parseInt(clicked_date) < parseInt(curr_date-14)) {
-                <?php echo "curr_month = ('".$months[((int)date("m"))]."');"; ?>;
+                <?php echo "curr_month = ('".$_PERIOD['months'][((int)date("m"))]."');"; ?>;
             }
             document.getElementById('modal-title').innerHTML = 'Edit Hours for: '+curr_month+' '+clicked_date;
         });        
