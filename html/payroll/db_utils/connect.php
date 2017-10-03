@@ -2,9 +2,8 @@
 include "../../../../../inc/dbinfo.inc";
 
 function db_connect() {
-    $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
+    $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_PORT);
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    $database = mysqli_select_db($connection, DB_DATABASE);
     return $connection;
 }
 

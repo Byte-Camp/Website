@@ -1,5 +1,5 @@
 <?php
-    function get_info($instructor_id, $dates) {
+    function get_schedule($instructor_id, $dates) {
         include('../db_utils/connect.php');
         $connection = db_connect();
         $query = sprintf(

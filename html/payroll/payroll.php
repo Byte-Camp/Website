@@ -3,57 +3,18 @@
     include('db_utils/connect.php');
     include('connect/user.php');
     include('utils/payPeriod.php');
-    include('utils/instructorInfo.php');
-    
-
+    include('utils/schedule.php');
+     
     $_USER = get_user();
-    if (!isset($_USER['email'])) { echo '<script>location.href = "index.php"</script>'; }
-    echo "<script>alert('".$_USER['email']."');</script>";
-    $connection = db_connect();
-            
-    $query = sprintf(
-        'SELECT * FROM accounts WHERE instructor_email = "%s"',
-        mysqli_real_escape_string($connection, $_SESSION['email'])
-    );
-    $result = mysqli_query($connection, $query);
-    echo "<script>alert('WHAT');</script>";
-    if (mysqli_num_rows($result) > 0) {
-        //$row = mysqli_fetch_array($result);
-        echo "<script>alert('YAY');</script>";
-        //$_SESSION['firstname'] = $row['first_name'];
-        //$_SESSION['lastname'] = $row['last_name'];
-        //$_SESSION['id'] = $row['id'];
-        //$_SESSION['city'] = $row['city'];   
-    }
-    db_close($result, $connection);
-    /*$email = $_USER['email'];
-    $connection = db_connect();
-    
-    $query = sprintf(
-        'SELECT * FROM accounts WHERE instructor_email = "%s"',
-        mysqli_real_escape_string($connection, $email)
-    );
-    $result = mysqli_query($connection, $query);
-    
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_array($result);
-        echo "<script>alert('YAY');</script>";
-        $_USER['firstname'] = $row['first_name'];
-        $_USER['lastname'] = $row['last_name'];
-        $_USER['id'] = $row['id'];
-        $_USER['city'] = $row['city'];  
-    }*/ 
-    //db_close($result, $connection);
-    /*
-    echo "<script>console.log('user');</script>";
     $_PERIOD = get_period();
+    $_SCHEDULE = get_schedule($_USER['id'], $_PERIOD['dates']);
+    
     $currMonth = $_PERIOD['months'][((int)date("m"))-1];
     $currDate = ((int)date("d"))-1;
     //$_PERIOD['dates'] = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
-    echo "<script>console.log('period');</script>";
+    //echo "<script>console.log('period');</script>";
 
-    $_INFO = get_info($_USER['id'], $_PERIOD['dates']);
-    echo "<script>console.log('info');</script>";*/
+    
 ?>
 <head>
     <meta charset="utf-8">
@@ -164,12 +125,12 @@
             <?php 
                 for ($i=0;$i<5;$i++){
                     $enable = 'modal';
-                    if ($_INFO['program'][$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
+                    if ($_SCHEDULE['program'][$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
                     echo '
                     <div id="'.$i.'" class="square container col-md-2" data-toggle="'.$enable.'" data-target="#edit_square">
                         <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$_PERIOD['weekdays'][$i+1].'</p></div>
                         <label id="day'.$i.'"> '.$_PERIOD['days'][$i].' </label>
-                        '.$_INFO['program'][$i].'
+                        '.$_SCHEDULE['program'][$i].'
                         <h6 class="square-info"> '.$_PERIOD['startTime'][$i].' </h6>
                         <h6 class="square-info"> '.$_PERIOD['endTime'][$i].' </h6>
                         <h5 class="square-info"> '.$_PERIOD['total'][$i].' </h5>
@@ -184,12 +145,12 @@
             <?php 
                 for ($i=5;$i<10;$i++){
                     $enable = 'modal';
-                    if ($_INFO['program'][$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
+                    if ($_SCHEDULE['program'][$i] == '<h4 class="square-info loc-name"> <br><br>NO WORK TODAY </h4>') { $enable = ''; }
                     echo '
                     <div id="'.$i.'" class="square container col-md-2" data-toggle="'.$enable.'" data-target="#edit_square">
                         <div class="day hidden-md hidden-lg hidden-xl text-center"><p>'.$_PERIOD['weekdays'][$i-4].'</p></div>
                         <label id="day'.$i.'"> '.$_PERIOD['days'][$i].' </label>
-                        '.$_INFO['program'][$i].'
+                        '.$_SCHEDULE['program'][$i].'
                         <h6 class="square-info"> '.$_PERIOD['startTime'][$i].' </h6>
                         <h6 class="square-info"> '.$_PERIOD['endTime'][$i].' </h6>
                         <h5 class="square-info"> '.$_PERIOD['total'][$i].' </h5>
