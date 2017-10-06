@@ -35,17 +35,16 @@ function searchSite(){
 	}
 }
 
-/*$(document).ready(function() {
-    var qmarks = "";
-    for (i=0;i<10;i++){
-        qmarks+=("       <div style='position:absolute;top:-100px;left: 0px;padding:0;margin:0;'>"+
-                 "            <h1 class='text-center banner-text' style='padding:0;margin:0;cursor:-webkit-grab;cursor:grab;'>?</h1>"+
-                 "       </div>");
-    }
-    document.getElementById('box2d-faq').innerHTML =("   <div id='box2d-container'>"+
-                                                            qmarks+
-                                                     "       <div style='position:absolute;top:-100px;left: 0px;padding:0;margin:0;'>"+
-                                                     "            <h1 class='text-center banner-text' style='padding:0;margin:0;cursor:-webkit-grab;cursor:grab;'>FAQ's</h1>"+
-                                                     "       </div>"+
-                                                     "   </div>");
-});*/
+function emailQuestion(){
+	var q = $("#faq-input").val();
+	alert(q);
+	$.ajax({
+	    type: "POST",
+	    url: "emailFaq.php",
+	    data: { question: q },
+	    async: false,
+	    success: function(data){
+	        alert(data);
+	    }
+	});
+}
