@@ -37,14 +37,14 @@ function searchSite(){
 
 function emailQuestion(){
 	var q = $("#faq-input").val();
-	alert(q);
 	$.ajax({
 	    type: "POST",
-	    url: "emailFaq.php",
+	    url: "../static/php/faq_utils.php",
 	    data: { question: q },
 	    async: false,
 	    success: function(data){
-	        alert(data);
+	        console.log(data);
+	        alert("Thank you for your question.");
 	    }
 	});
 }
