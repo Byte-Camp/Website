@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Camps - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
@@ -89,13 +90,31 @@
     </nav>
 
     <div id="title-grab">
-
+        <canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>
+        <div id="header">
+            <div class="container-fluid" style="height:250px; margin-top:-40px; background-color:#D48CF8;"></div>
+        </div>
+        <div id="box2d-container">
+            <div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">
+                <h1 class="text-center banner-text no-select" style="padding:0;margin:0;cursor:pointer;">CAMPS</h1>
+            </div>
+        </div>
     </div>
     
+    <script type="text/javascript">
+        if( navigator.userAgent.match(/Android/i)
+            || navigator.userAgent.match(/webOS/i)
+            || navigator.userAgent.match(/iPhone/i)
+            || navigator.userAgent.match(/iPad/i)
+            || navigator.userAgent.match(/iPod/i)
+            || navigator.userAgent.match(/BlackBerry/i)
+            || navigator.userAgent.match(/Windows Phone/i)
+        ){ document.getElementById('title-grab').innerHTML = ''; }
+    </script>
     
     <!-- Program select -->
     <a id="programs" class="anchor"></a>
-    <div id="programs-section" class="content-section" style="padding:0px; padding-top:50px; background-color:#905a2d;">
+    <div id="programs-section" class="content-section" style="padding:0px; padding-top:50px; background-color:#F9F9F9;">
         <br><br>
         <div class="text-center" style="margin-bottom:20px;">
             <div class="btn-group btn-group-lg filters-button-group" role="group" id="btn-group-age" aria-label="...">
@@ -535,32 +554,6 @@
     <!-- Theme JavaScript -->
     <script src="../static/js/main.js"></script>
     <script src="../static/js/camps.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            /*if( navigator.userAgent.match(/Android/i)
-                || navigator.userAgent.match(/webOS/i)
-                || navigator.userAgent.match(/iPhone/i)
-                || navigator.userAgent.match(/iPad/i)
-                || navigator.userAgent.match(/iPod/i)
-                || navigator.userAgent.match(/BlackBerry/i)
-                || navigator.userAgent.match(/Windows Phone/i)
-            ){
-                document.getElementById('title-grab').innerHTML = '';
-            }
-            else {*/
-            document.getElementById('title-grab').innerHTML = 
-            '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>'+
-            '<div id="header">'+
-                '<div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>'+
-            '</div>'+
-            '<div id="box2d-container">'+
-                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
-                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">CAMPS</h1>'+
-                '</div>'+
-            '</div>';
-            //}
-        });
-    </script>
 </body>
 
 </html>

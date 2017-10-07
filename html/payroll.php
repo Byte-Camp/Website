@@ -24,7 +24,8 @@
     <meta name="author" content="">
 
     <title>Staff Payroll - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
-
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    
     <!-- Bootstrap Core CSS -->
     <link href="../../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
