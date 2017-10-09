@@ -7,7 +7,7 @@
 	    if (isset($_SESSION['email'])) { 
 	    	return $_SESSION;
 	    }
-		header('Location: ../index.php');
+		header('Location: ../staff/index.php');
 	    return NULL;
 	}
 ?>

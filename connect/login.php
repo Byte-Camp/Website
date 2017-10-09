@@ -31,11 +31,11 @@
 	        	$_SESSION['city'] = $row['city'];
 		    }
 		    db_close($result, $connection);
-        	header('Location: ../payroll.php');
+        	header('Location: ../html/payroll.php');
         	exit;       
 	    }
 	    db_close($result, $connection);
 	}
-	header('Location: ../index.php');
+	header('Location: ../staff/index.php');
     exit;
 ?>

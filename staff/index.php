@@ -7,24 +7,24 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Login Staff Payroll - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
+        <title>Staff Login - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="../../static/css/vendor/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom Fonts -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="../../static/css/main.css" rel="stylesheet">
-        <link href="../../static/css/vendor/animate.css" rel="stylesheet">
-        <link href="../../static/css/vendor/aos.css" rel="stylesheet">
-        <script src="../../static/js/vendor/aos.js"></script>
+        <link href="../static/css/main.css" rel="stylesheet">
+        <link href="../static/css/vendor/animate.css" rel="stylesheet">
+        <link href="../static/css/vendor/aos.css" rel="stylesheet">
+        <script src="../static/js/vendor/aos.js"></script>
         
         <!-- Custom CSS -->
-        <link href="../../static/css/main.css" rel="stylesheet">
-        <link href="../../static/css/login.css" rel="stylesheet">
+        <link href="../static/css/main.css" rel="stylesheet">
+        <link href="../static/css/login.css" rel="stylesheet">
     </head>
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -32,7 +32,7 @@
 
         <a id="login" class="anchor"></a>
         <div class="login-section container content-section text-center col-xs-10 col-sm-9 col-md-6 col-lg-3 col-centered" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-            <form action="connect/login.php" method='post'>
+            <form action="../connect/login.php" method='post'>
                 <input id="email" class="login-input" type="text" placeholder="Email" name="email" required>
                 <br>
                 <input id="password" class="login-input" type="password" placeholder="Password" name="password" required>
@@ -45,13 +45,13 @@
         <!-- Google Maps API -->
         <!--script src='https://maps.googleapis.com/maps/api/js?'></script-->
         <!-- jQuery -->
-        <script src="../../static/js/vendor/jquery.min.js"></script>
+        <script src="../static/js/vendor/jquery.min.js"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script src="../../static/js/vendor/bootstrap.min.js"></script>
+        <script src="../static/js/vendor/bootstrap.min.js"></script>
         <!-- Plugin JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
         <!-- Theme JavaScript -->
-        <script src="../../static/js/main.js"></script>
+        <script src="../static/js/main.js"></script>
     </body>
        
 </html>

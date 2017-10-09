@@ -1,9 +1,8 @@
 <html lang="en">
 <?php
-    include('db_utils/connect.php');
-    include('connect/user.php');
-    include('utils/payPeriod.php');
-    include('utils/schedule.php');
+    include('../db_utils/connect.php');
+    include('../connect/user.php');
+    include('../static/php/payroll_utils.php');
      
     $_USER = get_user();
     $_PERIOD = get_period();
@@ -27,19 +26,19 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     
     <!-- Bootstrap Core CSS -->
-    <link href="../../static/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="../../static/css/main.css" rel="stylesheet">
-    <link href="../../static/css/vendor/animate.css" rel="stylesheet">
-    <link href="../../static/css/vendor/aos.css" rel="stylesheet">
-    <script src="../../static/js/vendor/aos.js"></script>
+    <link href="../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/vendor/animate.css" rel="stylesheet">
+    <link href="../static/css/vendor/aos.css" rel="stylesheet">
+    <script src="../static/js/vendor/aos.js"></script>
     <!-- Theme CSS -->
-    <link href="../../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/main.css" rel="stylesheet">
 </head>
 
 
@@ -252,14 +251,14 @@
     <!-- Google Maps API -->
     <!--script src='https://maps.googleapis.com/maps/api/js?'></script-->
     <!-- jQuery -->
-    <script src="../../static/js/vendor/jquery.min.js"></script>
+    <script src="../static/js/vendor/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="../../static/js/vendor/bootstrap.min.js"></script>
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <!-- Theme JavaScript -->
-    <script src="../../static/js/main.js"></script>
-    <script src="../../static/js/payroll.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/payroll.js"></script>
     <script>
         $('.square').on('click', function(){
             <?php echo "
