@@ -1,3 +1,16 @@
+$( ".glyphicon-check" ).click(function() {
+    if (this.style.color == "green"){
+        $(this).removeClass("glyphicon-check");
+        $(this).addClass("glyphicon-unchecked");
+        this.style.color = "";
+    }
+    else{
+        $(this).removeClass("glyphicon-unchecked");
+        $(this).addClass("glyphicon-check");
+        this.style.color = "green";
+    }
+});
+
 function switchCamp(camp){
     //if (camp == "#camp-info-default"){
     //    $(camp).show();

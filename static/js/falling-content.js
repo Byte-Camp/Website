@@ -99,7 +99,7 @@ function createDOMObjects() {
 		var domObj = $(b);
 		var domPos = $(b).position();
 		var width = domObj.width() / 2 ;
-		var height = domObj.height() / 2
+		var height = domObj.height() / 2;
 
         var x = (domPos.left) + width;
         var y = (domPos.top) + height;
@@ -116,7 +116,7 @@ function createBox(x,y,width,height, static) {
 	var bodyDef = new b2BodyDef;
 	bodyDef.type = static ? b2Body.b2_staticBody : b2Body.b2_dynamicBody;
 	bodyDef.position.x = x / SCALE;
-	bodyDef.position.y = y / SCALE
+	bodyDef.position.y = y / SCALE;
 	bodyDef.angle = static ? 0 : Math.random() - 0.5;
 
 	var fixDef = new b2FixtureDef;

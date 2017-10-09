@@ -949,6 +949,19 @@ a.anchor {
   margin-right:20px;
 }
 
+.list-res {
+  margin:0px;
+}
+.list-res a, li {
+  text-align:left;
+}
+.list-res a:hover {
+  background-color:#e6e6e6;
+}
+.link {
+  color: #0060B6;
+}
+
 .res-title{
   display: inline;
   line-height: 50px;
@@ -1026,13 +1039,7 @@ a.anchor {
 #camps-nav {
   background: #Ffdf70; /* For browsers that do not support gradients */
 }
-#camps-foot {
-  background: #FFDF70; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#905a2d , #FFDF70); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#905a2d, #FFDF70); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#905a2d, #FFDF70); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#905a2d, #FFDF70); /* Standard syntax */
-}
+
 
 #phys, #stat {
   position:absolute;

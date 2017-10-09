@@ -9,55 +9,43 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-
-    <!-- jQuery -->
-    <script src="../static/js/vendor/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/vendor/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- AOS Animation CSS and JavaScript -->
-    <link rel="stylesheet" href="../static/css/aos.css" />
-    <script src="../static/js/vendor/aos.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
-
-    <!-- Theme JavaScript -->
-    <script src="../static/js/main.js"></script>
-
-    <!-- Page JavaScript -->
-    <script src="../static/js/resources.js"></script>
-
     <title>Resources - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
-
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/vendor/animate.css" rel="stylesheet">
+    <link href="../static/css/vendor/aos.css" rel="stylesheet">
+    <script src="../static/js/vendor/aos.js"></script>
+    <!-- Theme CSS -->
+    <link href="../static/css/main.css" rel="stylesheet">
     <!--<link href="../static/css/side-nav.css" rel="stylesheet">-->
-
+    <style>
+    	#resources-foot {
+            background: #FFDF70; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#7e438b , #FFDF70); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#7e438b, #FFDF70); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#7e438b, #FFDF70); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#7e438b, #FFDF70); /* Standard syntax */
+        }
+    </style>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="switchCamp('default')">
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload="init()" style="background-color:#7e438b;">
     <script>AOS.init();</script>
 
     <!-- Navigation -->
-    <nav id="res-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black; background-color:#FFDF70;" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true">
+    <nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src="../static/img/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/>
+                <a href="../index.html" ><img src="../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
                 <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
                     <span class="light">Byte Camp</span>
                 </a>
@@ -74,18 +62,18 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#register">Register Now</a>
+                        <a class="page-scroll" href="calendar/calendar_2017.html">Register Now</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
                         <ul class="dropdown-menu navbar-custom">
-                            <li><a href="../index.html#calendar">Calendar</a></li>
+                            <li><a href="calendar/calendar_2017.html">Calendar</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="camps.html#programs">Camp Descriptions</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Best Of's</a></li>
+                            <li><a href="byte-o-vision.html">Best Of's</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="http://bytecamp.wixsite.com/bytecampresources">Resources</a></li>
+                            <li><a href="resources.html">Resources</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -105,134 +93,327 @@
         <!-- /.container -->
     </nav>
 
-    <!--<div id="header">
-        <div class="container-fluid banner" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">
-            <div class="col-lg-12">
-                <h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Resources</h1>
-            </div>
-        </div>
-    </div>-->
-
+    <div id='title-grab'>
+    </div>
     <!-- HERE IS ALL THE RESOURCE INFO -->
     <a id="resources" class="anchor"></a>
-    <div id="resources-section" class="container content-section accent-section" style="padding:0px; padding-top:50px; background-color:#A11692;">
-        <h1 class="text-center banner-text" data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">Resources</h1>
-        <div class="camp-selection-container" style="text-align:center;">
-            <img onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/2dtab.png" alt='2D Tablet Animation' style="display: inline-block; height:75px; margin: 10px;">
-            <img onclick="switchCamp(this)" value='clay' src="../static/img/icons/clay.png" alt='Claymation' style="display: inline-block; height:75px; margin: 10px;">
-            <img onclick="switchCamp(this)" value='coding' src="../static/img/icons/coding.png" alt='Introduction to Coding' style="display: inline-block; height:75px; margin: 10px;">
-            <img onclick="switchCamp(this)" value='mv' src="../static/img/icons/mv.png" alt='Music and Video Production' style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
-            <div class="clearfix hidden-lg"></div>
-            <img src="../static/img/icons/3d.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/3Dgames.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/baa.png" style="display: inline-block; height:75px; margin: 10px;">
-            <img src="../static/img/icons/2d.png" style="display: inline-block; height:75px; margin: 10px;">
+    <div id="resources-section" class="container content-section" style="padding:0px; margin:0px; padding-top:50px; padding-bottom:100px; min-height:1000px;">
+    	<div class="camp-selection-container col-sm-3 col-md-2 text-center" style="padding-top:50px; padding-bottom:50px;">
+            <img class="res-btn" onclick="switchCamp(this)" value='2dtab' src="../static/img/icons/bc/2Dtab.png" alt='2D Tablet Animation' title='2D Tablet Animation'><p class="hidden-xs" style="padding:0; margin:0;">2D Animation</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='clay' src="../static/img/icons/bc/clay.png" alt='Claymation' title='Claymation'><p class="hidden-xs" style="padding:0; margin:0;">Claymation</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='coding' src="../static/img/icons/bc/coding.png" alt='Introduction to Coding' title='Introduction to Coding'><p class="hidden-xs" style="padding:0; margin:0;">Intro to Code</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='mv' src="../static/img/icons/bc/mv.png" alt='Music and Video Production' title='Music and Video Production'><p class="hidden-xs" style="padding:0; margin:0;">Music Video</p>
+            <img class="res-btn" onclick="switchCamp(this)" value='2d' src="../static/img/icons/bc/2d.png" alt='2D Games' title='2D Games'><p class="hidden-xs" style="padding:0; margin:0;">2D Games</p>
+            <div class="clearfix hidden-xs"></div>           
+            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3d.png" alt='3D Animation' title='3D Animation'>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='blender' src="../static/img/icons/bc/3Dgames.png" alt='3D Games' title='3D Games'><p class="hidden-xs" style="padding:0; margin:0;">Blender</p>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/cyoa.png" alt='Code Your Own Adventure' title='Code Your Own Adventure'>
+            <img class="res-btn-small" onclick="switchCamp(this)" value='html' src="../static/img/icons/bc/baa.png" alt='Build An App' title='Build An App'><p class="hidden-xs" style="padding:0; margin:0;">HTML/JS/CSS</p>
         </div>
 
-        <h3 class='text-center' id='camp-name-hover' style='color:white; margin:0;'>Choose your camp</h3>
-        
-        <div class="resource-content container col-lg-8 col-xs-10 col-centered">
-            <!-- Default -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="default">
-                <h1 class="text-center">Resources</h1>
-                <hr>
-                <p class="text-center">Please choose your camp on the left!</p>
-            </div>
+        <div class="container col-sm-offset-1 col-xs-12 col-sm-8">
+	        <h3 class='text-center' id='camp-name-hover' style='color:white; margin:0;'>Choose a camp</h3>
+	        <div class="resource-content container col-xs-12">
 
+	            <!-- Default -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-default" value="default">
+	                <div>
+	                    <img src="../static/img/buttons/btn_home.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Resources</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/buttons/btn_home.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <p style="margin: 0px; font-size: 24px;">Welcome to Byte Camp's Resource Page! 
+	                Here we hold all the very important software we use in each of our camps.
+	                Click on a camp to get started!</p>
+	            </div>
 
-            <!-- Claymation -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-clay">
-                <div class="text-center">
-                    <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
-                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Claymation</h1>
-                    <img src="../static/img/icons/clay.png" style="display:inline; width: 50px;">
-                </div>
-                <hr>
-                <h3 class="text-center" style="margin: 25px;">Software</h3>
-                <p class="text-center" style="margin: 0px; font-size: 24px;">Download your free version of AnimatorDV here:</p>
-                <a class="text-center" href="http://animatordv.com/download_free.php">
-                    <img src="../static/img/animatorDV.jpg" style="display: block; margin: auto;">
-                    <p>ANIMATOR DV</p>
-                </a>
-                <br>
-                <h2 class="text-center" style="margin: 25px;">Documents</h2>
-                <div class="text-center">
-                    <a href="../static/docs/Storyboards.pdf">
-                        <div class="doc-container">
-                            <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                            <p class="text-center">Storyboards</p>
-                        </div>
-                    </a>
-                    <a href="../static/docs/Scripts.pdf">
-                        <div class="doc-container">
-                            <img src="../static/img/PDF-icon.ico" class="dl-icon">
-                            <p class="text-center">Scripts</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+	            <!-- 2d tablet -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-2dtab">
+	                <div>
+	                    <img src="../static/img/icons/bc/2Dtab.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">2D Animation</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/2Dtab.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+	                <p class="res-header-2">Download Flip-A-Clip from the Google Play or iTunes Store:</p>
+	                <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.vblast.flipaclip&hl=en">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/flipaclip.png" height="75">
+                                <p>Android</p>
+                            </div>
+                        </a>
+                        <a href="https://itunes.apple.com/us/app/flipaclip-cartoon-animation/id1101848914?mt=8"">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/flipaclip.png" height="75">
+                                <p>iOS</p>
+                            </div>
+                        </a>
+                    </div>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <div>
+	                    <a href="../static/doc/Storyboards.pdf">
+	                        <div class="doc-container">
+	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
+	                            <p>Storyboards</p>
+	                        </div>
+	                    </a>
+	                    <a href="../static/doc/Scripts.pdf">
+	                        <div class="doc-container">
+	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
+	                            <p>Scripts</p>
+	                        </div>
+	                    </a>
+	                </div>
+	            </div>
 
-            <!-- Music Video -->
-            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info" id="camp-info-mv">
-                <div class="text-center">
-                    <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
-                    <h1 class="text-center" style="display: inline; line-height: 50px; vertical-align: middle; padding-left:20px; padding-right: 20px;">Music Video</h1>
-                    <img src="../static/img/icons/mv.png" style="display:inline; width: 50px;">
-                </div>
-                <hr>
-                <h2 class="text-center" style="margin: 25px;">Software</h2>
-                <p class="text-center" style="margin: 0px;">Download the free LMMS software here:</p>
-                <a class="text-center" href="https://lmms.io/download/">
-                    <img src="../static/img/lmms.png" height="100px" style="display: block; margin: auto;">
-                    <p>LMMS</p>
-                </a>
-                <br>
-                <h2 class="text-center" style="margin: 25px;">Documents</h2>
-                <p>There are no documents available yet! Please request any documents you would like here.</p>
-            </div>
+	            <!-- Claymation -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-clay">
+	                <div>
+	                    <img src="../static/img/icons/bc/clay.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Claymation</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/clay.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+	                <p class="res-header-2">Download your free version of AnimatorDV here:</p>
+	                <a href="http://animatordv.com/download_free.php">
+	                    <img src="../static/img/icons/software/animatorDV.png" style="width:100%;">
+	                    <p>ANIMATOR DV</p>
+	                </a>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <div>
+	                    <a href="../static/doc/Storyboards.pdf">
+	                        <div class="doc-container">
+	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
+	                            <p>Storyboards</p>
+	                        </div>
+	                    </a>
+	                    <a href="../static/doc/Scripts.pdf">
+	                        <div class="doc-container">
+	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
+	                            <p>Scripts</p>
+	                        </div>
+	                    </a>
+	                </div>
+	            </div>
 
+	            <!-- Intro to Code -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-coding">
+	                <div>
+	                    <img src="../static/img/icons/bc/coding.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Intro to Code</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/coding.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+	                <p class="res-header-2">Play around with the online version or download the offline version here:</p>
+	                <div>
+                        <a href="https://scratch.mit.edu/projects/editor/?tip_bar=home">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/scratch.png" height="75">
+                                <p>Online</p>
+                            </div>
+                        </a>
+                        <a href="https://scratch.mit.edu/scratch2download/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/scratch.png" height="75">
+                                <p>Offline</p>
+                            </div>
+                        </a>
+                    </div>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <p>There are no documents available yet! Please request any documents you would like here.</p>
+	            </div>
+
+	            <!-- Music Video -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-mv">
+	                <div>
+	                    <img src="../static/img/icons/bc/mv.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Music Video</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/mv.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+	                <p class="res-header-2">Download the free LMMS icons/software here:</p>
+	                <div>
+                        <a href="https://lmms.io/download/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/lmms.png" height="75">
+                                <p>LMMS</p>
+                            </div>
+                        </a>
+                    </div>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <p>There are no documents available yet! Please request any documents you would like here.</p>
+	            </div>
+
+	            <!-- 2d games -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-2d">
+	                <div>
+	                    <img src="../static/img/icons/bc/2d.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">2D Games</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/2d.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+                    <p class="res-header-2">Play with the online version, or download this package to install Mighty Editor:</p>
+                    <div>
+                        <a href="http://mightyeditor.mightyfingers.com/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/mightyeditor.png" height="75">
+                                <p>Online Editor</p>
+                            </div>
+                        </a>
+                        <a href="../static/doc/mightyeditor-linux.zip">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/mightyeditor.png" height="75">
+                                <p>Install Package</p>
+                            </div>
+                        </a>
+                    </div>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <p>There are no documents available yet! Please request any documents you would like here.</p>
+	            </div>
+
+	            <!-- blender -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-blender">
+	                <div>
+	                    <img src="../static/img/icons/bc/3d.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">Blender</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/3Dgames.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+	                <p class="res-header-2">Download your free version of Blender here:</p>
+	                <a href="http://animatordv.com/download_free.php">
+	                    <img src="../static/img/icons/software/blender.png" height="75" style="display: block; margin: auto;">
+	                    <p>Blender</p> 
+	                </a>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <div>
+	                    <a href="../static/doc/Storyboards.pdf">
+	                        <div class="doc-container">
+	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
+	                            <p>Storyboards</p>
+	                        </div>
+	                    </a>
+	                    <a href="../static/doc/Scripts.pdf">
+	                        <div class="doc-container">
+	                            <img src="../static/img/icons/other/pdf.ico" class="dl-icon">
+	                            <p>Scripts</p>
+	                        </div>
+	                    </a>
+	                </div>
+	            </div>
+
+	            <!-- html/js/css -->
+	            <div class="col-lg-offset-2 col-lg-8 resource-info camp-info text-center" id="camp-info-html">
+	                <div>
+	                    <img src="../static/img/icons/bc/cyoa.png" class="res-icon"><br class="hidden-md hidden-lg">
+	                    <h2 class="res-title">HTML/JS/CSS</h2><br class="hidden-md hidden-lg">
+	                    <img src="../static/img/icons/bc/baa.png" class="res-icon">
+	                </div>
+	                <hr>
+	                <h3 class="res-header-1">Software</h3>
+	                <br>
+	                <p class="res-header-2">All you need is a good text editor and web browser! We recommend Atom and Mozilla Firefox which you can download here:</p>
+	                <div>
+                        <a href="https://atom.io/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/atom.png" height="75">
+                                <p>Atom</p>
+                            </div>
+                        </a>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <div class="doc-container">
+                                <img src="../static/img/icons/software/firefox.png" height="75">
+                                <p>Mozilla Firefox</p>
+                            </div>
+                        </a>
+                    </div>
+	                <p style="margin: 0px;">Some other options for text editor's:</p>
+	                <p><a href="https://www.sublimetext.com/2">Sublime Text, </a> <a href="https://notepad-plus-plus.org/download/v7.4.1.html">Notepad++</a></p>
+	                <p style="margin: 0px;">Some other options for web browser's:</p>
+	                <p><a href="https://www.google.com/chrome/">Google Chrome, </a> <a href="http://www.opera.com/download">Opera</a></p>
+	                <br>
+	                <h3 class="res-header-1">Documents</h3>
+	                <p>There are no documents available yet! Please request any documents you would like here.</p>
+	            </div>
+	        </div>
         </div>
-    </div>
-
-    <!-- HERE IS THE SWEET SIDEBAR YO -->
-     <!-- Sidebar
-    <div id="wrapper">
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav">
-                    <li><a href="#" value="claymation" class="sidebar-text" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" value="musicvideo" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
-                    <li><a href="#" style="line-height: 50px; padding-top:10px; padding-bottom: 10px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
-                </ul>
-            </div>
-        </div> -->
-    <!-- /#sidebar-wrapper
-            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav" style="font-size: 30px;">
-                    <li class="sidebar-item"><a onclick="switchCamp('claymation')" style="line-height: 50px;">Claymation<img src="../static/img/icons/clay.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('musicvideo')" style="line-height: 50px;">Music Video<img src="../static/img/icons/mv.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('2dgames')" style="line-height: 50px;">2D Games<img src="../static/img/icons/2d.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('3danimation')" style="line-height: 50px;">3D Animation<img src="../static/img/icons/3d.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('3dgames')" style="line-height: 50px;">3D Games<img src="../static/img/icons/3Dgame.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('baa')" style="line-height: 50px;">Build-An-App<img src="../static/img/icons/baa.png" class="sidebar-img"/></a></li>
-                    <li class="sidebar-item"><a onclick="switchCamp('2danimation')" style="line-height: 50px;">2D Animation<img src="../static/img/icons/2Dtab.png" class="sidebar-img"/></a></li>
-                </ul>
-            </div> -->
-
-
+	</div>
 
     <!-- Footer -->
-    <footer data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-
-        <div class="container text-center">
-            <img src="../static/img/website-logo.png" style="width:30%"/>
-            <p>Copyright &copy; Byte Camp 2016</p>
+    <footer id='resources-foot'>
+        <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <img src="../static/img/icons/other/website-logo.png" style="width:30%"/>
+            <p>Copyright &copy; Byte Camp 2017</p>
         </div>
     </footer>
+    <!-- jQuery -->
+    <script src="../static/js/vendor/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="../static/js/main.js"></script>
+
+    <script src="../static/js/vendor/box2d.min.js" charset="utf-8"></script>
+    <script src="../static/js/resources.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
+    <script src="../static/js/falling-content.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ){
+                document.getElementById('title-grab').innerHTML = '';
+            }
+            else {*/
+            document.getElementById('title-grab').innerHTML = 
+            '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>'+
+            '<div id="header">'+
+                '<div class="container-fluid banner" style="height:340px; margin-top:-40px; background: url(../static/img/banners/sky-banner.png) no-repeat bottom center scroll;"></div>'+
+            '</div>'+
+
+            '<div id="box2d-container">'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">RES</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">OUR</h1>'+
+                '</div>'+
+                '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
+                    '<h1 class="text-center banner-text no-select" style="padding:0;margin:0;">CES</h1>'+
+                '</div>'+
+            '</div>';
+            //}
+        });
+    </script>
 </body>
 
 </html>

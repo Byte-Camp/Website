@@ -48,9 +48,9 @@ var web = "";
 	
 	function show_scratch(path) 
 	{	
-		ReadFile(path);
+		//ReadFile(path);
 		document.getElementById("sb2Player").style.display = "block";
-		execGreenFlag();	
+		//execGreenFlag();	
 
 	}	
 	
@@ -97,25 +97,26 @@ var web = "";
 	
 
 	function menuList(div_input) {
-		
-		document.getElementById("games").style.display = "none";
-		document.getElementById("3D").style.display = "none";
+			
 		document.getElementById("clay").style.display = "none"
-		document.getElementById("projects").style.display = "none";
-		document.getElementById("3Dgame").style.display = "none";
-		document.getElementById("musicvid").style.display = "none";
 		document.getElementById("2Dtablet").style.display = "none";
+    document.getElementById("musicvid").style.display = "none";
+    document.getElementById("coding").style.display = "none";
+    document.getElementById("games").style.display = "none";
+    document.getElementById("3D").style.display = "none";
+    document.getElementById("3Dgame").style.display = "none";
+    document.getElementById("projects").style.display = "none";
 		
 		document.getElementById(div_input).style.display = "inline";
 
-		document.getElementById("clay_button").src = "../static/best-ofs/res/claybutton.png";			
-		document.getElementById("games_button").src = "../static/best-ofs/res/gamesbutton.png";			
-		document.getElementById("projects_button").src = "../static/best-ofs/res/projectsbutton.png";			
-		document.getElementById("3D_button").src = "../static/best-ofs/res/3Dbutton.png";			
-		document.getElementById("musicvid_button").src = "../static/best-ofs/res/musicvidbutton.png";			
-		document.getElementById("3Dgame_button").src = "../static/best-ofs/res/3Dgamebutton.png";		
-		document.getElementById("2Dtablet_button").src = "../static/best-ofs/res/2Dtabletbutton.png";	
-		
+		document.getElementById("clay_button").src = "../static/best-ofs/res/claybutton.png";
+    document.getElementById("2Dtablet_button").src = "../static/best-ofs/res/2Dtabletbutton.png";
+    document.getElementById("musicvid_button").src = "../static/best-ofs/res/musicvidbutton.png";    			
+		document.getElementById("games_button").src = "../static/best-ofs/res/gamesbutton.png";				
+		document.getElementById("3D_button").src = "../static/best-ofs/res/3Dbutton.png";
+    document.getElementById("3Dgame_button").src = "../static/best-ofs/res/3Dgamebutton.png";    			
+		document.getElementById("projects_button").src = "../static/best-ofs/res/projectsbutton.png"; 		
+	
 		document.getElementById(div_input+"_button").src = "../static/best-ofs/res/"+div_input+"button_down.png";
 		
 		list = div_input;
@@ -124,10 +125,7 @@ var web = "";
 		if (div_input == "3D") list = "3Danimation";
 		if (div_input == "games") list = "2Dgame";
 	
-	
-		}
-
-		
+	}	
 	</script>
 
 
@@ -165,7 +163,6 @@ function pageinit() {
 }   	
 
 #sb2Player {   
-   background-color: #FFFFFF;
    width: 500px;
    z-index: 98; 
    left: 60px; 
@@ -379,40 +376,37 @@ a {
   <div id="buttons">
   <img class="button" id="projects_button" src="../static/best-ofs/res/projectsbutton_down.png" width=30 onClick="menuList('projects')" style='cursor:hand;cursor:pointer; display:none;'><br>
   <img class="button" id="clay_button" src="../static/best-ofs/res/claybutton.png" width=30 onClick="menuList('clay')" style='cursor:hand;cursor:pointer'><br>
+  <img class="button" id="2Dtablet_button" src="../static/best-ofs/res/2Dtabletbutton.png" width=30 onClick="menuList('2Dtablet')" style='cursor:hand;cursor:pointer'><br>  
+  <img class="button" id="musicvid_button" src="../static/best-ofs/res/musicvidbutton.png" width=30 onClick="menuList('musicvid')" style='cursor:hand;cursor:pointer'><br>
+  <!--img class="button" id="coding_button" src="../static/best-ofs/res/codingbutton.png" width=30 onClick="menuList('coding')" style='cursor:hand;cursor:pointer'><br-->
   <img class="button" id="games_button" src="../static/best-ofs/res/gamesbutton.png" width=30 onClick="menuList('games')" style='cursor:hand;cursor:pointer'><br>
   <img class="button" id="3D_button" src="../static/best-ofs/res/3Dbutton.png" width=30 onClick="menuList('3D')" style='cursor:hand;cursor:pointer'><br>
-  <img class="button" id="musicvid_button" src="../static/best-ofs/res/musicvidbutton.png" width=30 onClick="menuList('musicvid')" style='cursor:hand;cursor:pointer'><br>
-  <img class="button" id="2Dtablet_button" src="../static/best-ofs/res/2Dtabletbutton.png" width=30 onClick="menuList('2Dtablet')" style='cursor:hand;cursor:pointer'><br>  
   <img class="button" id="bytecamp_button" src="../static/best-ofs/res/bytecamp.png" width=30 onClick="gotoMyURL()" style='cursor:hand;cursor:pointer'><br>
-  <img class="button" id="3Dgame_button" src="../static/best-ofs/res/3Dgamebutton.png" width=30 onClick="menuList('3Dgame')" style='cursor:hand;cursor:pointer; display:none;'><br>
+  <!--img class="button" id="3Dgame_button" src="../static/best-ofs/res/3Dgamebutton.png" width=30 onClick="menuList('3Dgame')" style='cursor:hand;cursor:pointer; display:none;'><br-->
   </div>  
 
  
   
- <div id="blender"> 
+  <div id="blender"> 
 
- </div>
- 
+  </div>
+
   <div id="mp4Player"> 
 
- </div>
- 
+  </div>
+
   <div id="htmlPlayer" >
-  </div> 
-  
- <div id="sb2Player" style="z-index:4;background-color:white;">
- <canvas id='scratch' width='486' height='391' tabindex='1' style='pointer-events:auto;'></canvas>
+  </div>
+
+  <div id="sb2Player">
+    <iframe allowtransparency="true" width="485" height="402" src="//scratch.mit.edu/projects/embed/178774338/?autostart=false" frameborder="0" allowfullscreen></iframe>
+    <!--canvas id='scratch' width='486' height='391' tabindex='1' style='pointer-events:auto;'></canvas-->
   </div>
   
   
   <div id="left">
-  
-
-  <br><br>Click on the projects to play -><br><br><br>Thank you for all your hard work at camp!<br>We hope we get to see you again soon.<br><br><a href="http://www.bytecamp.ca"><img src="../static/best-ofs/res/bytecamplogo.png" width="300" height="71"><br>www.bytecamp.ca</a><br><br>1-888-808-2983<br><br><a href="mailto:dave@bytecamp.ca" alt="email us!">dave@bytecamp.ca</a><br><br><br><a href="https://twitter.com/intent/user?screen_name=byte_camp"><img src="../static/best-ofs/res/twitter.jpg" width="83" height="45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fbytecamp&width=292&height=590&show_faces=true&colorscheme=light&stream=true&show_border=true&header=true&appId=118959584806641" ><img src="../static/best-ofs/res/facebook.jpg" width="65" height="45"></a>&nbsp;&nbsp;&nbsp;<a href="http://www.youtube.com/subscription_center?add_user=bytecamp"><img src="../static/best-ofs/res/youtubecom.jpg" width="60"height="45"></a>
- 
-
-
-</div><!-- left -->
+    <br><br>Click on the projects to play -><br><br><br>Thank you for all your hard work at camp!<br>We hope we get to see you again soon.<br><br><a href="http://www.bytecamp.ca"><img src="../static/best-ofs/res/bytecamplogo.png" width="300" height="71"><br>www.bytecamp.ca</a><br><br>1-888-808-2983<br><br><a href="mailto:dave@bytecamp.ca" alt="email us!">dave@bytecamp.ca</a><br><br><br><a href="https://twitter.com/intent/user?screen_name=byte_camp"><img src="../static/best-ofs/res/twitter.jpg" width="83" height="45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fbytecamp&width=292&height=590&show_faces=true&colorscheme=light&stream=true&show_border=true&header=true&appId=118959584806641" ><img src="../static/best-ofs/res/facebook.jpg" width="65" height="45"></a>&nbsp;&nbsp;&nbsp;<a href="http://www.youtube.com/subscription_center?add_user=bytecamp"><img src="../static/best-ofs/res/youtubecom.jpg" width="60"height="45"></a>
+  </div><!-- left -->
 
 
   
@@ -490,6 +484,11 @@ a {
 		<div id='scrollitem'><a href='javascript:newSWF("Zanika -  Break Up Song.mp4")'><img src="../static/best-ofs/musicvideo/Zanika -  Break Up Song.jpg" width='60' height='48'></a><div id='scrolltext'><a href='javascript:newSWF("Zanika -  Break Up Song.mp4")'><span id='scrolltitle'> Break Up Song</span><br><span id='scrollsubtitle'>Zanika</span></a></div></div>
 	</div>
 	
+  <!--  coding  -->
+  <div id='coding' style='display:none'>
+  </div>
+
+
 	<!--  2Dgames  -->
 	<div id='games' style='display:none'>
 		<div id='scrollitem'><a href='javascript:newSWF("Alison - Wolf Run/index.html")'><img src="../static/best-ofs/2Dgame/Alison - Wolf Run.jpg" width='60' height='48'></a><div id='scrolltext'><a href='javascript:newSWF("Alison - Wolf Run/index.html")'><span id='scrolltitle'>Wolf Run</span><br><span id='scrollsubtitle'>Alison</span></a></div></div>
