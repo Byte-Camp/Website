@@ -25,7 +25,7 @@ body {
   /*font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: 'Caveat Brush', cursive;
   color: black;
-  background-color: #FFDF70;
+  background-color: #F9F9F9;
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 html {
@@ -179,15 +179,28 @@ img::-moz-selection {
 }
 .faq-container{
   padding:5px;
-  background-image: url('../img/textures/wrinkledlight.png');
+  height:200px;
+  position:relative;
+  /*background-image: url('../img/textures/wrinkledlight.png');*/
   /*background-color:#f4f2e8;*/
 }
+
+.faq-container h4{
+  color:#FFFFFF;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
 .faq-item{
   background-color:transparent;
   border:none;
 }
 @media (max-width: 768px) {
-	.faq-col {
+	.faq-container {
 		width:90%;
 		float:none;
 		margin:0 auto;
@@ -206,9 +219,10 @@ img::-moz-selection {
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /*box-shadow: 0px 2px 5px black;*/
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #FFDF70;
+  background-color: #FFFFFF;
 }
 .navbar-custom .navbar-toggle {
   color: black;
@@ -258,14 +272,14 @@ img::-moz-selection {
     padding: 10px 0;
     border-bottom: none;
     letter-spacing: 1px;
-    background: #FFDF70;
+    background: #FFFFFF;
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: #FFDF70;
+    background: #FFFFFF;
     /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
   }
 }
@@ -889,7 +903,7 @@ a.anchor {
 }
 
 .camp-selection-container img:hover{
-    box-shadow: 0px 0px 10px 10px #ffdf70;
+    box-shadow: 0px 0px 10px 10px #F9F9F9;
 
 }
 
@@ -1020,9 +1034,11 @@ a.anchor {
   border-radius:10px;
   box-shadow: 0px 3px 5px gray;
 }
+
 .camp-modal-header{
   font-size:40px;
 }
+
 .camp-icns{
   display:inline;
   width:75px;
@@ -1033,13 +1049,10 @@ a.anchor {
   transition: 1s;
   cursor: help;
 }
+
 .lilclayguy:hover{
   height: 100px;
 }
-#camps-nav {
-  background: #Ffdf70; /* For browsers that do not support gradients */
-}
-
 
 #phys, #stat {
   position:absolute;
@@ -1064,6 +1077,7 @@ a.anchor {
   background-color:#3B839E;
   height:50px; 
 }
+
 .square {
   margin:0px;
   padding:0px;
@@ -1071,15 +1085,18 @@ a.anchor {
   border:2px solid black;
   min-height:200px;
 }
+
 .square:hover {
   background-color:#ddd;
   color:#000;
 }
+
 .square-info{
   text-align:center;
   margin-bottom:5px;
   margin-top:0px;
 }
+
 .loc-name {
   margin-top:0px;
   margin-bottom:10px;

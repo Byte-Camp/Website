@@ -12,7 +12,7 @@
     $currDate = ((int)date("d"))-1;
     //$_PERIOD['dates'] = ['2009-08-03 00:00:00', '2009-08-04 00:00:00', '2009-08-05 00:00:00', '2009-08-06 00:00:00', '2009-08-07 00:00:00', '2009-08-10 00:00:00', '2009-08-11 00:00:00', '2009-08-12 00:00:00', '2009-08-13 00:00:00', '2009-08-14 00:00:00'];
     //echo "<script>console.log('period');</script>";
-
+    
     
 ?>
 <head>
@@ -46,12 +46,12 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script>AOS.init();</script>
 
-    <!-- NAVIGATION -->
-    <!--nav id="camps-nav" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="../../index.html" ><img src="../../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
-                <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../../index.html">
+                <a href="../index.html" ><img src="../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
+                <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
                     <span class="light">Byte Camp</span>
                 </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -59,42 +59,52 @@
                 </button>
             </div>
 
-            < Collect the nav links, forms, and other content for toggling >
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    < Hidden li included to remove active class from about link when scrolled up past about section >
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="connect/logout.php">Logout</a>
+                        <a class="page-scroll" href="calendar/calendar_2017.html">Register Now</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
                         <ul class="dropdown-menu navbar-custom">
-                            <li><a href="../calendar/calendar_2017.html">Calendar</a></li>
+                            <li><a href="calendar/calendar_2017.html">Calendar</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../byte-o-vision.html">Best Ofs</a></li>
+                            <li><a href="camps.html#programs">Camp Descriptions</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../resources.html">Public Resources</a></li>
+                            <li><a href="byte-o-vision.html">Best Of's</a></li>
+                            <!--li role="separator" class="divider"></li>
+                            <li><a href="resources.html">Resources</a></li-->
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-custom">
+                            <li><a href="resources.html">Documents & Software</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../camps.html#programs">Staff Resources</a></li>
+                            <li><a href="payroll/index.php">Staff Resources</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
                         <ul class="dropdown-menu navbar-custom">
-                            <li><a href="../about_us.html#what">Who are We?</a></li>
+                            <li><a href="about_us.html#what">Who are We?</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../about_us.html#who">Contact Us</a></li>
+                            <li><a href="about_us.html#who">Contact Us</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="../faq.html">FAQs</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </nav-->
+        <!-- /.container -->
+    </nav>
 
     <!-- BANNER -->
     <div id="header">
@@ -243,7 +253,7 @@
     <footer id='payroll-foot'>
         <!--div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true"-->
         <div class="container text-center">
-            <img src="../../static/img/icons/other/website-logo.png" style="width:20%"/>
+            <img src="../static/img/icons/other/website-logo.png" style="width:20%"/>
             <p>Copyright &copy; Byte Camp 2017</p>
         </div>
     </footer>
