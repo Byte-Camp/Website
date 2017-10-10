@@ -151,16 +151,19 @@ img::-moz-selection {
   padding:5px;
   margin:0 0 10px;
 }
+
 .faq-info {
   border-radius:0px 10px 10px 10px;
   font-family:helvetica;
   background-color:transparent;
 }
+
 .faq-title {
 	font-family:helvetica;
   font-size:;
 	border:none;
 }
+
 .faq-icon{
 	font-size:15px;
   opacity: 0;
@@ -169,20 +172,34 @@ img::-moz-selection {
 	left:10px;
 	z-index:99;
 }
+
 .faq-dropdown {
 	min-height:25px;
 	font-size: 12px;
 	padding:5px;
 }
+
 .faq-dropdown:hover {
   color:#707070;
 }
+
 .faq-container{
+  -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; /* Safari */
+  transition: width 0.5s, height 0.5s, transform 0.5s;
   padding:5px;
   height:200px;
   position:relative;
+  cursor:pointer;
   /*background-image: url('../img/textures/wrinkledlight.png');*/
   /*background-color:#f4f2e8;*/
+}
+
+
+.faq-container:hover{
+  z-index:99;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .faq-container h4{
