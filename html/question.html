@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FAQs - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/vendor/animate.css" rel="stylesheet">
+    <link href="../static/css/vendor/aos.css" rel="stylesheet">
+    <script src="../static/js/vendor/aos.js"></script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-image:url('../static/img/banners/controller-tile-blue.png');">
+    <script>AOS.init();</script>
+    <!-- Program select -->
+    <a id="question-page" class="anchor"></a>
+    <div class="container-fluid content-section">
+        <!-- scroll-paper Modal -->
+        <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div style="background:#EE3935; padding:10px;">
+                        <button type="button" class="close" onclick="window.location.href='faq.html#faqs'"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center">
+                            <h1 class="faq-header">Ask Your Question!</h1>
+                            <br>
+                            <h4 class="faq-hints">
+                                1. Ask your question<br>
+                                2. Provide an email or phone number<br>
+                                3. Press ENTER to submit your question<br>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="background:black; border:5px solid #EE3935;">
+                        <div class="row"><center>
+                            <textarea id="faq-input" class="scroll-paper" onkeypress="if(event.keyCode == 13) emailQuestion();">
+Hi there,
+
+    < ask your question here >
+
+From: < your email >   
+                            </textarea>
+                        </center></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../static/js/vendor/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/vendor/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+
+    <script src="../static/js/vendor/box2d.min.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
+    <script src="../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
+    <script src="../static/js/falling-content.js" charset="utf-8"></script>
+    
+    <!-- Theme JavaScript -->
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/faq.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('#question').modal('show');
+        });
+    </script>
+</body>
+
+</html>

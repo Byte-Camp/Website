@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FAQs - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
+    <title>FAQ - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
@@ -17,13 +16,16 @@
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="../static/css/main.css" rel="stylesheet">
+    <!-- AOS Core -->
     <link href="../static/css/vendor/animate.css" rel="stylesheet">
     <link href="../static/css/vendor/aos.css" rel="stylesheet">
     <script src="../static/js/vendor/aos.js"></script>
+
+    <!-- Theme Main Javascript -->
+    <link href="../static/css/main.css" rel="stylesheet">
+    <script src="../static/js/main.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-image:url('../static/img/banners/controller-tile-blue.png');">
@@ -32,17 +34,15 @@
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="../index.html" ><img src="../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
+            <div class="navbar-header navbar-home">
+                <a class="navbar-icon" href="../index.html" ><img src="../static/img/buttons/btn_home.png"/></a>
                 <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
-                    <span class="light">Byte Camp</span>
+                    <span class="navbar-name">Byte Camp</span>
                 </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
@@ -50,30 +50,30 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="calendar/calendar_2017.html" style="color:#EE3935;">Register Now</a>
+                        <a class="page-scroll navbar-reg" href="calendar/calendar_2017.html">Register Now</a>
                     </li>
-                    <li class="dropdown">
-			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#30D4FF;">Programs <span class="caret"></span></a>
-			            <ul class="dropdown-menu navbar-custom">
-			                <li><a href="calendar/calendar_2017.html">Calendar</a></li>
-			                <li role="separator" class="divider"></li>
-			                <li><a href="camps.html#programs">Camp Descriptions</a></li>
-			                <li role="separator" class="divider"></li>
-			                <li><a href="byte-o-vision.html">Best Of's</a></li>
-			                <li role="separator" class="divider"></li>
-			                <li><a href="resources.html">Resources</a></li>
-			            </ul>
-		            </li>
-                    <li class="dropdown">
-			            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#FFDF70;">About Us <span class="caret"></span></a>
-			            <ul class="dropdown-menu navbar-custom">
-			                <li><a href="about_us.html#what">Who are We?</a></li>
-			                <li role="separator" class="divider"></li>
-			                <li><a href="about_us.html#who">Contact Us</a></li>
-			                <li role="separator" class="divider"></li>
-			                <li><a href="faq.html">FAQs</a></li>
-			            </ul>
-		            </li>
+                    <li class="dropdown navbar-programs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-custom">
+                            <li><a href="calendar/calendar_2017.html">Calendar</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="camps.html#programs">Camps</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="byte-o-vision.html">Best Of's</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="resources.html">Resources</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown navbar-about">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                        <ul class="dropdown-menu navbar-custom">
+                            <li><a href="about_us.html#what">Who are We?</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="about_us.html#who">Contact Us</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,489 +82,66 @@
     </nav>
     
     <div id='title-grab'>
-        <div id="header">
-            <div class="container-fluid banner" style="height:340px; margin-top:-40px; background:#30D4FF;"></div>
-        </div>
+    	<canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>
+        <div id="header" class="container-fluid title-header" style="background:#5599FF;"></div>
         <div id="box2d-container">
-            <div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">
-                <h1 class="text-center banner-text" style="padding:0;margin:0;cursor:pointer;">FAQ</h1>
-            </div>
-            <script>
-                for (i=0;i<10;i++){
-                    document.getElementById('box2d-container').innerHTML += 
-                    '<div style="position:absolute;top:-100px;left: 0px;padding:0;margin:0;">'+
-                        '<h1 class="text-center banner-text" style="padding:0;margin:0;cursor:pointer;">?</h1>'+
-                    '</div>';
-                }
-            </script>
+            <div class="in-box2d"><h1 class="text-center banner-text">FAQ</h1></div>
+            <script>for (i=0;i<10;i++){ document.getElementById('box2d-container').innerHTML += '<div class="in-box2d"><h1 class="text-center banner-text">?</h1></div>'; }</script>
         </div>
+        <script type="text/javascript">checkMobile();</script>
     </div>
-
-    <script type="text/javascript">
-        if( navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/iPod/i)
-            || navigator.userAgent.match(/BlackBerry/i)
-            || navigator.userAgent.match(/Windows Phone/i)
-        ){ document.getElementById('title-grab').innerHTML = ''; }
-    </script>
-
 
     <!-- Program select -->
     <a id="faqs" class="anchor"></a>
     <div class="container-fluid content-section">    
         <!-- FAQs -->
-        <div class="container col-lg-10 col-md-10 col-centered">
-            <div class="row col-centered">
-                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#regModal" aria-hidden="true" style="background:#EE3935;">
-                    <h4 class="faq-header">Registration</h4>
-                </div>
-
-                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#campInfoModal" aria-hidden="true" style="background:#30D4FF;">
-                    <h4 class="faq-header">Camp Information</h4>
-                </div>
-
-                <div class="panel-group accordion faq-container col-lg-4 col-md-4 col-sm-4" style="background:#FFDF70;">
-                    <h4 class="faq-header">The Organization</h4>
-                    <!-- faq(1,3,1) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse131">
-                            <ul><li><div class="faq-dropdown">
-                                What is Byte Camp?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse131" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(1,3,2) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse132">
-                            <ul><li><div class="faq-dropdown">
-                                Where are we located?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse132" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(1,3,3) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse133">
-                            <ul><li><div class="faq-dropdown">
-                                Why are the camps so inexpensive/expensive?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse133" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(1,3,4) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse134">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse134" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(1,3,5) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse135" >
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>               
-                        </div>
-                        <div id="collapse135" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(1,3,6) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse136">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse136" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                </div>
+        <div class="container col-lg-10 col-md-10 col-center">
+            <div class="row col-center">
+                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#regModal" aria-hidden="true" style="background:#EE3935;"><center><h4>Registration</h4></center></div>
+                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#campInfoModal" aria-hidden="true" style="background:#5599FF;"><center><h4>Camp Information</h4></center></div>
+                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#orgModal" aria-hidden="true" style="background:#FFDF70;"><center><h4>The Organization</h4></center></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="container col-lg-10 col-md-10 col-center">
+            <div class="row col-center">
+                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#studentModal" aria-hidden="true" style="background:#5599FF;"><center><h4>Student Work</h4></center></div>
+                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#resModal" aria-hidden="true" style="background:#FFDF70;"><center><h4>Software & Resources</h4></center></div>
+                <div class="faq-container col-lg-4 col-md-4 col-sm-4" data-toggle="modal" data-target="#otherModal" aria-hidden="true" style="background:#EE3935;"><center><h4>Other</h4></center></div>
+            </div>
+        </div>
+		<br><br>
+		<div class="container col-sm-5 col-center">
+            <div class="row col-center">
+                <a href="question.html"><div class="faq-input col-xs-10 col-center"><center><h6>Can't find what you're looking for?</h6></center></div></a>
             </div>
         </div>
         <br><br>
         
-        <!-- FAQs -->
-        <div class="container col-lg-10 col-md-10 col-centered">
-            <div class="row col-centered">
-                <!-- Column 2,1 -->
-                <div class="panel-group accordion faq-container col-lg-4 col-md-4 col-sm-4" style="background:#30D4FF;">
-                    <h4 class="faq-header">Student Work</h4>
-                    <!-- faq(2,1,1) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse211">
-                            <ul><li><div class="faq-dropdown">
-                                Where can I find my project online?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse211" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,1,2) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse212">
-                            <ul><li><div class="faq-dropdown">
-                                How can I use my USB wristband at home?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse212" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,1,3) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse213">
-                            <ul><li><div class="faq-dropdown">
-                                Will my online project be available for everyone to see?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse213" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,1,4) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse214">
-                            <ul><li><div class="faq-dropdown">
-                                When can I register in a camp?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse214" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,1,5) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse215">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse215" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,1,6) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse216">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse216" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                </div>
-
-                <!-- Column 2,2 -->
-                <div class="panel-group accordion faq-container col-lg-4 col-md-4 col-sm-4" style="background:#FFDF70;">
-                    <h4 class="faq-header">Software & Resources</h4>
-                    <!-- faq(2,2,1) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse221">
-                            <ul><li><div class="faq-dropdown" >
-                                What software and programs do we use at Byte Camp?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse221" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,2,2) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse222">
-                            <ul><li><div class="faq-dropdown">
-                                Where can I find help downloading a program used by Byte Camp?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse222" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,2,3) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse223">
-                            <ul><li><div class="faq-dropdown">
-                                Is the software we use free and available to download?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse223" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,2,4) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse224">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse224" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,2,5) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse225">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse25" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,2,6) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse226">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse226" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                </div>
-
-                <!-- Column 2,3 -->
-                <div class="panel-group accordion faq-container col-lg-4 col-md-4 col-sm-4" style="background:#EE3935;">
-                    <h4 class="faq-header">Other</h4>
-                    <!-- faq(2,3,1) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse231">
-                            <ul><li><div class="faq-dropdown">
-                                Where can I find my project online?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse231" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,3,2) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse232">
-                            <ul><li><div class="faq-dropdown">
-                                How can I use my USB wristband at home?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse232" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,3,3) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse233">
-                            <ul><li><div class="faq-dropdown">
-                                Will my online project be available for everyone to see?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse233" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,3,4) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse234">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse234" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,3,5) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse235" >
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>               
-                        </div>
-                        <div id="collapse235" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                    
-                    <!-- faq(2,3,6) -->
-                    <!--div class="panel panel-default faq-item">
-                        <div class="panel-title faq-title" data-toggle="collapse" data-parent=".accordion" href="#collapse236">
-                            <ul><li><div class="faq-dropdown">
-                                Why is Byte Camp the best tech camp for kids?
-                            </div></li></ul>
-                            <i class="faq-icon fa fa-plus-circle" aria-hidden="true"></i>       
-                        </div>
-                        <div id="collapse236" class="panel-collapse collapse faq-info">
-                            <div class="panel-body">
-                                Make your own clay characters come to life, just like Shaun the Sheep! Participants will 
-                            </div>
-                        </div>
-                    </div-->
-                </div>
-            </div>
-        </div>
-
         <!-- Registration Modal -->
         <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div style="background:#EE3935; padding:10px;">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <div class="text-center">
-                            <h1 class="text-center camp-header camp-modal-header" style="color:#FFFFFF">Registration</h1>
-                        </div>
+                        <div class="text-center"><h1 class="faq-header">Registration</h1></div>
                     </div>
-                    <div class="modal-body" style="border:5px solid #EE3935; font-size:20px;">
+                    <div class="modal-body" style="border:5px solid #EE3935;">
                         <div class="row">
-                        	<div class="panel-group" id="regAccordion">
-								<div class="panel col-md-6" style="background:transparent;">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#regAccordion" href="#reg1">How can I register in a camp?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#regAccordion" href="#reg2">Why can't I register in the camp I want?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#regAccordion" href="#reg3">Who can I speak to about registering?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#regAccordion" href="#reg4">When can I register in a camp?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#regAccordion" href="#reg5">Are there Byte Camps during the school year?</a>
-										</h4>
-									</div>
+                        	<div class="panel-group" id="regAccordion" style="position:relative;">
+								<div class="panel col-md-6 faq-question">
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#regAccordion" href="#reg1">How can I register in a camp?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#regAccordion" href="#reg2">Why can't I register in the camp I want?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#regAccordion" href="#reg3">Who can I speak to about registering?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#regAccordion" href="#reg4">When can I register in a camp?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#regAccordion" href="#reg5">Are there Byte Camps during the school year?</a></h4></div>
 								</div>
-								<div class="panel col-md-6" style="background:transparent; font-size:30px;">
-									<div id="reg1" class="panel-collapse collapse">
-										<div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div>
-									</div>
-									<div id="reg2" class="panel-collapse collapse">
-										<div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div>
-									</div>
-									<div id="reg3" class="panel-collapse collapse">
-										<div class="panel-body">You can contact a the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div>
-									</div>
-									<div id="reg4" class="panel-collapse collapse">
-										<div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div>
-									</div>
-									<div id="reg5" class="panel-collapse collapse">
-										<div class="panel-body">Yes! There are often after school and advanced evening camps which you can register for at the beginning of each semester. Programs and locations are limited so make sure to register right away!</div>
-									</div>
+								<div class="panel col-md-6 faq-answer">
+									<div id="reg1" class="panel-collapse collapse"><div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div></div>
+									<div id="reg2" class="panel-collapse collapse"><div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="reg3" class="panel-collapse collapse"><div class="panel-body">You can contact the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="reg4" class="panel-collapse collapse"><div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="reg5" class="panel-collapse collapse"><div class="panel-body">Yes! There are often after school and advanced evening camps which you can register for at the beginning of each semester. Programs and locations are limited so make sure to register right away!</div></div>
 								</div>
 							</div>
                         </div>
@@ -577,66 +154,28 @@
         <div class="modal fade" id="campInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div style="background:#30D4FF; padding:10px;">
+                    <div style="background:#5599FF; padding:10px;">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <div class="text-center">
-                            <h1 class="text-center camp-header camp-modal-header" style="color:#FFFFFF">Camp Information</h1>
-                        </div>
+                        <div class="text-center"><h1 class="faq-header">Camp Information</h1></div>
                     </div>
-                    <div class="modal-body" style="border:5px solid #30D4FF; font-size:20px;">
+                    <div class="modal-body" style="border:5px solid #5599FF;">
                         <div class="row">
                         	<div class="panel-group" id="campInfoAccordion">
-								<div class="panel col-md-6" style="background:transparent;">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo1">What camps and programs do Byte Camp offer?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo2">Do I need to supply my own laptop/tablet?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo3">Will food be provided?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo4">Can I sign up for a camp that I'm too young for?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo5">Why do we spend so much time outside?</a>
-										</h4>
-									</div>
-									<div class="panel-heading">
-										<h4 class="panel-title">
-										  <a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo6">How come we dont face the front during camp?</a>
-										</h4>
-									</div>
-								</div>
-								<div class="panel col-md-6" style="background:transparent; font-size:30px;">
-									<div id="campInfo1" class="panel-collapse collapse">
-										<div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div>
-									</div>
-									<div id="campInfo2" class="panel-collapse collapse">
-										<div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div>
-									</div>
-									<div id="campInfo3" class="panel-collapse collapse">
-										<div class="panel-body">You can contact a the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div>
-									</div>
-									<div id="campInfo4" class="panel-collapse collapse">
-										<div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div>
-									</div>
-									<div id="campInfo5" class="panel-collapse collapse">
-										<div class="panel-body">Yes! There are often after school and advanced evening camps which you can register for at the beginning of each semester. Programs and locations are limited so make sure to register right away!</div>
-									</div>
-									<div id="campInfo6" class="panel-collapse collapse">
-										<div class="panel-body">Yes! There are often after school and advanced evening camps which you can register for at the beginning of each semester. Programs and locations are limited so make sure to register right away!</div>
-									</div>
+								<div class="panel col-md-6 faq-question"><center>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo1">What camps and programs do Byte Camp offer?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo2">Do I need to supply my own laptop/tablet?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo3">Will food be provided?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo4">Can I sign up for a camp that I'm too young for?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo5">Why do we spend so much time outside?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#campInfoAccordion" href="#campInfo6">How come we dont face the front during camp?</a></h4></div>
+								</center></div>
+								<div class="panel col-md-6 faq-answer">
+									<div id="campInfo1" class="panel-collapse collapse"><div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div></div>
+									<div id="campInfo2" class="panel-collapse collapse"><div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="campInfo3" class="panel-collapse collapse"><div class="panel-body">You can contact the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="campInfo4" class="panel-collapse collapse"><div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="campInfo5" class="panel-collapse collapse"><div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="campInfo6" class="panel-collapse collapse"><div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div></div>
 								</div>
 							</div>
                         </div>
@@ -645,60 +184,148 @@
             </div>
         </div>
 
-        <style>
-        	/* The Magic */
-			.accordion:hover .accordion-item:hover .accordion-item-content,
-			.accordion .accordion-item--default .accordion-item-content {
-			    height: 6em;
-			}
+        <!-- The Organization Modal -->
+        <div class="modal fade" id="orgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div style="background:#FFDF70; padding:10px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center"><h1 class="faq-header">The Organization</h1></div>
+                    </div>
+                    <div class="modal-body" style="border:5px solid #FFDF70;">
+                        <div class="row">
+                        	<div class="panel-group" id="orgAccordion">
+								<div class="panel col-md-6 faq-question"><center>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#orgAccordion" href="#org1">What is Byte Camp?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#orgAccordion" href="#org2">Why is Byte Camp the best tech camp for kids?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#orgAccordion" href="#org3">Where are we located?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#orgAccordion" href="#org4">Why are the camps so inexpensive/expensive?</a></h4></div>
+								</center></div>
+								<div class="panel col-md-6 faq-answer">
+									<div id="org1" class="panel-collapse collapse"><div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div></div>
+									<div id="org2" class="panel-collapse collapse"><div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="org3" class="panel-collapse collapse"><div class="panel-body">You can contact the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="org4" class="panel-collapse collapse"><div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div></div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			.accordion-item-content,
-			.accordion:hover .accordion-item-content {
-			    height: 0;
-			    overflow: hidden;
-			    transition: height .25s;
-			}
-    	</style>
+        <!-- Student Work Modal -->
+        <div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div style="background:#5599FF; padding:10px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center"><h1 class="faq-header">Student Work</h1></div>
+                    </div>
+                    <div class="modal-body" style="border:5px solid #5599FF;">
+                        <div class="row">
+                        	<div class="panel-group" id="studentAccordion">
+								<div class="panel col-md-6 faq-question"><center>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#studentAccordion" href="#student1">Where can I find my project online?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#studentAccordion" href="#student2">How can I use my USB wristband at home?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#studentAccordion" href="#student3">Will my online project be available for everyone to see?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#studentAccordion" href="#student4">When can I register in a camp?</a></h4></div>
+								</center></div>
+								<div class="panel col-md-6 faq-answer">
+									<div id="student1" class="panel-collapse collapse"><div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div></div>
+									<div id="student2" class="panel-collapse collapse"><div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="student3" class="panel-collapse collapse"><div class="panel-body">You can contact the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="student4" class="panel-collapse collapse"><div class="panel-body">You can register for a camp in the weeks leading up to the start date by looking at our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a>. If you are late in registering you can contact a regional manager in your area. Our number is 1-(888)-808-BYTE(2983).</div></div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Search Bar -->
-        <div class="container col-md-5 col-centered" style="padding:50px;">
-            <div id="faq-search" name="faq-search" class="input-group col-md-12">
-                <input id="faq-input" type="text" class="form-control input-lg" placeholder="Can't find what you're looking for?"/>
-                <span class="input-group-btn">
-                    <button class="btn btn-info btn-lg" type="button" onclick="emailQuestion();">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </span>
+        <!-- Software & Resources Modal -->
+        <div class="modal fade" id="resModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div style="background:#FFDF70; padding:10px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center"><h1 class="faq-header">Software & Resources</h1></div>
+                    </div>
+                    <div class="modal-body" style="border:5px solid #FFDF70;">
+                        <div class="row">
+                        	<div class="panel-group" id="resAccordion">
+								<div class="panel col-md-6 faq-question"><center>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#resAccordion" href="#res1">What software and programs do we use at Byte Camp?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#resAccordion" href="#res2"> Where can I find help downloading a program used by Byte Camp?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#resAccordion" href="#res3">Is the software we use free and available to download?</a></h4></div>
+								</center></div>
+								<div class="panel col-md-6 faq-answer">
+									<div id="res1" class="panel-collapse collapse"><div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div></div>
+									<div id="res2" class="panel-collapse collapse"><div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="res3" class="panel-collapse collapse"><div class="panel-body">You can contact a the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div></div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Modal -->
+        <div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div style="background:#EE3935; padding:10px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center"><h1 class="faq-header">Other</h1></div>
+                    </div>
+                    <div class="modal-body" style="border:5px solid #EE3935;">
+                        <div class="row">
+                        	<div class="panel-group" id="otherAccordion">
+								<div class="panel col-md-6 faq-question"><center>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#otherAccordion" href="#other1">Where can I find my project online?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#otherAccordion" href="#other2">How can I use my USB wristband at home?</a></h4></div>
+									<div class="panel-heading swing"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#otherAccordion" href="#other3">Will my online project be available for everyone to see?</a></h4></div>
+								</center></div>
+								<div class="panel col-md-6 faq-answer">
+									<div id="other1" class="panel-collapse collapse"><div class="panel-body">You can register by visiting our <a href="calender/calendar2017.html" style="color:#EE3935;">calender</a> page and selecting the camp that interests you most!</div></div>
+									<div id="other2" class="panel-collapse collapse"><div class="panel-body">Before registering, make sure that the camp you are interested in is still available and has not yet started. If you continue to have issues registering, please contact a manager in your region. Our number is 1-(888)-808-BYTE(2983).</div></div>
+									<div id="other3" class="panel-collapse collapse"><div class="panel-body">You can contact a the regional manager for your area to discuss any registration and any other questions you may have. Our number is 1-(888)-808-BYTE(2983).</div></div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
     <!-- Footer -->
-    <footer id='faq-foot'>
-        <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-            <img src="../static/img/icons/other/website-logo.png" style="width:30%"/>
+    <footer>
+        <div class="container text-center footer" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <img src="../static/img/icons/other/website-logo.png"/>
             <p>Copyright &copy; Byte Camp 2017</p>
         </div>
     </footer>
 
     <!-- jQuery -->
     <script src="../static/js/vendor/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+    
+    <!-- Bootstrap Core JS -->
     <script src="../static/js/vendor/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
+    <!-- Plugin JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    
 
     <script src="../static/js/vendor/box2d.min.js" charset="utf-8"></script>
     <script src="../static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
     <script src="../static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
     <script src="../static/js/falling-content.js" charset="utf-8"></script>
-    
-    <!-- Theme JavaScript -->
-    <script src="../static/js/main.js"></script>
+    <script src="../static/js/vendor/isotope.pkgd.min.js" charset="utf-8"></script>
+
+    <!-- Theme JS-->
     <script src="../static/js/faq.js"></script>
-    <script> document.getElementById("title-grab").innerHTML += '<canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>';</script>
 </body>
 
 </html>

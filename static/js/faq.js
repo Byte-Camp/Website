@@ -43,8 +43,8 @@ function emailQuestion(){
 	    data: { question: q },
 	    async: false,
 	    success: function(data){
-	        console.log(data);
-	        alert("Thank you for your question.");
+	        alert("Thank you for your question. You will be contacted shortly with a response.");
+	        window.location.href='faq.html';
 	    }
 	});
 }

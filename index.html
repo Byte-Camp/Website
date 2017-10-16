@@ -1,66 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App">
     <meta name="author" content="Byte Camp">
 
-    <!-- AOS Animation CSS and JavaScript -->
-    <link rel="stylesheet" href="static/css/vendor/aos.css" />
-
-
     <title>Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="static/css/vendor/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Patrick+Hand|Permanent+Marker" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="static/css/main.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <style media="screen">
-        #btn-text-blue:hover{
-            color: dodgerblue;
-        }
-        #btn-text-green:hover{
-            color: green;
-        }
-        #btn-text-orange:hover{
-            color: orange;
-        }
-        #btn-text-purple:hover{
-            color: darkorchid;
-        }
-        #btn-text-yellow:hover{
-            color: yellow;
-        }
-        #btn-text-red:hover{
-            color: red;
-        }
-    </style>
-
+    <!-- AOS Core -->
+    <link href="static/css/vendor/animate.css" rel="stylesheet">
+    <link href="static/css/vendor/aos.css" rel="stylesheet">
     <script src="static/js/vendor/aos.js"></script>
 
+    <!-- Theme Main Javascript -->
+    <link href="static/css/main.css" rel="stylesheet">
+    <script src="static/js/main.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" onload='detectmob()'>
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-image:url('../static/img/banners/controller-tile-red.png');">
     <script>AOS.init();</script>
 
     <!-- Intro Header -->
@@ -70,51 +37,13 @@
                 <div class="row">
                     <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop poster="static/img/banners/website-banner-comp.png" id="bgvid">
                     </video>
-                    <div id="videocover" style='z-index: -99; background-color: #FFEBA4; opacity: 0.4;'></div>
-                    <style media="screen">
-                        video#bgvid, #videocover{
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            min-width: 100%;
-                            min-height: 100%;
-                            width: auto;
-                            height: auto;
-                            z-index: -100;
-                            -ms-transform: translateX(-50%) translateY(-50%);
-                            -moz-transform: translateX(-50%) translateY(-50%);
-                            -webkit-transform: translateX(-50%) translateY(-50%);
-                            transform: translateX(-50%) translateY(-50%);
-                            background: url(polina.jpg) no-repeat;
-                            background-size: cover;
-                        }
-                    </style>
-                    <script type="text/javascript">
-                        function detectmob() {
-
-                            if( navigator.userAgent.match(/Android/i)
-                                || navigator.userAgent.match(/webOS/i)
-                                || navigator.userAgent.match(/iPhone/i)
-                                || navigator.userAgent.match(/iPad/i)
-                                || navigator.userAgent.match(/iPod/i)
-                                || navigator.userAgent.match(/BlackBerry/i)
-                                || navigator.userAgent.match(/Windows Phone/i)
-                            ){
-
-                                // If mobile, then we do all this
-
-                            }
-                            else {
-                                // If not mobile then do this
-                                document.getElementById("bgvid").innerHTML = '<source src="static/vid/index/web video.webm" type="video/webm"><source src="static/vid/index/web video.mp4" type="video/mp4">';
-                            }
-                        } // detectmob
-                    </script>
+                    <div id="videocover"></div>
+                    <script type="text/javascript">if (!checkMobile()){ document.getElementById("bgvid").innerHTML = '<source src="static/vid/index/web video.webm" type="video/webm"><source src="static/vid/index/web video.mp4" type="video/mp4">'; }</script>
                     <div class="col-md-8 col-md-offset-2">
                         <img src="static/img/icons/other/website-logo.png" class="animate-in hatch delay05" style="width:80%"/>
                         <div class="intro-text animate-in hatch delay1">
-                            <div style='display:inline-block; width:49%; text-align: right;' id='camp-switch'>Creative tech</div>
-                            <div style='display:inline-block; width:49%; text-align: left; padding:0;'>camps for kids.</div>
+                            <div class="index-title" style='text-align: right;' id='camp-switch'>Creative tech</div>
+                            <div class="index-title" style='text-align: left; padding:0;'>camps for kids.</div>
                             </div>
                         </div>
                             <br><a href="html/calendar/calendar_2017.html" class="btn btn-warning btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
@@ -199,41 +128,32 @@
             </div>
         </div>
     </section>
-
-
-
+    
     <!-- Footer -->
-    <footer id='index-foot'>
-        <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-            <img src="static/img/icons/other/website-logo.png" style="width:30%"/>
+    <footer>
+        <div class="container text-center footer" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+            <img src="static/img/icons/other/website-logo.png"/>
             <p>Copyright &copy; Byte Camp 2017</p>
         </div>
     </footer>
 
     <!-- jQuery -->
     <script src="static/js/vendor/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+    
+    <!-- Bootstrap Core JS -->
     <script src="static/js/vendor/bootstrap.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!-- Theme JavaScript -->
-    <script src="static/js/main.js"></script>
-    <script type="text/javascript">
-    // This code switches up the main words _____ camps for kids
-        var array = ['Coding', '2D Animation', 'Music Video', 'Claymation', '2D Game Design', '3D Game Design', '3D Animation', 'VFX'];
-        var i=0;
-        setTimeout(function(){
-            setInterval(function(){
-                $('#camp-switch').removeClass('hatch');
-            }, 3000);
-        },2000);
-        setInterval(function(){
-            $('#camp-switch').text(array[i]);
-            i = (i < 7) ? i + 1 : 0;
-            $('#camp-switch').addClass('hatch');
-        }, 3000);
 
-    </script>
+    <!-- Plugin JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="static/js/vendor/box2d.min.js" charset="utf-8"></script>
+    <script src="static/js/vendor/MouseAndTouch.js" charset="utf-8"></script>
+    <script src="static/js/vendor/DebugMouseDrag.js" charset="utf-8"></script>
+    <script src="static/js/falling-content.js" charset="utf-8"></script>
+    <script src="static/js/vendor/isotope.pkgd.min.js" charset="utf-8"></script>
+
+    <!-- Theme JS-->
+    <script src="static/js/index.js"></script>
 </body>
 
 </html>
