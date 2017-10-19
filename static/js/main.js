@@ -29,25 +29,15 @@ function btemplater(temp, replacements){
     return temp;
 }
 
-function checkMobile(){
-    if( navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/webOS/i)
-        || navigator.userAgent.match(/iPhone/i)
-        || navigator.userAgent.match(/iPad/i)
-        || navigator.userAgent.match(/iPod/i)
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i)
-    ){ document.getElementById('title-grab').innerHTML = ''; return true; }
-}
-
 $(document).ready(function(){
-var scrollTop = 0;
-$(window).scroll(function(){
-scrollTop = $(window).scrollTop();
-if (scrollTop >= 100) {
-$('#navbar').addClass('scrolled-nav');
-} else if (scrollTop < 100) {
-$('#navbar').removeClass('scrolled-nav');
-}
-});
+    var scrollTop = 0;
+    $(window).scroll(function(){
+        scrollTop = $(window).scrollTop();
+        if (scrollTop >= 100) {
+            $('#navbar').addClass('scrolled-nav');
+        } 
+        else if (scrollTop < 100) {
+            $('#navbar').removeClass('scrolled-nav');
+        }
+    });
 });

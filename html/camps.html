@@ -22,9 +22,9 @@
     <link href="../static/css/vendor/aos.css" rel="stylesheet">
     <script src="../static/js/vendor/aos.js"></script>
 
-    <!-- Theme Main Javascript -->
+    <!-- Theme -->
     <link href="../static/css/main.css" rel="stylesheet">
-    <script src="../static/js/main.js" defer></script>
+    <script src="../static/js/init.js"></script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-image:url('../static/img/banners/controller-tile-purple.png');">
@@ -80,23 +80,24 @@
         <!-- /.container -->
     </nav>
 
-    <div id="title-grab">
+    <div id='title-grab'>
         <canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>
-        <div id="header" class="container-fluid title-header" style="background-color:#9955FF;"></div>
+        <div id="header" class="container-fluid title-header" style="background:#9955FF;"></div>
         <div id="box2d-container">
-            <div class="in-box2d"><h1 class="text-center banner-text no-select">CAMPS</h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text">CAMPS</h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/clay.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2Dtab.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/mv.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/coding.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2d.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/3d.png" class="camp-icon"></h1></div>
-            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/3dgames.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/baa.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/cyoa.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/3Dgames.png" class="camp-icon"></h1></div>
         </div>
-		<script type="text/javascript">checkMobile();</script>
+        <script type="text/javascript">checkMobile();</script>
     </div>
-    
+
     <!-- Program select -->
     <a id="programs" class="anchor"></a>
     <div id="programs-section" class="content-section">
@@ -559,6 +560,7 @@
     <script src="../static/js/vendor/isotope.pkgd.min.js" charset="utf-8"></script>
 
     <!-- Theme JS-->
+    <script src="../static/js/main.js"></script>
     <script src="../static/js/camps.js"></script>
 </body>
 
