@@ -1,0 +1,227 @@
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+* html #scrolltext a {
+  width:100%;
+}
+
+a {
+  text-decoration : none;
+}
+
+a:link { color:#FFDC71; }      /* unvisited link */
+a:visited { color:#FFDC71; }  /* visited link */
+a:hover { color:#FFFFFF; }  /* mouse over link */
+a:active { color:#FFDC71; }   
+
+#blender {
+  width: 530px;
+  z-index: 98; 
+  left: 72px; 
+  position: absolute;  
+  top: 150px;   
+}   
+
+#mp4Player {
+  width: 530px;
+  z-index: 98; 
+  left: 72px; 
+  position: absolute;  
+  top: 140px;   
+}       
+
+#sb2Player {   
+  width: 500px;
+  z-index: 98; 
+  left: 60px; 
+  position: absolute;  
+  top: 118px;   
+  padding:30px 10px 30px 30px;
+  display:none;
+  pointer-events:none;
+}   
+
+#htmlPlayer {   
+  width: 530px;
+  height: 400px;   
+  z-index: 98; 
+  left: 55px; 
+  position: absolute;  
+  top: 140px;  
+  border: 10px solid black;
+}   
+
+
+#container {
+  position: relative; 
+  margin-left: auto ;
+  margin-right: auto ;
+  margin-top: 0 ;
+  width: 904px;
+  padding: 0px;
+}
+  
+#tv_top {
+  z-index: 100; 
+  left: 0px; 
+  position: absolute;  
+  top: 0px;
+}
+
+#tv_left {
+  z-index: 100; 
+  left: 0px; 
+  position: absolute;  
+  top: 152px;
+}
+
+#tv_center {
+  z-index: 100; 
+  left: 598px; 
+  position: absolute; 
+  top: 152px;
+}
+
+#tv_right {
+  z-index: 100; 
+  right: 0px; 
+  position: absolute; 
+  top: 152px;
+}
+
+#tv_bottom {
+  z-index: 100; 
+  right: 0px; 
+  position: absolute; 
+  top: 532px;
+}
+
+#left, #right,#buttons {
+  position: absolute; 
+  height: 400px;
+  color: #000;
+  background-color: #FFFFFF;   
+
+}
+
+#left {
+  text-shadow: 0px 0px 3px #FFDC71;
+  font-family: sans-serif; 
+  font-weight:bold;
+  font-size: 12px;
+  background-color: #000000;  
+  color: #FFDC71;
+  text-align:center;
+  top: 145px;
+  left:65px;
+  width: 540px;   
+}
+
+
+#buttons {
+  background-color: transparent;
+  z-index: 101; 
+  left:838px; 
+  top: 200px;
+  width:36px;
+  height:395px;   
+}
+
+.button {
+  margin-bottom:5px;
+}
+
+#right {
+  background-color: #6b000e; 
+  top: 145px;
+  right:78px;   
+  width:210px;
+  height:395px;   
+  float: right;
+  text-align: left;
+  overflow: auto;
+  padding: 0%;   
+}
+
+#blackbg {
+  position: absolute; 
+  top: 135px;
+  left:40px;   
+  width:810px;
+  height:420px;   
+  background-color:#000;
+}
+
+.scrollitem {
+  position: relative; 
+  background-color: #990e00; 
+  width: 300px;
+  height: 60px;
+  top:10px;
+  margin: 5px 3px 5px 3px;  
+  padding: 2px 3px 2px 5px;
+}
+
+.scrolltext {
+  line-height:15px;
+  width: 240px;
+  position: absolute;
+  text-align: left;
+  left: 40px;
+  top: 4px;
+  color:#000000;
+  font-family: sans-serif; 
+  background:#fff
+  /* for IE */
+  filter:alpha(opacity=90);
+  /* CSS3 standard */
+  opacity:0.9;
+}
+  
+  .scrolltext a:link, 
+  .scrolltext a:visited {
+  padding:5px;
+  background:#fff;
+  display:block;color:#000
+}
+
+.scrolltext a:hover {
+  background:#fee;
+}
+
+.scrolltitle {
+  font-weight:bolder;
+  font-size:13px;
+  line-height:13px;   
+  margin: 0px 0px 0px 0px;
+  padding: 2px 0px 0px 0px;
+  text-indent:2px;
+}
+
+.scrollsubtitle {
+  line-height:10px;
+  font-size:10px;
+  text-indent:3px; 
+}
+
+.clear {
+  height: 0;
+  font-size: 1px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  clear: both;
+}
+
+#bc_step_1_result {
+  width: 500px;    
+  z-index:0;
+}
+
+.bc_step_1_failed {
+  background: url(../static/best-ofs/res/step_1_fail_geta3d.png) top lef;
+  background-size: 100%;;
+}

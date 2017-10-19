@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App">
-    <meta name="author" content="Byte Camp">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <title>Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -25,28 +25,30 @@
     <!-- Theme Main Javascript -->
     <link href="static/css/main.css" rel="stylesheet">
     <script src="static/js/main.js"></script>
+
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-image:url('../static/img/banners/controller-tile-red.png');">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  onload="init()" style="background-image:url('static/img/banners/controller-tile-purple.png');">
     <script>AOS.init();</script>
 
     <!-- Intro Header -->
-    <header class="intro">
+    <header class="intro" style="background:url('static/img/banners/website-banner.png') no-repeat fixed bottom;">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
+                    <!--
                     <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop poster="static/img/banners/website-banner-comp.png" id="bgvid">
                     </video>
                     <div id="videocover"></div>
                     <script type="text/javascript">if (!checkMobile()){ document.getElementById("bgvid").innerHTML = '<source src="static/vid/index/web video.webm" type="video/webm"><source src="static/vid/index/web video.mp4" type="video/mp4">'; }</script>
-                    <div class="col-md-8 col-md-offset-2">
-                        <img src="static/img/icons/other/website-logo.png" class="animate-in hatch delay05" style="width:80%"/>
+                    -->
+                    <div class="col-xs-8 col-center">
+                        <img src="static/img/icons/other/website-logo.png" class="animate-in hatch delay05" style="width:100%"/>
                         <div class="intro-text animate-in hatch delay1">
                             <div class="index-title" style='text-align: right;' id='camp-switch'>Creative tech</div>
                             <div class="index-title" style='text-align: left; padding:0;'>camps for kids.</div>
-                            </div>
-                        </div>
-                            <br><a href="html/calendar/calendar_2017.html" class="btn btn-warning btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
+                        </div><br>
+                        <a href="html/calendar/calendar_2017.html" class="btn btn-warning btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
                         <a href="#menu" class="btn btn-circle page-scroll animate-in pullDown delay15">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -56,7 +58,18 @@
         </div>
     </header>
 
-	<!-- Body Menu Section -->
+    <!--div id="title-grab">
+        <canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>
+        <div id="header" class="container-fluid title-header" style="background:url('static/img/banners/website-banner-old.png');"></div>
+        <div id="box2d-container">
+            <div class="in-box2d"><h1 class="text-center banner-text no-select">CAMPS</h1></div>
+        </div>
+		<script type="text/javascript">checkMobile();</script>
+    </div-->
+    
+    <!-- Menu select -->
+    <a id="menu" class="anchor"></a>
+    <!-- Body Menu Section -->
 	<div class="accent-section">
 		<section id="menu" class="container text-center content-section">
 			<div class="row">
@@ -101,7 +114,7 @@
         </section>
 	</div>
 
-    <!-- About Section -->
+	<!-- About Section -->
     <section id="about" class="container-fluid content-section" style="padding-bottom: 100px;">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 text-center" style="margin-top: 50px;">
@@ -128,7 +141,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container text-center footer" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
@@ -152,8 +165,7 @@
     <script src="static/js/falling-content.js" charset="utf-8"></script>
     <script src="static/js/vendor/isotope.pkgd.min.js" charset="utf-8"></script>
 
-    <!-- Theme JS-->
-    <script src="static/js/index.js"></script>
+    <script src="static/js/index.js" charset="utf-8"></script>
 </body>
 
 </html>

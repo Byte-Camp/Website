@@ -16,7 +16,6 @@ function makeHeader(targetId, replacements){
 
 }
 
-
 function btemplater(temp, replacements){
     var start = 0; var end; var word;
     while(temp.indexOf('{{', start) > -1){
@@ -40,3 +39,15 @@ function checkMobile(){
         || navigator.userAgent.match(/Windows Phone/i)
     ){ document.getElementById('title-grab').innerHTML = ''; return true; }
 }
+
+$(document).ready(function(){
+var scrollTop = 0;
+$(window).scroll(function(){
+scrollTop = $(window).scrollTop();
+if (scrollTop >= 100) {
+$('#navbar').addClass('scrolled-nav');
+} else if (scrollTop < 100) {
+$('#navbar').removeClass('scrolled-nav');
+}
+});
+});
