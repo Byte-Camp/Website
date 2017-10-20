@@ -3,11 +3,13 @@ $( ".glyphicon-check" ).click(function() {
         $(this).removeClass("glyphicon-check");
         $(this).addClass("glyphicon-unchecked");
         this.style.color = "";
+        //$(this).parent().children(".res-thumb").addClass(" res-thumb-bw");
     }
     else{
         $(this).removeClass("glyphicon-unchecked");
         $(this).addClass("glyphicon-check");
         this.style.color = "green";
+        //$(this).parent().children(".res-thumb").removeClass(" res-thumb-bw");
     }
 });
 

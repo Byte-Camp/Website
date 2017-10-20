@@ -32,7 +32,7 @@
     <script>AOS.init();</script>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
+    <nav id="navbar" class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
         <div class="container-fluid">
             <div class="navbar-header navbar-home">
                 <a class="navbar-icon" href="../index.html" ><img src="../static/img/buttons/btn_home.png"/></a>
@@ -83,7 +83,7 @@
 
     <div id="title-grab">
         <canvas id="canvas" style="position:absolute;top:0;" width="100" height="1"></canvas>
-        <div id="header" class="container-fluid title-header" style="background-color:#FFDF70;"></div>
+        <div id="header" class="container-fluid title-header" style="background-color:#FF9955;"></div>
         <div id="box2d-container">
             <div class="in-box2d"><h1 class="text-center banner-text no-select">RES</h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select">OUR</h1></div>
@@ -92,86 +92,199 @@
         <script type="text/javascript">checkMobile();</script>
     </div>
 
-    <div id="resources-section" class="container text-center content-section"> 
-        <div class="col-lg-4 col-sm-6 col-xs-12 text-center">
+    <a id="resources" class="anchor"></a>
+    <div id="resources-section" class="container text-center content-section" >
+        <!-- HTML/JS/CSS -->
+        <div class="col-lg-4 col-sm-6 col-xs-12 text-center res-container">
             <div class="res-content">
-                <!--img src="../static/img/banners/webdev.png" class="res-banner"/-->
-                <div class="res-banner" style="background-color:#FFDF70; height:200px;"></div>
+                <div class="res-container-color" style="background-color:#5599FF;" data-toggle="collapse" href="#drop-htmljscss">
+                    <img class="res-container-thumb glyphicon" src="../static/img/icons/software/htmljscss.png" style="margin-top:10px;"/>
+                    <h3 class="res-container-title">
+                        Code Your Own Adventure
+                        <br>&<br>
+                        Build An App
+                    </h3>
+                </div>
+                <h5 class="res-title"><center>
+                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/cyoa.png"/>
+                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/baa.png"/>
+                </center></h5>
 
-                <h4 class="res-title"><img class="glyphicon res-thumb" src="../static/img/icons/software/htmljscss.png"></span><span class="link"> HTML/JS/CSS </span></h4>
                 <hr class="thick-grey">
                 
-                <div class="res-header">Filter By Camp:</div>
-                <div class="res-filters">
-                    <ul class="list-group checked-list-box list-res">
-                        <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> Cody Your Own Adventure </li>
-                        <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Build An App </li>
-                    </ul>
-                </div>
+                <div id="drop-htmljscss" class="panel-collapse collapse panel-body" style="padding:10px;">
+                    <div class="res-header">Resources:</div>
+                    <div class="res-filters">
+                        <ul class="list-group list-res panel-group" id="list-htmljscss">
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-htmljscss-dl" data-parent="#list-htmljscss"><span class="glyphicon glyphicon-download-alt"></span> <span> Download Software </span> <span class="badge res-badge">3</span></a>
+                                <div id="drop-htmljscss-dl" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body">
+                                        <a href="https://atom.io/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/atom.png"/>Atom</a><br>
+                                        <a href="https://www.mozilla.org/en-US/firefox/new/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/firefox.png"/>Mozilla Firefox</a><br>
+                                        <a href="https://inkscape.org/en/release/0.92.2/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/inkscape.png"/>Inkscape</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-htmljscss-docs" data-parent="#list-htmljscss"><span class="glyphicon glyphicon-file"></span> <span> Documents </span> <span class="badge res-badge">0</span></a>
+                                <div id="drop-htmljscss-docs" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a>There are no documents available yet! Please request any documents you would like to see here.</a>
+                                    </center></div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-2px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-htmljscss-bg" data-parent="#list-htmljscss"><span class="glyphicon glyphicon-education"></span> <span> Beginner's Guide </span> <span class="badge res-badge">2</span></a>
+                                <div id="drop-htmljscss-bg" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a href="https://www.codecademy.com/courses/web-beginner-en-HZA3b/0/1">Code Academy</a><br>
+                                        <a href="https://inkscape.org/en/learn/tutorials/">Inkscape Tutorials</a><br>
+                                    </center></div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
 
-                <div class="res-header">Resources:</div>
-                <div class="res-filters">
-                    <ul class="list-group list-res">
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-download-alt"></span> <span class="link"> Download Software </span> <span class="badge res-badge">3</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> <span class="link"> Learning Resources </span> <span class="badge res-badge">2</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-file"></span> <span class="link"> Beginner's Guide </span> <span class="badge res-badge">0</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-film"></span> <span class="link"> Videos Tutorials </span> <span class="badge res-badge">0</span></a>
-                    </ul>
+                    <div class="res-header">Filter By Software:</div>
+                    <div class="res-filters">
+                        <ul class="list-group checked-list-box list-res">
+                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span>  Atom </li>
+                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Inkscape </li>
+                            <li class="list-group-item list-camps"><span id="c" class="glyphicon glyphicon-check" style="color:green;"></span> Mozilla Firefox </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </div>       
         </div>
 
-        <div class="col-lg-4 col-sm-6 col-xs-12 text-center">
+        <!-- Blender -->
+        <div class="col-lg-4 col-sm-6 col-xs-12 text-center res-container"> 
             <div class="res-content">
-                <!--img src="../static/img/banners/blender.png" class="res-banner"/!-->
-                <div class="res-banner" style="background-color:#C5F43D; height:200px;"></div>
-                <h4 class="res-title"><img class="glyphicon res-thumb" src="../static/img/icons/software/blender.png"></span><span class="link"> Blender </span></h4>
+                <div class="res-container-color" style="background-color:#C5F43D;" data-toggle="collapse" href="#drop-blender">
+                    <img class="res-container-thumb glyphicon" src="../static/img/icons/software/blender.png" style="height:140px; margin-top:30px;"/>
+                    <h3 class="res-container-title">
+                        3D Animation
+                        <br>&<br>
+                        3D Game Design
+                    </h3>
+                </div>
+                <h5 class="res-title"><center>
+                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/3D.png"/>
+                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/3Dgames.png"/>
+                </center></h5>
+
                 <hr class="thick-grey">
                 
-                <div class="res-header">Filter By Camp:</div>
-                <div class="res-filters">
-                    <ul class="list-group checked-list-box list-res">
-                        <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> 3D Animation </li>
-                        <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> 3D Game Design </li>
-                    </ul>
-                </div>
+                <div id="drop-blender" class="collapse panel-body" style="padding:10px;">
+                    <div class="res-header">Resources:</div>
+                    <div class="res-filters">
+                        <ul class="list-group list-res panel-group" id="list-blender">
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-blender-dl" data-parent="#list-blender"><span class="glyphicon glyphicon-download-alt"></span> <span> Download Software </span> <span class="badge res-badge">2</span></a>
+                                <div id="drop-blender-dl" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body">
+                                    <a href="https://www.blender.org/download/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/blender.png"/>Blender</a><br>
+                                    <a href="http://www.vegascreativesoftware.com/ca/trial-versions/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/vegas.png"/>Sony Vegas Movie Studio</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-blender-docs" data-parent="#list-blender"><span class="glyphicon glyphicon-file"></span> <span> Documents </span> <span class="badge res-badge">0</span></a>
+                                <div id="drop-blender-docs" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a href="../../static/doc/Storyboards.pdf">Storyboards</a><br>
+                                        <a href="../../static/doc/Scripts.pdf">Scripts</a><br>
+                                    </center></div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-blender-bg" data-parent="#list-blender"><span class="glyphicon glyphicon-education"></span> <span> Beginner's Guide </span> <span class="badge res-badge">2</span></a>
+                                <div id="drop-blender-bg" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a href="https://www.blender.org/support/tutorials/">Blender Tutorials</a><br>
+                                <a href="https://www.vegascreativesoftware.info/us/tutorials/">Sony Vegas Tutorials</a><br>
+                                    </center></div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-2px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-blender-vt" data-parent="#list-blender"><span class="glyphicon glyphicon-film"></span> <span> Video Tutorials </span> <span class="badge res-badge">1</span></a>
+                                <div id="drop-blender-vt" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a href="https://www.youtube.com/playlist?list=PLOT5gg-WjnqFZPi4LTtdc1PRbHkyW2jem">Blender tutorials by Colin Boorman</a><br>
+                                    </center></div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
 
-                <div class="res-header">Resources:</div>
-                <div class="res-filters">
-                    <ul class="list-group list-res">
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-download-alt"></span> <span class="link"> Download Software </span> <span class="badge res-badge">1</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> <span class="link"> Learning Resources </span> <span class="badge res-badge">4</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-file"></span> <span class="link"> Beginner's Guide </span> <span class="badge res-badge">1</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-film"></span> <span class="link"> Videos Tutorials </span> <span class="badge res-badge">8</span></a>
-                    </ul>
+                    <div class="res-header">Filter By Software:</div>
+                    <div class="res-filters">
+                        <ul class="list-group checked-list-box list-res">
+                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> Blender </li>
+                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Sony Vegas Movie Studio </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </div>       
         </div>
 
-        <div class="col-lg-4 col-sm-6 col-xs-12 text-center" >
+        <!-- Flip-A-Clip -->
+        <div class="col-lg-4 col-sm-6 col-xs-12 text-center res-container"> 
             <div class="res-content">
-                <!--img src="../static/img/banners/tab.png" class="res-banner" style="background-color:#FFDF70;"/-->
-                <div class="res-banner" style="background-color:#EE3935; height:200px;"></div>
-                <h4 class="res-title"><img class="glyphicon res-thumb" src="../static/img/icons/software/flipaclip.png"></span><span class="link"> Flip-A-Clip </span></h4>
+                <div class="res-container-color" style="background-color:#FF9955;" data-toggle="collapse" href="#drop-flipaclip">
+                    <img class="res-container-thumb glyphicon" src="../static/img/icons/software/flipaclip.png" style="height:120px; margin-top:30px;"/>
+                    <h3 class="res-container-title"> 2D Tablet Animation </h3>
+                </div>
+                <h5 class="res-title"><center>
+                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/2Dtab.png"/>
+                </center></h5>
+
                 <hr class="thick-grey">
                 
-                <div class="res-header">Filter By Camp:</div>
-                <div class="res-filters">
-                    <ul class="list-group checked-list-box list-res">
-                        <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> 2D Tablet Animation </li>
-                    </ul>
-                </div>
+                <div id="drop-flipaclip" class="collapse panel-body" style="padding:10px;">
+                    <div class="res-header">Resources:</div>
+                    <div class="res-filters">
+                        <ul class="list-group list-res panel-group" id="list-flipaclip">
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-flipaclip-dl" data-parent="#list-flipaclip"><span class="glyphicon glyphicon-download-alt"></span> <span> Download Software </span> <span class="badge res-badge">2</span></a>
+                                <div id="drop-flipaclip-dl" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body">
+                                    <a href="https://www.flipaclip.org/download/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/flipaclip.png"/>Flip-A-Clip</a><br>
+                                    <a href="http://www.vegascreativesoftware.com/ca/trial-versions/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/vegas.png"/>Sony Vegas Movie Studio</a><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-flipaclip-docs" data-parent="#list-flipaclip"><span class="glyphicon glyphicon-file"></span> <span> Documents </span> <span class="badge res-badge">2</span></a>
+                                <div id="drop-flipaclip-docs" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a href="../../static/doc/Storyboards.pdf">Storyboards</a><br>
+                                        <a href="../../static/doc/Scripts.pdf">Scripts</a><br>
+                                    </center></div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="border:none;margin-bottom:-10px;box-shadow:none;">
+                                <a class="list-group-item panel-title" data-toggle="collapse" href="#drop-flipaclip-bg" data-parent="#list-flipaclip"><span class="glyphicon glyphicon-education"></span> <span> Beginner's Guide </span> <span class="badge res-badge">2</span></a>
+                                <div id="drop-flipaclip-bg" class="panel-collapse collapse res-collapse">
+                                    <div class="panel-body"><center>
+                                        <a href="http://support.flipaclip.us/topics/10-where-is-the-instructions-manual/">Flip-A-Clip Tutorials</a><br>
+                                        <a href="https://www.vegascreativesoftware.info/us/tutorials/">Sony Vegas Tutorials</a><br>
+                                    </center></div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
 
-                <div class="res-header">Resources:</div>
-                <div class="res-filters">
-                    <ul class="list-group list-res">
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-download-alt"></span> <span class="link"> Download Software </span> <span class="badge res-badge">1</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-education"></span> <span class="link"> Learning Resources </span> <span class="badge res-badge">4</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-file"></span> <span class="link"> Beginner's Guide </span> <span class="badge res-badge">1</span></a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-film"></span> <span class="link"> Videos Tutorials </span> <span class="badge res-badge">8</span></a>
-                    </ul>
+                    <div class="res-header">Filter By Software:</div>
+                    <div class="res-filters">
+                        <ul class="list-group checked-list-box list-res">
+                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> Blender </li>
+                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Sony Vegas Movie Studio </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </div>       
         </div>
     </div>
     
