@@ -86,14 +86,16 @@
         <div id="box2d-container">
             <div class="in-box2d"><h1 class="text-center banner-text">CAMPS</h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/clay.png" class="camp-icon"></h1></div>
-            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2Dtab.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2dg.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/mv.png" class="camp-icon"></h1></div>
-            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/coding.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/i2c.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2d.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/3d.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/baa.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/cyoa.png" class="camp-icon"></h1></div>
-            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/3Dgames.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/3dg.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/lca.png" class="camp-icon"></h1></div>
+            <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/ani3.png" class="camp-icon"></h1></div>
         </div>
         <script type="text/javascript">checkMobile();</script>
     </div>
@@ -137,14 +139,30 @@
                 <!-- 2D TABLET ANIMATION -->
                 <div class="element-item col-lg-6 col-xs-12 younger animation" data-category="younger animation">
                     <div class="camp-content" style="background:#FF9955;">
-                        <div class="camp-info text-center" id="camp-info-2dtab" >
-                            <img src="../static/img/icons/bc/2Dtab.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                        <div class="camp-info text-center" id="camp-info-2d" >
+                            <img src="../static/img/icons/bc/2d.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header">2D Tablet Animation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Hand draw animated movies on tablets just like Disney!</p>
-                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#2dtabModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#2dModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANIMATION^3 -->
+                <div class="element-item col-lg-6 col-xs-12 younger animation" data-category="younger animation">
+                    <div class="camp-content" style="background:#C5F43D;">
+                        <div class="camp-info text-center" id="camp-info-ani3" >
+                            <img src="../static/img/icons/bc/ani3.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                            <h1 class="text-center camp-header">Animation&sup3</h1>
+                            <hr style='margin:5px'>
+                            <h4 style='margin-bottom: 0px'>9-12 yrs, $150, 4-5 full days</h4>
+                            <hr style='margin:5px'>
+                            <p style='margin-bottom: 10px;'>Hand draw animated movies on tablets just like Disney!</p>
+                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#ani3Modal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
                     </div>
@@ -152,7 +170,7 @@
                 
                 <!-- MUSIC VIDEO -->
                 <div class="element-item col-lg-6 col-xs-12 younger other" data-category="younger other">
-                    <div class="camp-content" style="background:#C5F43D;">
+                    <div class="camp-content" style="background:#9955FF;">
                         <div class="camp-info text-center" id="camp-info-mv">
                             <img src="../static/img/icons/bc/mv.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header">Music Video Production</h1>
@@ -166,17 +184,49 @@
                     </div>
                 </div>
 
+                <!-- LIGHTS!, COMPUTER!, ACTION! -->
+                <div class="element-item col-lg-6 col-xs-12 younger other" data-category="younger other">
+                    <div class="camp-content" style="background:#FF9955;">
+                        <div class="camp-info text-center" id="camp-info-lca">
+                            <img src="../static/img/icons/bc/lca.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                            <h1 class="text-center camp-header">Lights! Computer! Action!</h1>
+                            <hr style='margin:5px'>
+                            <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
+                            <hr style='margin:5px'>
+                            <p style='margin-bottom: 10px;'>Write some sick beats then create the music video!</p>
+                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#lcaModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- INTRO TO CODE -->
                 <div class="element-item col-lg-6 col-xs-12 younger coding" data-category="younger coding">
-                    <div class="camp-content" style="background:#9955FF;">
-                        <div class="camp-info text-center" id="camp-info-2dtab">
-                            <img src="../static/img/icons/bc/coding.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                    <div class="camp-content" style="background:#C5F43D;">
+                        <div class="camp-info text-center" id="camp-info-i2c">
+                            <img src="../static/img/icons/bc/i2c.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header">Introduction to Coding</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Learn real coding skills by making games in Scratch!</p>
-                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#codingModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#i2cModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CODE YOUR OWN ADVENTURE -->
+                <div class="element-item col-lg-6 col-xs-12 younger coding" data-category="younger coding">
+                    <div class="camp-content" style="background:#9955FF;">
+                        <div class="camp-info text-center" id="camp-info-cyoa">
+                            <img src="../static/img/icons/bc/cyoa.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                            <h1 class="text-center camp-header">Code Your Own Adventure</h1>
+                            <hr style='margin:5px'>
+                            <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
+                            <hr style='margin:5px'>
+                            <p style='margin-bottom: 10px;'>Learn real coding skills by making games in Scratch!</p>
+                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#cyoaModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
                     </div>
@@ -186,7 +236,7 @@
                 <div class="element-item col-lg-6 col-xs-12 older coding" data-category="older coding">
                     <div class="camp-content" style="background:#FF9955;">
                         <div class="camp-info text-center" id="camp-info-2dg">
-                            <img src="../static/img/icons/bc/2d.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                            <img src="../static/img/icons/bc/2dg.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header">2D Video Game Design</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
@@ -201,14 +251,14 @@
                 <!-- 3D ANIMATION -->
                 <div class="element-item col-lg-6 col-xs-12 older animation" data-category="older">
                     <div class="camp-content" style="background:#C5F43D;">
-                        <div class="camp-info text-center" id="camp-info-3da">
+                        <div class="camp-info text-center" id="camp-info-3d">
                             <img src="../static/img/icons/bc/3d.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header">3D Animation</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
                             <hr style='margin:5px'>
                             <p style='margin-bottom: 10px;'>Draw 3D characters, animate them and create a story!</p>
-                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#3daModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
+                            <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#3dModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
                     </div>
@@ -218,7 +268,7 @@
                 <div class="element-item col-lg-6 col-xs-12 older coding" data-category="older coding">
                     <div class="camp-content" style="background:#9955FF;"> 
                         <div class="camp-info text-center" id="camp-info-3dg">
-                            <img src="../static/img/icons/bc/3Dgames.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
+                            <img src="../static/img/icons/bc/3dg.png" class="camp-icon"><br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header">3D Video Game Design</h1>
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>11-14 yrs, $200-$275, 4-5 full days</h4>
@@ -287,25 +337,25 @@
             </div>
         </div>
 
-        <!-- 2DTab Modal -->
-        <div class="modal fade" id="2dtabModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!-- 2d Modal -->
+        <div class="modal fade" id="2dModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/2Dtab.png" class="camp-icon">
+                            <img src="../static/img/icons/bc/2d.png" class="camp-icon">
                                 <br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header camp-modal-header">2D Tablet Animation</h1>
                                 <br class="hidden-md hidden-lg hidden-xl">
-                            <img src="../static/img/icons/bc/2Dtab.png" class="camp-icon">
+                            <img src="../static/img/icons/bc/2d.png" class="camp-icon">
                             <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/tab-app_awareness.jpg" controls>
-                                <source src="../static/vid/camps/tab-app_awareness.mp4" type="video/mp4">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2d-app_awareness.jpg" controls>
+                                <source src="../static/vid/camps/2d-app_awareness.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="col-xs-12 col-md-6">
@@ -322,7 +372,38 @@
             </div>
         </div>
 
-        <!-- Music Video Modal -->
+        <!-- ANI3 Modal -->
+        <div class="modal fade" id="ani3Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center">
+                            <img src="../static/img/icons/bc/ani3.png" class="camp-icon">
+                                <br class="hidden-md hidden-lg hidden-xl">
+                            <h1 class="text-center camp-header camp-modal-header">Animation&sup3</h1>
+                                <br class="hidden-md hidden-lg hidden-xl">
+                            <img src="../static/img/icons/bc/ani3.png" class="camp-icon">
+                            <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2d-app_awareness.jpg" controls>
+                                <source src="../static/vid/camps/2d-app_awareness.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <p style='font-size: 20px;'>Explore the world of Animation, from Stop-Motion and Claymation to Vector and 3D Animation. Students will learn hands-on how these creative processes are used to make some of the TV shows and movies they love. The program will take students through various animation techniques like claymation, stop-motion animation on tablets, and 3D animation design!</p>
+                                <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MV Modal -->
         <div class="modal fade" id="mvModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -339,8 +420,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/musicvid-power_of_music.jpg" controls>
-                                <source src="../static/vid/camps/musicvid-power_of_music.mp4" type="video/mp4">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/mv-power_of_music.jpg" controls>
+                                <source src="../static/vid/camps/mv-power_of_music.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="col-xs-12 col-md-6">
@@ -356,25 +437,56 @@
             </div>
         </div>
 
-        <!-- Coding Modal -->
-        <div class="modal fade" id="codingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!-- Lights! Camera! Action! Modal -->
+        <div class="modal fade" id="lcaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/coding.png" class="camp-icon">
+                            <img src="../static/img/icons/bc/lca.png" class="camp-icon">
                                 <br class="hidden-md hidden-lg hidden-xl">
-                            <h1 class="text-center camp-header camp-modal-header">Introduction To Coding</h1>
+                            <h1 class="text-center camp-header camp-modal-header">Lights! Camera! Action!</h1>
                                 <br class="hidden-md hidden-lg hidden-xl">
-                            <img src="../static/img/icons/bc/coding.png" class="camp-icon">
+                            <img src="../static/img/icons/bc/lca.png" class="camp-icon">
                             <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/coding-scarf.jpg" controls>
-                                <source src="../static/vid/camps/coding-scarf.mp4" type="video/mp4">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/mv-power_of_music.jpg" controls>
+                                <source src="../static/vid/camps/mv-power_of_music.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <p style='font-size: 20px;'>sdsd</p>
+                                <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- I2C Modal -->
+        <div class="modal fade" id="i2cModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center">
+                            <img src="../static/img/icons/bc/i2c.png" class="camp-icon">
+                                <br class="hidden-md hidden-lg hidden-xl">
+                            <h1 class="text-center camp-header camp-modal-header">Introduction To Coding</h1>
+                                <br class="hidden-md hidden-lg hidden-xl">
+                            <img src="../static/img/icons/bc/i2c.png" class="camp-icon">
+                            <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/i2c-scarf.jpg" controls>
+                                <source src="../static/vid/camps/i2c-scarf.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="col-xs-12 col-md-6">
@@ -390,6 +502,37 @@
             </div>
         </div>
 
+        <!-- CYOA Modal -->
+        <div class="modal fade" id="cyoaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="text-center">
+                            <img src="../static/img/icons/bc/cyoa.png" class="camp-icon">
+                                <br class="hidden-md hidden-lg hidden-xl">
+                            <h1 class="text-center camp-header camp-modal-header">Code Your Own Adventure</h1>
+                                <br class="hidden-md hidden-lg hidden-xl">
+                            <img src="../static/img/icons/bc/cyoa.png" class="camp-icon">
+                            <p style='margin:0'>9-12 yrs, $200-$275, 4-5 full days</p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/i2c-scarf.jpg" controls>
+                                <source src="../static/vid/camps/i2c-scarf.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <p style='font-size: 20px;'>Kids will have a chance to learn HTML and CSS - the languages that power the web - to build their own choose-your-own-adventure game! Create a story! Create your own vector-based artwork! Program it for the web!</p>
+                                <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 2D Games Modal -->
         <div class="modal fade" id="2dgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
@@ -397,18 +540,18 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="text-center">
-                            <img src="../static/img/icons/bc/2d.png" class="camp-icon">
+                            <img src="../static/img/icons/bc/2dg.png" class="camp-icon">
                                 <br class="hidden-md hidden-lg hidden-xl">
                             <h1 class="text-center camp-header camp-modal-header">2D Video Game Design</h1>
                                 <br class="hidden-md hidden-lg hidden-xl">
-                            <img src="../static/img/icons/bc/2d.png" class="camp-icon">
+                            <img src="../static/img/icons/bc/2dg.png" class="camp-icon">
                             <p style='margin:0'>11-14 yrs, $200-$275, 4-5 full days</p>
                         </div>
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2Dgame-wolf.jpg" controls>
-                                <source src="../static/vid/camps/2Dgame-wolf.mp4" type="video/mp4">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2dg-wolf.jpg" controls>
+                                <source src="../static/vid/camps/2dg-wolf.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="col-xs-12 col-md-6">
@@ -425,7 +568,7 @@
         </div>
 
         <!-- 3D Animation Modal -->
-        <div class="modal fade" id="3daModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="3dModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -441,8 +584,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3da-harry_potter.jpg" controls>
-                                <source src="../static/vid/camps/3da-harry_potter.mp4" type="video/mp4">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3d-harry_potter.jpg" controls>
+                                <source src="../static/vid/camps/3d-harry_potter.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="col-xs-12 col-md-6">
@@ -476,8 +619,8 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3Dgame-scavenger.jpg" controls>
-                                <source src="../static/vid/camps/3Dgame-scavenger.mp4" type="video/mp4">
+                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3dg-scavenger.jpg" controls>
+                                <source src="../static/vid/camps/3dg-scavenger.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <div class="col-xs-12 col-md-6">
