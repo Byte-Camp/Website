@@ -81,7 +81,10 @@ From: < your email >
     <script src="../static/js/faq.js"></script>
     <script type="text/javascript">
         $(window).load(function(){
-            $('#question').modal('show');
+            $('#question').modal({backdrop: 'static', keyboard: false});
+        });
+        $(document).click(function(event) { 
+            window.location.href='faq.html#faqs';   
         });
     </script>
 </body>

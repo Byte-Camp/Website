@@ -106,8 +106,8 @@
                     </h3>
                 </div>
                 <h5 class="res-title"><center>
-                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/cyoa.png"/>
-                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/baa.png"/>
+                    <img id="htmlA_htmlB_htmlD-htmlB" class="res-thumb glyphicon glyphicon-check" data-toggle="collapse" href="#drop-htmljscss" src="../static/img/icons/bc/cyoa.png"/>
+                    <img id="htmlA_htmlB_htmlC_htmlD" class="res-thumb glyphicon glyphicon-check" data-toggle="collapse" href="#drop-htmljscss" src="../static/img/icons/bc/baa.png"/>
                 </center></h5>
 
                 <hr class="thick-grey">
@@ -121,6 +121,7 @@
                                 <div id="drop-htmljscss-dl" class="panel-collapse collapse res-collapse">
                                     <div class="panel-body">
                                         <a href="https://atom.io/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/atom.png"/>Atom</a><br>
+                                        <a href="https://phonegap.com/getstarted/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/phonegap.png"/>PhoneGap</a><br>
                                         <a href="https://www.mozilla.org/en-US/firefox/new/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/firefox.png"/>Mozilla Firefox</a><br>
                                         <a href="https://inkscape.org/en/release/0.92.2/"><img class="glyphicon res-software-thumb" src="../static/img/icons/software/inkscape.png"/>Inkscape</a><br>
                                     </div>
@@ -149,9 +150,10 @@
                     <div class="res-header">Filter By Software:</div>
                     <div class="res-filters">
                         <ul class="list-group checked-list-box list-res">
-                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span>  Atom </li>
-                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Inkscape </li>
-                            <li class="list-group-item list-camps"><span id="c" class="glyphicon glyphicon-check" style="color:green;"></span> Mozilla Firefox </li>
+                            <li class="list-group-item list-camps"><span id="htmlA" class="glyphicon glyphicon-check" style="color:green;"></span>Atom</li>
+                            <li class="list-group-item list-camps"><span id="htmlB" class="glyphicon glyphicon-check" style="color:green;"></span>Phonegap</li>
+                            <li class="list-group-item list-camps"><span id="htmlC" class="glyphicon glyphicon-check" style="color:green;"></span>Inkscape</li>
+                            <li class="list-group-item list-camps"><span id="htmlD" class="glyphicon glyphicon-check" style="color:green;"></span>Mozilla Firefox</li>
                         </ul>
                     </div>
                 </div>
@@ -170,8 +172,8 @@
                     </h3>
                 </div>
                 <h5 class="res-title"><center>
-                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/3d.png"/>
-                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/3dg.png"/>
+                    <img id="blendA_blendB" class="res-thumb glyphicon glyphicon-check" data-toggle="collapse" href="#drop-blender" src="../static/img/icons/bc/3d.png"/>
+                    <img id="blendA-blendB" class="res-thumb glyphicon glyphicon-check" data-toggle="collapse" href="#drop-blender" src="../static/img/icons/bc/3dg.png"/>
                 </center></h5>
 
                 <hr class="thick-grey">
@@ -221,8 +223,8 @@
                     <div class="res-header">Filter By Software:</div>
                     <div class="res-filters">
                         <ul class="list-group checked-list-box list-res">
-                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> Blender </li>
-                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Sony Vegas Movie Studio </li>
+                            <li class="list-group-item list-camps"><span id="blendA" class="glyphicon glyphicon-check" style="color:green;"></span> Blender </li>
+                            <li class="list-group-item list-camps"><span id="blendB" class="glyphicon glyphicon-check" style="color:green;"></span> Sony Vegas Movie Studio </li>
                         </ul>
                     </div>
                 </div>
@@ -237,7 +239,7 @@
                     <h3 class="res-container-title"> 2D Tablet Animation </h3>
                 </div>
                 <h5 class="res-title"><center>
-                    <img class="glyphicon res-thumb" src="../static/img/icons/bc/2d.png"/>
+                    <img id="flipA_flipB" class="res-thumb glyphicon glyphicon-check" data-toggle="collapse" href="#drop-flipaclip" src="../static/img/icons/bc/2d.png"/>
                 </center></h5>
 
                 <hr class="thick-grey">
@@ -279,8 +281,8 @@
                     <div class="res-header">Filter By Software:</div>
                     <div class="res-filters">
                         <ul class="list-group checked-list-box list-res">
-                            <li class="list-group-item list-camps"><span id="a" class="glyphicon glyphicon-check" style="color:green;"></span> Blender </li>
-                            <li class="list-group-item list-camps"><span id="b" class="glyphicon glyphicon-check" style="color:green;"></span> Sony Vegas Movie Studio </li>
+                            <li class="list-group-item list-camps"><span id="flipA" class="glyphicon glyphicon-check" style="color:green;"></span> Blender </li>
+                            <li class="list-group-item list-camps"><span id="flipB" class="glyphicon glyphicon-check" style="color:green;"></span> Sony Vegas Movie Studio </li>
                         </ul>
                     </div>
                 </div>
@@ -289,10 +291,12 @@
     </div>
     
     <!-- Footer -->
-    <footer>
-        <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-            <img src="../static/img/icons/other/website-logo.png"/>
-            <p>Copyright &copy; Byte Camp 2017</p>
+    <footer class="container-fluid footer">
+        <div class="col-center">
+            <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                <img class="footer-logo" src="../static/img/icons/other/website-logo.png"/>
+                <p>Copyright &copy; Byte Camp 2017</p>
+            </div>
         </div>
     </footer>
 

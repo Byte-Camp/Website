@@ -250,14 +250,14 @@
     </div>
 
     <!-- Footer -->
-    <footer id='payroll-foot'>
-        <!--div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true"-->
-        <div class="container text-center">
-            <img src="../static/img/icons/other/website-logo.png" style="width:20%"/>
-            <p>Copyright &copy; Byte Camp 2017</p>
+    <footer class="container-fluid footer">
+        <div class="col-center">
+            <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                <img class="footer-logo" src="../static/img/icons/other/website-logo.png"/>
+                <p>Copyright &copy; Byte Camp 2017</p>
+            </div>
         </div>
     </footer>
-
     <!-- Google Maps API -->
     <!--script src='https://maps.googleapis.com/maps/api/js?'></script-->
     <!-- jQuery -->

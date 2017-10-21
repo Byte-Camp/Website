@@ -183,6 +183,10 @@ img::-moz-selection {
   margin:0 auto;
 }
 
+.footer-logo {
+  width:30%;
+}
+
 /* ACCENT/CONTENT SECTIONS */
 .content-section {
   padding-top: 100px;
@@ -658,7 +662,7 @@ body{
   height: 200px;
   margin-top: 100px;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #map {
     height: 400px;
     margin-top: 250px;
@@ -741,7 +745,7 @@ ul.banner-social-buttons {
   margin-bottom: 10px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .index-btn-text{
     font-size: 56px;
   }
@@ -771,18 +775,55 @@ ul.banner-social-buttons {
           transform: rotate(5deg);
 }
 
-.about-margins{
-  margin-bottom: 5px;
+.about-thumb {
+  width:25%;
+
+  float:left;
+  margin-right:5%;
+}
+
+.about-info {
+  text-align:left;
+  padding:0;
+  float:right;
+}
+
+.about-name {
+  margin-top:5px;
+  margin-bottom:0px;
+}
+
+.about-nickname {
+  margin-top:0px;
+  margin-bottom:10px;
+  opacity:0.4;
+}
+
+.about-position{
+  margin-bottom:0px;
 }
 
 .about-description{
-  font-size: 24px;
-  display:none;
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:20px;
 }
 
-.about-contact-info{
-  margin:0px;
-  font-size:27px;
+.about-contact-info h6{
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:-10px;
+}
+
+@media (max-width: 768px) {
+  .about-description{ display:none; }
+  .about-name { margin-top:6%; }
+}
+
+@media (max-width: 540px) {
+  .about-description, .about-thumb { display:none; }
+  .about-info, .about-contact-info { text-align:center; }
+  .about-name { margin-top:5px; }
 }
 
 .banner{
