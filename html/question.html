@@ -83,9 +83,15 @@ From: < your email >
         $(window).load(function(){
             $('#question').modal({backdrop: 'static', keyboard: false});
         });
-        $(document).click(function(event) { 
-            window.location.href='faq.html#faqs';   
+        $('body').click(function (event) {
+            if(!$(event.target).closest('.modal-content').length && !$(event.target).is('.modal-content')) {
+                setTimeout(function () { window.location.href='faq.html#faqs'; }, 500);
+                
+            }     
         });
+        /*$(document).click(function(event) { 
+            window.location.href='faq.html#faqs';   
+        });*/
     </script>
 </body>
 

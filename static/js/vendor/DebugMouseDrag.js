@@ -1,3 +1,4 @@
+try {
 var mouseX, mouseY, mousePVec, isMouseDown, selectedBody, mouseJoint;
 var canvasPosition = getElementPosition(document.getElementById("canvas"));
 
@@ -87,3 +88,4 @@ function updateMouseDrag() {
       }
    }
 }
+} catch(err){ }

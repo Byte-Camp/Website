@@ -23,7 +23,8 @@ $( ".glyphicon-check" ).click(function() {
 function glyphCheck(t) {
     var s = t.split('-');
     if (s[0] === t) {
-        arrChk = t.split('_');
+        var arrChk = t.split('_'); 
+        var arrUnchk = [];
     }
     else {
         var arrChk = s[0].split('_');

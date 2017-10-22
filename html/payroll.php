@@ -16,29 +16,10 @@
     
 ?>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Staff Payroll - Byte Camp - Creative Tech Programs for Kids: 3D Animation, Claymation, 2D Game Design, 3D Game Design, Music and Video Production, 3D Printing and Design, 2D Tablet Animation, Build an App</title>
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Montserrat:400,700" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="../static/css/main.css" rel="stylesheet">
-    <link href="../static/css/vendor/animate.css" rel="stylesheet">
-    <link href="../static/css/vendor/aos.css" rel="stylesheet">
-    <script src="../static/js/vendor/aos.js"></script>
-    <!-- Theme CSS -->
-    <link href="../static/css/main.css" rel="stylesheet">
+    <script src="../static/js/init.js"></script>
+    <script>printHead("../");</script>
 </head>
 
 
@@ -46,65 +27,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script>AOS.init();</script>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation" style="box-shadow: 0px 2px 5px black;" data-aos="slide-down" data-aos-duration="1000" data-aos-once="true">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="../index.html" ><img src="../static/img/buttons/btn_home.png" style="display: inline-block; height: 40px; margin-top: 5px; float: left;"/></a>
-                <a class="navbar-brand page-scroll" style="margin-left: -5px;" href="../index.html">
-                    <span class="light">Byte Camp</span>
-                </a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="calendar/calendar_2017.html">Register Now</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs <span class="caret"></span></a>
-                        <ul class="dropdown-menu navbar-custom">
-                            <li><a href="calendar/calendar_2017.html">Calendar</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="camps.html#programs">Camp Descriptions</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="byte-o-vision.html">Best Of's</a></li>
-                            <!--li role="separator" class="divider"></li>
-                            <li><a href="resources.html">Resources</a></li-->
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
-                        <ul class="dropdown-menu navbar-custom">
-                            <li><a href="resources.html">Documents & Software</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="payroll/index.php">Staff Resources</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
-                        <ul class="dropdown-menu navbar-custom">
-                            <li><a href="about_us.html#what">Who are We?</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="about_us.html#who">Contact Us</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="faq.html">FAQs</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <script>printNav("../");</script>
 
     <!-- BANNER -->
     <div id="header">
@@ -249,25 +172,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="container-fluid footer">
-        <div class="col-center">
-            <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-                <img class="footer-logo" src="../static/img/icons/other/website-logo.png"/>
-                <p>Copyright &copy; Byte Camp 2017</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Google Maps API -->
-    <!--script src='https://maps.googleapis.com/maps/api/js?'></script-->
-    <!-- jQuery -->
-    <script src="../static/js/vendor/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/vendor/bootstrap.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <!-- Theme JavaScript -->
-    <script src="../static/js/main.js"></script>
+    <script>printFoot("../");</script>
     <script src="../static/js/payroll.js"></script>
     <script>
         $('.square').on('click', function(){

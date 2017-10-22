@@ -414,6 +414,7 @@ video#bgvid, #videocover{
 .scroll-paper:focus{
   z-index:99;
   width:90%;
+  outline:none;
 }
 
 /* NAV BAR */
@@ -533,9 +534,7 @@ video#bgvid, #videocover{
 INDEX STYLING
 ==============================================
 */
-body{
-    overflow-x: hidden;
-}
+
 /* Main page Header */
 .intro{
   display: table;
@@ -775,11 +774,24 @@ ul.banner-social-buttons {
           transform: rotate(5deg);
 }
 
+.about-row {
+
+  margin:0px;padding:0px;
+}
+
+.about-person {
+  margin:0px;padding:20px;
+}
+
+.about-hr {
+  margin:0px;
+}
+
 .about-thumb {
   width:25%;
-
   float:left;
-  margin-right:5%;
+  margin-right:10px;
+  margin-bottom:10px;
 }
 
 .about-info {
@@ -789,7 +801,6 @@ ul.banner-social-buttons {
 }
 
 .about-name {
-  margin-top:5px;
   margin-bottom:0px;
 }
 
@@ -805,25 +816,24 @@ ul.banner-social-buttons {
 
 .about-description{
   text-align:center;
-  margin-top:20px;
-  margin-bottom:20px;
+}
+
+.about-description-sm {
+  position:absolute;
+  top:75px;
+  right:0;
+  width:70%;
 }
 
 .about-contact-info h6{
-  margin-top:10px;
-  margin-bottom:10px;
-  margin-left:-10px;
-}
-
-@media (max-width: 768px) {
-  .about-description{ display:none; }
-  .about-name { margin-top:6%; }
+  margin-top:5px;
+  margin-bottom:0px;
+  margin-left:-15px;
 }
 
 @media (max-width: 540px) {
-  .about-description, .about-thumb { display:none; }
+  .about-thumb { display:none; }
   .about-info, .about-contact-info { text-align:center; }
-  .about-name { margin-top:5px; }
 }
 
 .banner{
