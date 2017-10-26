@@ -11,26 +11,30 @@
     <script>AOS.init();</script>
 
     <!-- Intro Header -->
-    <header class="intro" style="background:url('static/img/banners/website-banner.png') no-repeat fixed bottom;">
+    <header class="intro">
         <div class="intro-body">
             <div class="container">
-                <div class="row">
-                    <!--
-                    <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop poster="static/img/banners/website-banner-comp.png" id="bgvid">
+                <div class="row" style='padding-top:30px;'>
+
+                    <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop id="bgvid">
                     </video>
                     <div id="videocover"></div>
-                    <script type="text/javascript">if (!checkMobile()){ document.getElementById("bgvid").innerHTML = '<source src="static/vid/index/web video.webm" type="video/webm"><source src="static/vid/index/web video.mp4" type="video/mp4">'; }</script>
-                    -->
-                    <div class="col-xs-8 col-center">
-                        <img src="static/img/icons/other/website-logo.png" class="animate-in hatch delay05" style="width:100%"/>
+                    <div class="col-xs-12 col-sm-6" style="padding-top: 60px;">
+                        <img src="static/img/icons/other/website-logo.png" class="animate-in hatch delay05" id="bc-logo" style="width:100%"/>
                         <div class="intro-text animate-in hatch delay1">
                             <div class="index-title" style='text-align: right;' id='camp-switch'>Creative tech</div>
                             <div class="index-title" style='text-align: left; padding:0;'>camps for kids.</div>
                         </div><br>
-                        <a href="html/calendar/calendar_2017.html" class="btn btn-warning btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
-                        <a href="#menu" class="btn btn-circle page-scroll animate-in pullDown delay15">
+                        <a href="html/calendar/calendar_2017.html" class="btn btn-lg btn-register animate-in pullDown delay2">Register Now!</a></p>
+                        <!--<a href="#menu" class="btn btn-circle page-scroll animate-in pullDown delay15">
                             <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        </a>-->
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <video preload="metadata" class="hidden-xs" playsinline autoplay muted loop id="tv-vid" style="width:90%; padding-left: 5%; padding-top:18%; padding-right:2%; display:block; position:absolute;z-index:1031;">
+                      </video>
+                      <script type="text/javascript">if (!checkMobile()){ document.getElementById("tv-vid").innerHTML = '<source src="static/vid/index/web video.webm" type="video/webm"><source src="static/vid/index/web video.mp4" type="video/mp4">'; }</script>
+                      <img id="byte-tv" class='hidden-xs' src="static/best-ofs/res/byte_tv.png" style='width:100%; position:relative; display: inline; margin:auto;z-index:1032;'>
                     </div>
                 </div>
             </div>
@@ -49,59 +53,59 @@
     <!-- Menu select -->
     <a id="menu" class="anchor"></a>
     <!-- Body Menu Section -->
-	<div class="accent-section">
-		<section id="menu" class="container text-center content-section">
-			<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
-					<a href="html/calendar/calendar_2017.html" id='btn-text-blue'>
-						<img class='index-btn-img' src="static/img/buttons/btn_blue.png"/>
-						<p class="index-btn-text">Calendar</p>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
-					<a href="html/camps.html" id='btn-text-red'>
-						<img class="index-btn-img" src="static/img/buttons/btn_red.png" />
-						<p class="index-btn-text">Camps</p>
-					</a>
-				</div>
+    <div class="accent-section">
+        <section id="menu" class="container text-center content-section">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
+                    <a href="html/calendar/calendar_2017.html" id='btn-text-blue'>
+                        <img class='index-btn-img' src="static/img/buttons/btn_blue.png"/>
+                        <p class="index-btn-text">Calendar</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
+                    <a href="html/camps.html" id='btn-text-red'>
+                        <img class="index-btn-img" src="static/img/buttons/btn_red.png" />
+                        <p class="index-btn-text">Camps</p>
+                    </a>
+                </div>
 
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
-					<a href="html/about_us.html" id='btn-text-green'>
-						<img class="index-btn-img" src="static/img/buttons/btn_green.png" />
-						<p class="index-btn-text">Who Are We?</p>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
-					<a href="html/byte-o-vision.html" id='btn-text-orange'>
-						<img class="index-btn-img" src="static/img/buttons/btn_orange.png" />
-						<p class="index-btn-text">Byte-O-Vision</p>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
-					<a href="html/resources.html" id='btn-text-purple'>
-						<img class="index-btn-img" src="static/img/buttons/btn_purple.png" />
-						<p class="index-btn-text">Resources</p>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
-					<a href="html/faq.html" id='btn-text-yellow'>
-						<img class="index-btn-img" src="static/img/buttons/btn_yellow.png" />
-						<p class="index-btn-text">FAQ</p>
-					</a>
-				</div>
-			</div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
+                    <a href="html/about_us.html" id='btn-text-green'>
+                        <img class="index-btn-img" src="static/img/buttons/btn_green.png" />
+                        <p class="index-btn-text">Who Are We?</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
+                    <a href="html/byte-o-vision.html" id='btn-text-orange'>
+                        <img class="index-btn-img" src="static/img/buttons/btn_orange.png" />
+                        <p class="index-btn-text">Byte-O-Vision</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-left">
+                    <a href="html/resources.html" id='btn-text-purple'>
+                        <img class="index-btn-img" src="static/img/buttons/btn_purple.png" />
+                        <p class="index-btn-text">Resources</p>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 img-button-right">
+                    <a href="html/faq.html" id='btn-text-yellow'>
+                        <img class="index-btn-img" src="static/img/buttons/btn_yellow.png" />
+                        <p class="index-btn-text">FAQ</p>
+                    </a>
+                </div>
+            </div>
         </section>
-	</div>
+    </div>
 
 	<!-- About Section -->
     <section id="about" class="container-fluid content-section" style="padding-bottom: 100px;">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 text-center" style="margin-top: 50px;">
-                <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><a href="html/about_us.html">About Byte Camp</a></h2>
+                <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><a href="html/about_us.html">What is Byte Camp?</a></h2>
                 <p  data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="200" style="font-size:24px">Byte Camp Education Society is a non-profit organization that has been providing <strong>engaging, affordable creative technology programs for kids </strong>since 2003. We have active partnerships with <strong>over 100 schools and community centres</strong> in Metro Vancouver, Victoria, Nanaimo, Calgary, and the Okanagan. Over 20,000 kids have come through our programs learning animation, web design, programming, video editing, 3D modelling and more!</p>
                 <br>
-				<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="margin-bottom:5px;"><a href="html/about_us.html#who">Contact Us</a></h2>
-				<p data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><a href="mailto:melody@bytecamp.ca">melody@bytecamp.ca</a></p>
+                <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="margin-bottom:5px;"><a href="html/about_us.html#who">Contact Us</a></h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><a href="mailto:melody@bytecamp.ca">melody@bytecamp.ca</a></p>
                 <!--
                 <ul class="list-inline banner-social-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                     <li>

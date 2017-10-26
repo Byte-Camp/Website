@@ -19,7 +19,8 @@ function init(){
 }
 
 function gotoMyURL() {
-    window.location.href = '../index.html'+web;
+    window.history.back();
+    //window.location.href = '../index.html'+web;
 }
 
 function flash_java(){

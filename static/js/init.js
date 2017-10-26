@@ -93,10 +93,10 @@ function printHead(root_dir){
 function printFoot(root_dir){
 	document.write(`
 		<!-- Footer -->
-	    <footer class="container-fluid footer">
+	    <footer class="container-fluid">
 	        <div class="col-center">
 	            <div class="container text-center" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
-	                <img class="footer-logo" src="`+root_dir+`static/img/icons/other/website-logo.png"/>
+	                <img src="`+root_dir+`static/img/icons/other/website-logo.png"/>
 	                <p>Copyright &copy; Byte Camp 2017</p>
 	            </div>
 	        </div>
