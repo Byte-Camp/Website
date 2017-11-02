@@ -475,12 +475,18 @@ a.anchor {
 
 
 /*-----------------------------------------------------------------------------------------------------------INDEX-----------------------------------------------------------------------------------------------------------*/
-.intro{
+.intro {
   display: table;
   width: 100%;
   height: auto;
   padding: 100px 0;
   text-align: center;
+  background-color: black;
+  background: url(../img/banners/website-banner.png) no-repeat bottom center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .intro .intro-body{
@@ -749,6 +755,62 @@ ul.banner-social-buttons {
       -ms-transform: rotate(5deg);
           transform: rotate(5deg);
 }
+
+.polaroid{
+  background-color: white;
+  background-image:url('static/img/textures/handmadepaper.png');
+  padding: 20px 20px 15%;
+  text-align: center;
+  text-decoration: none;
+  z-index:99;
+  max-width:100%;
+  margin-top:1%;
+  
+  -webkit-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+     -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+          box-shadow: 0 4px 6px rgba(0,0,0,.3);
+  
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+    
+.polaroid img {
+  max-width:100%;
+  height:auto;
+}
+
+.polaroid:hover{
+  -webkit-transform: rotate(20deg);
+     -moz-transform: rotate(20deg);
+       -o-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+.polaroid:active{
+  -webkit-transform: scale(1.5) translate(-35%);
+     -moz-transform: scale(1.5) translate(-35%);
+       -o-transform: scale(1.5) translate(-35%);
+      -ms-transform: scale(1.5) translate(-35%);
+          transform: scale(1.5) translate(-35%);
+}
+
+@media(max-width:960px){
+  .polaroid {
+    max-width:80%;
+  }
+
+  .polaroid:active{
+    -webkit-transform: scale(1.5);
+       -moz-transform: scale(1.5);
+         -o-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
 /*-----------------------------------------------------------------------------------------------------------INDEX-----------------------------------------------------------------------------------------------------------*/
 
 
@@ -895,6 +957,22 @@ ul.banner-social-buttons {
 .camp-icon{
   display:inline;
   width:50px;
+}
+
+.camp-vid{
+  width:83%;
+  margin-left: 6%;
+  margin-top:19%;
+  display:block;
+  position:absolute;
+}
+
+.byte-tv{
+  width:100%;
+  position:relative;
+  display: inline;
+  margin:auto
+
 }
 /*-----------------------------------------------------------------------------------------------------------CAMPS-----------------------------------------------------------------------------------------------------------*/
 

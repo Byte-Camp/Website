@@ -17,6 +17,14 @@
         <div id="header" class="container-fluid title-header" style="background:#9955FF;"></div>
         <div id="box2d-container">
             <div class="in-box2d"><h1 class="text-center banner-text">CAMPS</h1></div>
+            
+            <!--div class="in-box2d hidden-xs"><h1 class="text-center banner-text no-select">
+                <video preload="metadata" id="tv-vid" playsinline autoplay muted loop style="width:95%; padding-left: 5%; padding-top:18%; padding-right:2%; display:block; position:absolute;z-index:1031;">
+                    <source src="../static/vid/index/web video.webm" type="video/webm"><source src="../static/vid/index/web video.mp4" type="video/mp4">
+                </video>
+                <img id="byte-tv" class='camp-icon' src="../static/img/icons/bc/byte-tv.png" style='width:200px; position:relative; display: inline; margin:auto;z-index:1032;'>
+            </h1></div-->
+            
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/clay.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2dg.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/mv.png" class="camp-icon"></h1></div>
@@ -93,7 +101,7 @@
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $150, 4-5 full days</h4>
                             <hr style='margin:5px'>
-                            <p style='margin-bottom: 10px;'>Hand draw animated movies on tablets just like Disney!</p>
+                            <p style='margin-bottom: 10px;'>Learn 3 kinds of animation in 1 camp!</p>
                             <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#ani3Modal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
@@ -125,7 +133,7 @@
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
                             <hr style='margin:5px'>
-                            <p style='margin-bottom: 10px;'>Write some sick beats then create the music video!</p>
+                            <p style='margin-bottom: 10px;'>Make a movie and then add effects for real movie magic!</p>
                             <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#lcaModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
@@ -141,7 +149,7 @@
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
                             <hr style='margin:5px'>
-                            <p style='margin-bottom: 10px;'>Learn real coding skills by making games in Scratch!</p>
+                            <p style='margin-bottom: 10px;'>Learn real coding skills by making games from Scratch!</p>
                             <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#i2cModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
@@ -157,7 +165,7 @@
                             <hr style='margin:5px'>
                             <h4 style='margin-bottom: 0px'>9-12 yrs, $200-$275, 4-5 full days</h4>
                             <hr style='margin:5px'>
-                            <p style='margin-bottom: 10px;'>Learn real coding skills by making games in Scratch!</p>
+                            <p style='margin-bottom: 10px;'>Build an adventure game on your web browser!</p>
                             <a class="btn btn-primary btn-lg camp-btns" data-toggle="modal" data-target="#cyoaModal"><i class="fa fa-info-circle" style='margin-right:10px;' aria-hidden="true"></i>Details</a>
                             <a class="btn btn-primary btn-lg camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
                         </div>
@@ -251,11 +259,15 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/clay-lost_zebra.jpg" controls>
-                                <source src="../static/vid/camps/clay-lost_zebra.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
                             <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-clay" class="camp-vid" preload="metadata" poster="../static/vid/camps/clay-lost_zebra.png" playsinline>
+                                    <source src="../static/vid/camps/clay-lost_zebra.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
+
+                            <div class="col-xs-12 col-md-6" style="margin-top:2%;">
                                 <p style='font-size: 20px;'>Make your own clay characters come to life, just like Shaun the Sheep! Participants will
                                 work with a partner to build their own clay characters, sets and props, develop their own
                                 script, shoot their movie scene, and then learn to edit and add sounds and special effects
@@ -286,10 +298,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2d-app_awareness.jpg" controls>
-                                <source src="../static/vid/camps/2d-app_awareness.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-2d" class="camp-vid" preload="metadata" poster="../static/vid/camps/2d-app_awareness.png" playsinline>
+                                    <source src="../static/vid/camps/2d-app_awareness.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Turn your drawing skills into awesome animation skills on our tablets! We'll show you how 
                                 to make beautiful animations as wild as your imagination. Participants will learn to storyboard and use some advanced 
@@ -321,10 +336,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2d-app_awareness.jpg" controls>
-                                <source src="../static/vid/camps/2d-app_awareness.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-ani3" class="camp-vid" preload="metadata" poster="../static/vid/camps/ani3-comp.png" playsinline>
+                                    <source src="../static/vid/camps/ani3-comp.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Explore the world of Animation, from Stop-Motion and Claymation to Vector and 3D Animation. Students will learn hands-on how these creative processes are used to make some of the TV shows and movies they love. The program will take students through various animation techniques like claymation, stop-motion animation on tablets, and 3D animation design!</p>
                                 <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
@@ -352,10 +370,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/mv-power_of_music.jpg" controls>
-                                <source src="../static/vid/camps/mv-power_of_music.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-mv" class="camp-vid" preload="metadata" poster="../static/vid/camps/mv-power_of_music.png" playsinline>
+                                    <source src="../static/vid/camps/mv-power_of_music.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Make your own music and music video! Camp time will be split between digital music composition, video filming and editing. Use amazing software tools to craft your very own song from scratch. We will show you the basics on beats, baselines, chords and melodies so that your song will sound awesome. Experiment with video, special effects and editing techniques to make the video as cool as your tune.</p>
                                 <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
@@ -383,10 +404,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/mv-power_of_music.jpg" controls>
-                                <source src="../static/vid/camps/mv-power_of_music.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-lca" class="camp-vid" preload="metadata" poster="../static/vid/camps/mv-power_of_music.png" playsinline>
+                                    <source src="../static/vid/camps/mv-power_of_music.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>What makes movie filming so much more special than how we film with a regular camera? Learn how to transform your ordinary camera into an industry movie making one by learning basic filming techniques and nifty special effects such as camera distances/angles, storyboarding and planning, green screen manipulation, and more! Students each will plan and shoot their own short films or videos about a minute in length.</p>
                                 <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
@@ -414,10 +438,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/i2c-scarf.jpg" controls>
-                                <source src="../static/vid/camps/i2c-scarf.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-i2c" class="camp-vid" preload="metadata" poster="../static/vid/camps/i2c-scarf.png" playsinline>
+                                    <source src="../static/vid/camps/i2c-scarf.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Discover how much fun it is to build your own game! Students will be introduced to basic coding 
                                 skills with easy to use drag-and-drop software, and get to use those skills to make their very own games. Students will also 
@@ -448,10 +475,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/i2c-scarf.jpg" controls>
-                                <source src="../static/vid/camps/i2c-scarf.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-cyoa" class="camp-vid" preload="metadata" poster="../static/vid/camps/NOT-DONE.png" playsinline>
+                                    <source src="../static/vid/camps/NOT-DONE.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Kids will have a chance to learn HTML and CSS - the languages that power the web - to build their own choose-your-own-adventure game! Create a story! Create your own vector-based artwork! Program it for the web!</p>
                                 <a class="btn btn-primary btn-lg camp-modal-btns camp-btns" href="calendar/calendar_2017.html"><i class="fa fa-user-plus" style='margin-right:10px;' aria-hidden="true"></i> Register!</a>
@@ -479,10 +509,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/2dg-wolf.jpg" controls>
-                                <source src="../static/vid/camps/2dg-wolf.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-2dg" class="camp-vid" preload="metadata" poster="../static/vid/camps/2dg-wolf.png" playsinline>
+                                    <source src="../static/vid/camps/2dg-wolf.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Learn how to build an HTML5 game from the ground up using awesome free tools. This is a coding camp, 
                                 so be prepared to challenge yourself and learn some new skills. Time will be spent learning how to create advanced 2D vector artwork 
@@ -513,10 +546,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3d-harry_potter.jpg" controls>
-                                <source src="../static/vid/camps/3d-harry_potter.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-3d" class="camp-vid" preload="metadata" poster="../static/vid/camps/3d-harry_potter.png" playsinline>
+                                    <source src="../static/vid/camps/3d-harry_potter.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Dreaming of a career with PIXAR? Ever wonder how those awesome 3D animated movies like Shrek, Toy 
                                 Story and Frozen are made? Spend the week learning how by modeling, animating and telling your own stories in 3D. You'll use 
@@ -548,10 +584,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3dg-scavenger.jpg" controls>
-                                <source src="../static/vid/camps/3dg-scavenger.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-3dg" class="camp-vid" preload="metadata" poster="../static/vid/camps/3dg-scavenger.png" playsinline>
+                                    <source src="../static/vid/camps/3dg-scavenger.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Create your own 3D Video Game! Invent your own digital worlds levels, adventures and quests using 
                                 Blender, a great (& free) 3D Game Engine. Students will learn to make their own custom controls and gameplay using Blender's 
@@ -583,10 +622,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <video class="col-xs-12 col-md-6" poster="../static/vid/camps/3dg-scavenger.jpg" controls>
-                                <source src="../static/vid/camps/3dg-scavenger.jpg" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                            <div class="col-xs-12 col-md-6">
+                                <video id="camp-vid-baa" class="camp-vid" preload="metadata" poster="../static/vid/camps/NOT-DONE.png" playsinline>
+                                    <source src="../static/vid/camps/NOT-DONE.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.   
+                                </video>
+                                <img class="byte-tv" src="../static/img/icons/bc/byte-tv.png">
+                            </div>
                             <div class="col-xs-12 col-md-6">
                                 <p style='font-size: 20px;'>Learn how to design, code, test and deploy you very own app! Use the GPS, accelerometer or anything 
                                 else you can think of to build your app from scratch. This is a coding camp, so be prepared to challenge yourself and learn some 
@@ -606,6 +648,12 @@
 
     <script>printFoot("../");</script>
     <script src="../static/js/camps.js"></script>
+    <script>
+        $('.byte-tv').click(function(){
+            camp_vid = document.getElementById($(this).prev().attr('id'));
+            camp_vid.paused ? camp_vid.play() : camp_vid.pause();
+        });    
+    </script>
 </body>
 
 </html>
