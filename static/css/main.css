@@ -960,12 +960,18 @@ ul.banner-social-buttons {
 }
 
 .camp-vid{
-  width:83%;
-  margin-left: 6%;
-  margin-top:19%;
   display:block;
   position:absolute;
+  width:80%;
+  margin-left:6.5%;
+  margin-top:19%;
 }
+
+@media(max-width:990px){ .camp-vid{ width:82%; }}
+@media(max-width:768px){ .camp-vid{ width:83%; margin-left:6%; }}
+@media(max-width:620px){ .camp-vid{ width:82%; }}
+@media(max-width:520px){ .camp-vid{ width:81%; margin-left:6%; margin-top:18.5%; }}
+@media(max-width:450px){ .camp-vid{ width:80%; }}
 
 .byte-tv{
   width:100%;

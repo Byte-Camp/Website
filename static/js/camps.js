@@ -11,6 +11,10 @@ $('.filters-button-group').on( 'click', 'button', function() {
   $grid.isotope({ filter: filterValue });
 });
 
+$('.byte-tv').click(function(){
+    camp_vid = document.getElementById($(this).prev().attr('id'));
+    camp_vid.paused ? camp_vid.play() : camp_vid.pause();
+}); 
 /*
 var camps9yr = ['2dtab', 'clay', 'intro', 'cyoa', 'mv'];
 var camps11yr = ['2d', '3d', '3dgames', 'baa'];

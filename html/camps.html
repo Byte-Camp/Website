@@ -17,14 +17,6 @@
         <div id="header" class="container-fluid title-header" style="background:#9955FF;"></div>
         <div id="box2d-container">
             <div class="in-box2d"><h1 class="text-center banner-text">CAMPS</h1></div>
-            
-            <!--div class="in-box2d hidden-xs"><h1 class="text-center banner-text no-select">
-                <video preload="metadata" id="tv-vid" playsinline autoplay muted loop style="width:95%; padding-left: 5%; padding-top:18%; padding-right:2%; display:block; position:absolute;z-index:1031;">
-                    <source src="../static/vid/index/web video.webm" type="video/webm"><source src="../static/vid/index/web video.mp4" type="video/mp4">
-                </video>
-                <img id="byte-tv" class='camp-icon' src="../static/img/icons/bc/byte-tv.png" style='width:200px; position:relative; display: inline; margin:auto;z-index:1032;'>
-            </h1></div-->
-            
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/clay.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/2dg.png" class="camp-icon"></h1></div>
             <div class="in-box2d"><h1 class="text-center banner-text no-select"><img src="../static/img/icons/bc/mv.png" class="camp-icon"></h1></div>
@@ -648,12 +640,6 @@
 
     <script>printFoot("../");</script>
     <script src="../static/js/camps.js"></script>
-    <script>
-        $('.byte-tv').click(function(){
-            camp_vid = document.getElementById($(this).prev().attr('id'));
-            camp_vid.paused ? camp_vid.play() : camp_vid.pause();
-        });    
-    </script>
 </body>
 
 </html>
